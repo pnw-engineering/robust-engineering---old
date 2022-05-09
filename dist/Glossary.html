@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,4 +108,115 @@
 <footer>&copy; Copyright 2022</footer>
 
 <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Robust Design</title>
+</head>
+
+<body class="body">
+
+    <header class="header">
+        <div class="menu-btn">
+            <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;</span>
+        </div>
+        <div class="header__image">
+            <img src="/dist/img/Skewed-Symmetric-Distribution.png">
+        </div>
+        <div class="header__title">--- Robust Engineering ---
+        </div>
+        <div class="header__subtitle">
+            Using Science, Statistics, and Critical Thinking to improve product design
+            robustness
+        </div>
+    </header>
+
+    <main id="myColumnLayout" class="column_layout">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="tools.html">Tools</a>
+            <a href="Glossary.html">Glossary</a>
+            <a href="#">???</a>
+        </div>
+        <div class="mainbody">
+            <h1>--- Glossary of terms ---</h1>
+            <div class="GridContainer">
+                <details class="GridElement">
+                    <summary>General Engineering</summary>
+                    <dl>
+                        <dt>Robust Design</dt>
+                        <dd>A design that provides the intended functions, in stated conditions, for the specified time, in
+                            the presence of noise.</dd>
+                        <dt>Functional Requirement</dt>
+                        <dd>Functionality a product must deliver to satisfy customer needs.</dd>
+                        <dt>Verification Test</dt>
+                        <dd>Testing done to ensure a product meets customer's requirements.</dd>
+                        <dt>Development Test</dt>
+                        <dd>Testing done to explore the design space in order to understand limits and relationships.</dd>
+                        <dt>Critical Parameter Management</dt>
+                        <dd>A process for ensuring parameters that are critical to product performane are clearly defined
+                            and accounted for.</dd>
+                        <dt>NUD</dt>
+                        <dd>requirements that are "NEW, UNIQUE, AND DIFFICULT" and therefore warrent additional time and
+                            attention to detail to prevent quality escapes.</dd>
+                        <dt>DFMEA</dt>
+                        <dd>Design Failure Modes and Effects Analysis - a process for identification of potential failure
+                            modes and methods for mitigation.</dd>
+                    </dl>
+                </details>
+                <details class="GridElement">
+                    <summary>Statistics</summary>
+                    <dl>
+                        <dt>Normality</dt>
+                        <dd>The property that determines how well a set of data fits a normal distribution. Knowing this
+                            aids in selecting the best statistical tools for further analysis.</dd>
+                        <dt>P value</dt>
+                        <dd>The probability that a null hypothesis has been satisfied and therefore cannot be rejected.
+                        </dd>
+                        <dt>Model</dt>
+                        <dd>A fabrication intended to predict output parameters based on input parameters. Used regularly
+                            in development as an analytical tool that can be used in lieu of physical testing.</dd>
+                        <dt>Mean</dt>
+                        <dd>The statistical property that describes the central tendancy of a data set (assumed to be
+                            normally distributed). Usually thought of as the "avarage".</dd>
+                        <dt>Median</dt>
+                        <dd>The statistical property that describes the central tendancy of a data set (assumed not to be
+                            normally distributed).</dd>
+                        <dt>Standard deviation</dt>
+                        <dd>The statistical property that describes the spread of a data set (assumed to be normally
+                            distributed). The simbol σ is used to designate standard deviation. Calculated as the square
+                            root of the variance. One nice property of σ is that the unit of measure for σ is the same as
+                            that of the data in the set and is therefor more intuitive.</dd>
+                        <dt>Variance</dt>
+                        <dd>The average of the squared difference from the mean of a data set. One nice property of variance
+                            is that they can be summed across data sets to determine vafriance for the sum of teh sets.</dd>
+                    </dl>
+                </details>
+                <details class="GridElement">
+                    <summary>Reliability</summary>
+                    <dl>
+                        <dt>Stress/Strength relationship</dt>
+                        <dd>A property that can be used to evaluate reliability based on product strengths (generally
+                            measured) against stresses applied in teh field (generally assumed).</dd>
+                        <dt>Failure Mode</dt>
+                        <dd>A way that a product or part can fail in the field. Quality escapes can be reduced by early
+                            identification and mitigation of failure modes.</dd>
+                        <dt>Failure Site</dt>
+                        <dd>The spicific design feature whare a known failure mode occurs in a product or part. These should
+                            be clearly identified and maintained in DFMEAs.</dd>
+                    </dl>
+                </details>
+            </div>
+        </div>
+    </main>
+</body>
+<footer>&copy; Copyright 2022</footer>
+
+<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+>>>>>>> 79959929c4b90d6c61c777da47016134c8801fa7
 <script src="js/main.js"></script>
