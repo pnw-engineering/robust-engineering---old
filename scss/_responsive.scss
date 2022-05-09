@@ -1,0 +1,92 @@
+@include media-md {
+  * {
+    font-size: 1.0vw;
+  }
+
+  .column_layout {
+
+    .mainbody {
+      width: 50%;
+      margin: 0 auto;
+      // background-color: dodgerblue;
+    }
+
+    ;
+    // line-height: 1.25;
+
+    details {
+      font-size: .6em;
+
+      summary {
+        // margin-left:1em;
+        font-size: .6em;
+      }
+    }
+
+    .intro {
+      font-size: 50%;
+
+    }
+
+    .disclaimer {
+      font-size: 500%;
+    }
+
+    .getstarted {
+      font-size: 1.1em;
+
+    }
+  }
+
+  .header {
+    // background-color: blue;
+
+    &__title {
+      letter-spacing: 5px;
+      font-size: 150%;
+      // background-color: aqua;
+    }
+
+    &__subtitle {
+      // width: 100vw;
+      letter-spacing: 2px;
+      font-size: 190%;
+      // background-color: aqua;
+    }
+  }
+
+
+  .grid-body {
+    width: 90%;
+    grid-gap: 30px // grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      // background-color: blue;
+  }
+
+  .grid-item {
+    // font-size: .5vw;
+    font-size: .75rem;
+    // width: 50%;
+    // background-color: burlywood;
+  }
+}
+
+@include media-lg {
+
+  .topics__badges {
+    font-size: 1.25rem;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // background-color: aqua;
+  }
+
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-xl {
+    .projects__bio-image {
+      height: 50vh;
+    }
+  }
+}
