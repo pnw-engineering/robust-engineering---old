@@ -66,7 +66,8 @@ function restoreBody() {
 function showSpeech(s) {
   clearBody();
   document.getElementById("sp").style.display = "grid";
-  fetch("/dist/"+s+".html")
+  // fetch("/dist/"+s+".html")
+  fetch(s+".html")
     .then((response) => response.text())
     .then((text) => (document.getElementById("sp").innerHTML = text));
   // document.getElementById("b1").innerHTML = text;
