@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Robust Design</title>
+</head>
+
+<body class="body"> 
+
+    <header class="header">
+        <div class="menu-btn">
+            <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;</span>
+        </div>
+        <div class="header__image">
+            <img src="/dist/img/Skewed-Symmetric-Distribution.png">
+        </div>
+        <div class="header__title">--- Robust Engineering ---
+        </div>
+        <div class="header__subtitle">
+            Using Science, Statistics, and Critical Thinking to improve product design
+            robustness
+        </div>
+    </header>
+
+
+    <main id="myColumnLayout" class="column_layout">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="tools.html">Tools</a>
+            <a href="Glossary.html">Glossary</a>
+            <a href="#">???</a>
+        </div>
+        <div class="mainbody">
+            <div class="speech" id="sp"></div>
+            <div class="grid-body" id="gb1">
+                <div class="grid-item">
+                    <div class="grid-item__title">
+                        For Individual Contributors:</div>
+                    <article class="topic" onclick="showSpeech('es1')">
+                        <h2 class="topic__heading">
+                            Know Your Requirements
+                        </h2>
+                        <div class="topic__soundbite">
+                            Identify Critical Factors and NUDs.
+                        </div>
+                        <div class="topic__img-box">
+                            <img class="topic__img" src="/dist/img/NormalDist.jpg" alt="">
+                        </div>
+                    </article>
+                    <article class="topic" onclick="showSpeech('es2')">
+                        <h2 class="topic__heading">
+                            Manage Variation
+                        </h2>
+                        <div class="topic__img-box">
+                            <img class=" topic__img" src="/dist/img/Skewed-Symmetric-Distribution.png" alt="">
+                        </div>
+                        <div class="topic__soundbite">
+                            Statistical methods to account for variation.
+                        </div>
+                    </article>
+                    <article class="topic" onclick="showSpeech('es3')">
+                        <h2 class="topic__heading">
+                            Eliminate Failure Modes
+                        </h2>
+                        <div class="topic__img-box">
+                            <img class=" topic__img" src="/dist/img/robust2.png" alt="">
+                        </div>
+                        <div class="topic__soundbite">Know product history in field.</div>
+                    </article>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-item__title">
+                        For Organizations:</div>
+                    <article class="topic" onclick="showSpeech('es4')">
+                        <h2 class="topic__heading">
+                            Design Reviews
+                        </h2>
+                        <div class="topic__img-box">
+                            <img class=" topic__img" src="/dist/img/Bathtub.png" alt="">
+                        </div>
+                        <div class="topic__soundbite">Use Subject Mater Experts to leverage Tribal Knowledge.</div>
+                    </article>
+                    <article class="topic" onclick="showSpeech('es5')">
+                        <h2 class="topic__heading">FMEA/DFME
+                        </h2>
+                        <div class="topic__img-box">
+                            <img class=" topic__img" src="/dist/img/Bathtub.png" alt="">
+                        </div>
+                        <div class="topic__soundbite">Systematic approach to improve design robustness.</div>
+                    </article>
+                    <article class="topic" onclick="showSpeech('es6')">
+                        <h2 class="topic__heading">FRACAS
+                        </h2>
+                        <div class="topic__img-box">
+                            <img class=" topic__img" src="/dist/img/Bathtub.png" alt="">
+                        </div>
+                        <div class="topic__soundbite">Failure Reporting And Corrective Action System.</div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<footer>&copy; Copyright 2022</footer>
+
+<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+<script src="js/main.js"></script>

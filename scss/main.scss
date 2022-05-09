@@ -1,0 +1,190 @@
+@import 'config';
+@import 'home';
+@import 'menu';
+@import 'tools';
+@import 'glossary';
+@import 'elevator';
+@import 'responsive';
+
+.header {
+  display: grid;
+  grid-template-columns: 40px 75vw 1fr;
+  border-bottom: 1px solid $text-color;
+  position: sticky;
+  // padding: 1em;
+  overflow: hidden;
+  color: $text-color;
+  font-size: 24px;
+  letter-spacing: 2px;
+  // background-color: aqua;
+
+  &__title {
+    grid-area: 1 / 2;
+    font-size: 90%;
+    font-variant: small-caps;
+    margin: auto;
+    // background-color: aqua;
+  }
+
+  &__subtitle {
+    grid-area: 2 / 2;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    margin: auto;
+    padding-left: 2rem;
+    text-align: center;
+    font-size: 40%;
+    // background-color:aqua;
+  }
+
+  &__image {
+    grid-area: 2 / 1 / span 1 / span 1;
+    width: 100%;
+    max-height: 100%;
+    // padding-top: 2rem;
+    // border: 1px solid;
+  }
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+  background-color: $primary-color;
+  color: $text-color;
+  // background-color: dodgerblue;
+
+  main {
+    h1 {
+      padding-top: 5px;
+      font-variant: small-caps;
+      text-align: center;
+      font-size: 24;
+      // background-color: coral;
+    }
+  }
+
+}
+
+.column_layout {
+  // font-size: 100%;
+  line-height: 1.25;
+  display: grid;
+  grid-template-columns: 0 1fr;
+  // position: relative;
+  // background-color: dodgerblue;
+  
+  .mainbody {
+    display: flexbox;
+    grid-area: 1 / 2;
+    // max-width: 95%;
+    margin: 0 auto;
+    // border: 1px solid red;
+  }
+  
+  details {
+    font-size: 120%;
+    margin-left: 2em;
+    cursor: pointer;
+    // background-color:cadetblue;
+    
+    summary {
+      // margin-left:1em;
+      font-size: 140%
+    }
+  }
+  
+  .intro {
+    font-size: 120%;
+    
+    a {
+      // color: complement($text-color);
+      color: red;
+    }
+  }
+  
+  .disclaimer {
+    color: rgb(242, 245, 88);
+    font-size: 120%;
+    // background-color: dodgerblue;
+  }
+
+  .getstarted {
+    position: absolute;
+    bottom: 10px;
+    background-color: lighten(crimson, 20);
+    // display: block;
+    margin-left: 15em;
+    // width: 200px;
+    color: white;
+    font-size: 1.1em;
+
+    &:hover {
+      background-color: crimson;
+      @include transition-ease;
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  margin: auto;
+  // background-color: darkkhaki;
+  background-color: $primary-color;
+  // display: flex;
+  // position: relative;
+  // border: 1px solid dodgerblue;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+  // background-color: coral;
+}
+
+a {
+  // color: set-text-color($primary-color);
+  color: lighten(crimson, 20);
+  // text-decoration: none;
+  font-size: 1em;
+  // background-color: red;
+
+  :hover {
+    // color: set-text-color(red);
+    color: crimson;
+    background-color: blue;
+    ;
+  }
+}
+
+.text-secondary {
+  color: $text-color;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: set-text-color($primary-color);
+}
+
+p {
+  font-size: 1.25em;
+  text-align: justify;
+  padding-bottom: .5em;
+  margin-left: 2em;
+  margin-right: 2em;
+  // background-color: blue;
+}
+
+.list {
+  font-size: 1.25em;
+  // background-color:cornflowerblue;
+}
+
+.highlight {
+  font-size: larger;
+  font-style: italic;
+  color: rgb(159, 183, 235);
+}

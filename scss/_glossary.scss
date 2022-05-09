@@ -1,0 +1,36 @@
+.GridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    width: 80%;
+    padding-top: 20px;
+    margin: auto;
+    // background-color: dodgerblue;
+}
+
+.GridElement {
+    display: flex;
+    font-size: 16px;
+    // border: 1px solid;
+    
+    summary {
+        font-size: 150%;
+        // background-color: dodgerblue;
+    }
+    
+    // dl{
+    //     // border: 1px solid;
+    //     // background-color: dodgerblue;
+    // }
+    dt {
+        font-size: 130%;
+        font-weight: bold;
+        padding-bottom: 1px;
+    }
+    dd{
+        font-size:110%;
+        padding-bottom: 5px;
+        padding-left: 2em;
+        // background-color: cornflowerblue;
+    }
+}
