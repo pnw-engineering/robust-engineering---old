@@ -240,9 +240,9 @@ body__item__heading {
 }
 
 .grid-body {
-  width: 80%;
+  width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px;
   margin: auto;
 }
@@ -400,7 +400,7 @@ body__item__heading {
   }
 
   .column_layout .mainbody {
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
   }
   .column_layout details {

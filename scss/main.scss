@@ -48,6 +48,8 @@
 
 .body {
   font-family: "Roboto", sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+  // font-family: 'Montserrat';;
   background-color: $primary-color;
   color: $text-color;
   // background-color: dodgerblue;
@@ -69,7 +71,6 @@
   line-height: 1.25;
   display: grid;
   grid-template-columns: 0 1fr;
-  // position: relative;
   // background-color: dodgerblue;
   
   .mainbody {
