@@ -1,10 +1,11 @@
 .grid-body {
     width: 90%;
+    // height:100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
     grid-gap: 10px;
     // font-size: 1rem;
-    margin: auto;
+    margin: 0 auto;
     // background-color: dodgerblue;
 }
 
@@ -14,14 +15,20 @@
     // background-color: beige;
 
     &__title {
-        width: 85%;
-        font-size: 150%;
+        width: 100%;
+        font-size: 200%;
+        font-weight: bold;
         font-variant: small-caps;
-        padding-bottom: 10px;
+        padding-bottom: 2px;
         padding-top: 10px;
-        margin: auto;
+        margin: 1em;
+        ;
         // background-color: aqua;
         // border-bottom: 1px;
+    }
+
+    p {
+        font-size: 120%;
     }
 }
 
@@ -31,7 +38,8 @@
     background-color: $secondary-color;
     // background-color: darkmagenta;
     border: 1px solid black;
-    box-shadow: 7px 7px darken($primary-color, 5);;
+    box-shadow: 7px 7px darken($primary-color, 5);
+    ;
     cursor: pointer;
     display: grid;
     grid-template-columns: 85% 15%;
@@ -109,9 +117,7 @@
 }
 
 .ElSpeech {
-    // background: $primary-color;
     // background: blue;
-    // color: $text-color;
     position: relative;
     width: 100%;
     display: flexbox;
@@ -135,15 +141,61 @@
 }
 
 .speech {
-    display: none;
+    // display: grid;
+    // display: flex;
     margin: 0 auto;
+    font-size: 12px;
     width: 100%;
     border: 1px solid;
-    height: 85%;
+    // height: 85%;
     background-color: $secondary-color;
     // transition: all 3s ease-in-out;
     animation-duration: .2s;
     animation-name: speecht;
+    // border: 1px solid red;
+    // grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+    // grid-template-columns: 1;
+    // grid-gap: 10px;
+
+    // column-count: 2;;
+    &#st {
+        border: none;
+        background-color: $primary-color;;
+    }
+    &__title {
+        font-size: 150%;
+        margin: .5em;
+
+        // background-color: lightseagreen;
+    }
+
+    p {
+        font-size: 90%;
+    }
+
+    &__body {
+        grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+    }
+
+    &__topic {
+        display: flex;
+        font-size: 12px;
+        // min-height: 1rem;
+        // margin: 0 auto;
+        border: 1px solid;
+        border-radius: 5px;
+        // padding-bottom: 5px;
+        // background-color: chocolate
+    }
+
+    .sh1 {
+        // grid-area: 1 / 1 / span 1 / span 2;
+        width: 100%;
+        text-align: center;
+        font-size: 150%;
+        padding-bottom: 5px;
+        // border: 1px solid red;
+    }
 }
 
 @keyframes speecht {
@@ -158,7 +210,7 @@
     }
 
     99% {
-        color:$secondary-color;
+        color: $secondary-color;
     }
 
     100% {
@@ -169,8 +221,3 @@
         margin-top: 0em;
     }
 }
-
-.sh1 {
-    text-align: center;
-}
-

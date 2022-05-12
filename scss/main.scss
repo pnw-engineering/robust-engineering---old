@@ -10,14 +10,14 @@
   display: grid;
   grid-template-columns: 40px 75vw 1fr;
   border-bottom: 1px solid $text-color;
-  position: sticky;
+  // position: sticky;
   // padding: 1em;
-  overflow: hidden;
+  // overflow: hidden;
   color: $text-color;
   font-size: 24px;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   // background-color: aqua;
-
+  
   &__title {
     grid-area: 1 / 2;
     font-size: 90%;
@@ -25,7 +25,7 @@
     margin: auto;
     // background-color: aqua;
   }
-
+  
   &__subtitle {
     grid-area: 2 / 2;
     padding-top: 2px;
@@ -34,11 +34,13 @@
     padding-left: 2rem;
     text-align: center;
     font-size: 40%;
+    letter-spacing: 1px;
     // background-color:aqua;
   }
 
   &__image {
-    grid-area: 2 / 1 / span 1 / span 1;
+    // grid-area: 2 / 1 / span 1 / span 1;
+    grid-area: 2 / 1;
     width: 100%;
     max-height: 100%;
     // padding-top: 2rem;
@@ -48,11 +50,12 @@
 
 .body {
   font-family: "Roboto", sans-serif;
-  // font-family: 'Montserrat', sans-serif;
-  // font-family: 'Montserrat';;
   background-color: $primary-color;
   color: $text-color;
   // background-color: dodgerblue;
+  height: 100vh;
+  // position: sticky;
+  // overflow: hidden;
 
   main {
     h1 {
@@ -68,40 +71,45 @@
 
 .column_layout {
   // font-size: 100%;
-  line-height: 1.25;
   display: grid;
+  line-height: 1.25;
   grid-template-columns: 0 1fr;
   // background-color: dodgerblue;
   
   .mainbody {
-    display: flexbox;
+    // display: grid;
     grid-area: 1 / 2;
+    // max-height:70%
     // max-width: 95%;
     margin: 0 auto;
     // border: 1px solid red;
+    // background-color: dodgerblue;
+    h1{
+      font-size: 180%;
+    }
   }
-  
+
   details {
     font-size: 120%;
     margin-left: 2em;
     cursor: pointer;
     // background-color:cadetblue;
-    
+
     summary {
       // margin-left:1em;
       font-size: 140%
     }
   }
-  
+
   .intro {
     font-size: 120%;
-    
+
     a {
       // color: complement($text-color);
       color: red;
     }
   }
-  
+
   .disclaimer {
     color: rgb(242, 245, 88);
     font-size: 120%;
