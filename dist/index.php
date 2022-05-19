@@ -15,24 +15,27 @@
 </head>
 
 <body class="body">
-
-    <header class="header">
-        <div class="header__title">
+    <?php echo "Hello World" ?>
+    <?php include("dist/header.html") ?>
+    
+    <!-- <header class="header"> -->
+        <!-- <div class="header__title">
             <span class="menu-btn" onclick="toggleNav()">&#9776</span>
             --- Robust Engineering ---
         </div>
         <div class="header__subtitle">
             Using Science, Statistics, and Critical Thinking to improve product design
             robustness
-        </div>
-    </header>
-
-
+        </div> -->
+    <!-- </header> -->
+    
+    
     <main id="myColumnLayout" class="column_layout">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="index.html">Home</a>
             <a href="tools.html">Tools</a>
+            <?php echo "Hello World" ?>
             <a href="Glossary.html">Glossary</a>
             <a href="#">???</a>
         </div>
@@ -88,14 +91,7 @@
             </details>
         </div>
 
-        <!-- <button class="getstarted" onclick="window.location.href='start.html'">GO!</button> -->
-        <button class="pushable" onclick="window.location.href='start.html'">
-            <span class="shadow"></span>
-            <span class="edge"></span>
-            <span class="front">
-                Go
-            </span>
-        </button>
+        <button class="getstarted" onclick="window.location.href='start.html'">GO!</button>
     </main>
 </body>
 

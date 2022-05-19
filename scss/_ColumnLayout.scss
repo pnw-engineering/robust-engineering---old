@@ -1,0 +1,21 @@
+.ColumnContainer {
+    // grid-area: 1 /2;
+    display: grid;
+    grid-template-columns: 1fr 65ch 1fr;
+    background-color: cornflowerblue;
+
+    h1 {
+        font-size: 2rem;
+        background-color: cornflowerblue;
+    }
+
+    atricle {
+        font-size: 1.25rem;
+        background-color: cornflowerblue;
+
+        p {
+            font-size: 1.25rem;
+            background-color: cornflowerblue;
+        }
+    }
+}

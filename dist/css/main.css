@@ -159,7 +159,7 @@ body__item__heading {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #1d3857;
+  background: #122030;
   list-style-type: none;
 }
 .nav .menu-nav__item {
@@ -269,9 +269,8 @@ body__item__heading {
 .topic {
   height: 10vh;
   margin: auto;
-  background-color: #4282a7;
   border: 1px solid black;
-  box-shadow: 7px 7px #172c44;
+  box-shadow: 7px 7px #0b141d;
   cursor: pointer;
   display: grid;
   grid-template-columns: 85% 15%;
@@ -283,26 +282,29 @@ body__item__heading {
   padding-top: 5px;
   padding-left: 1em;
   padding-right: 1em;
-  font-size: 125%;
+  font-size: 200%;
   font-variant: small-caps;
 }
 .topic__soundbite {
   grid-area: 2, 1, 1, 1;
   min-height: 2rem;
+  font-size: 100%;
   padding-bottom: 5px;
   padding-left: 1.5em;
   padding-right: 5px;
 }
 .topic__img-box {
   grid-area: 1/2/span 2/span 1;
+  z-index: 3;
   background-color: rgb(255, 255, 255);
 }
 .topic__img {
   width: 100%;
   max-height: 100%;
+  z-index: 1;
 }
 .topic:hover {
-  background-color: rgb(32, 75, 184);
+  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
   transition: all 0.25s ease-in-out;
 }
 
@@ -349,8 +351,6 @@ body__item__heading {
   margin: 0 auto;
   font-size: 12px;
   width: 100%;
-  border: 1px solid;
-  background-color: #4282a7;
   -webkit-animation-duration: 0.2s;
           animation-duration: 0.2s;
   -webkit-animation-name: speecht;
@@ -358,7 +358,7 @@ body__item__heading {
 }
 .speech#st {
   border: none;
-  background-color: #1d3857;
+  background-color: #122030;
 }
 .speech__title {
   font-size: 150%;
@@ -422,6 +422,26 @@ body__item__heading {
     margin-top: 0em;
   }
 }
+.end-button {
+  position: absolute;
+  grid-area: 2/2;
+  -moz-column-span: all;
+       column-span: all;
+  bottom: 10px;
+  height: 10vh;
+  width: 10vh;
+  background-color: #82b2cd;
+  margin: 0 auto;
+  color: white;
+  border: 2px solid #d2dfee;
+  font-size: 2em;
+  border-radius: 50%;
+}
+.end-button:hover {
+  background-color: #4282a7;
+  transition: all 0.3s ease-in-out;
+}
+
 @media screen and (min-width: 768px) {
   * {
     font-size: 1vw;
@@ -483,28 +503,37 @@ body__item__heading {
   }
 }
 .header {
-  display: grid;
-  grid-template-columns: 40px 75vw 1fr;
+  display: flexbox;
+  height: 15vh;
+  width: 100vw;
+  padding-right: 5vw;
   border-bottom: 1px solid #f4f2e9;
+  position: fixed;
+  z-index: 2;
+  margin-bottom: 5vw;
   color: #f4f2e9;
   font-size: 24px;
   letter-spacing: 5px;
+  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
 }
 .header__title {
-  grid-area: 1/2;
-  font-size: 90%;
+  display: inline-block;
+  font-size: 100%;
+  text-align: center;
   font-variant: small-caps;
-  margin: auto;
+  margin-right: 4vw;
 }
 .header__subtitle {
-  grid-area: 2/2;
-  padding-top: 2px;
-  padding-bottom: 5px;
-  margin: auto;
-  padding-left: 2rem;
+  display: flex;
+  margin-left: 3em;
   text-align: center;
-  font-size: 40%;
+  font-size: 60%;
   letter-spacing: 1px;
+}
+.header .menu-btn {
+  width: 3em;
+  font-size: 30px;
+  cursor: pointer;
 }
 .header__image {
   grid-area: 2/1;
@@ -514,7 +543,7 @@ body__item__heading {
 
 .body {
   font-family: "Roboto", sans-serif;
-  background-color: #1d3857;
+  background-color: #122030;
   color: #f4f2e9;
   height: 100vh;
 }
@@ -529,6 +558,7 @@ body__item__heading {
   display: grid;
   line-height: 1.25;
   grid-template-columns: 0 1fr;
+  padding-top: 17vh;
 }
 .column_layout .mainbody {
   grid-area: 1/2;
@@ -557,21 +587,28 @@ body__item__heading {
 }
 .column_layout .getstarted {
   position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  grid-area: 2/2;
   bottom: 10px;
-  background-color: #f16581;
-  margin-left: 15em;
+  height: 10vh;
+  width: 10vh;
+  background-color: #82b2cd;
+  margin: 0 auto;
   color: white;
-  font-size: 1.1em;
+  border: 2px solid #d2dfee;
+  font-size: 3em;
+  border-radius: 50%;
 }
 .column_layout .getstarted:hover {
-  background-color: crimson;
+  background-color: #4282a7;
   transition: all 0.3s ease-in-out;
 }
 
 .main {
   width: 100%;
   margin: auto;
-  background-color: #1d3857;
+  background-color: #122030;
 }
 
 h2,
@@ -618,4 +655,83 @@ p {
   font-size: larger;
   font-style: italic;
   color: rgb(159, 183, 235);
+}
+
+.pushable {
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  grid-area: 2/2;
+  bottom: 10px;
+  margin: 0 auto;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsla(240deg, 0%, 0%, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left, hsl(225deg, 50%, 5%) 0%, hsl(225deg, 50%, 16%) 8%, hsl(225deg, 50%, 16%) 92%, hsl(225deg, 50%, 5%) 100%);
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: white;
+  background: hsl(225deg, 50%, 25%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
 }/*# sourceMappingURL=main.css.map */

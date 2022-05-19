@@ -35,7 +35,7 @@
 .topic {
     height: 10vh;
     margin: auto;
-    background-color: $secondary-color;
+    // background-color: $secondary-color;
     // background-color: darkmagenta;
     border: 1px solid black;
     box-shadow: 7px 7px darken($primary-color, 5);
@@ -51,7 +51,7 @@
         padding-top: 5px;
         padding-left: 1em;
         padding-right: 1em;
-        font-size: 125%;
+        font-size: 200%;
         font-variant: small-caps;
         // background-color: chocolate;
     }
@@ -59,6 +59,7 @@
     &__soundbite {
         grid-area: 2, 1, 1, 1;
         min-height: 2rem;
+        font-size: 100%;
         padding-bottom: 5px;
         padding-left: 1.5em;
         padding-right: 5px;
@@ -67,6 +68,8 @@
 
     &__img-box {
         grid-area: 1 / 2 / span 2 / span 1;
+        z-index: 3;
+        ;
         background-color: rgb(255, 255, 255);
         // background-color: rgb(212, 30, 30);
     }
@@ -74,11 +77,21 @@
     &__img {
         width: 100%;
         max-height: 100%;
+        z-index: 1;
+        ;
         // background-color: rgb(255, 255, 255);
     }
 
     &:hover {
-        background-color: rgb(32, 75, 184);
+        background-image: linear-gradient(55deg,
+                hsl(240deg 36% 17%) 0%,
+                hsl(251deg 41% 20%) 21%,
+                hsl(263deg 45% 24%) 37%,
+                hsl(275deg 50% 26%) 50%,
+                hsl(287deg 57% 27%) 61%,
+                hsl(298deg 68% 28%) 75%,
+                hsl(306deg 100% 27%) 100%);
+        // background-color: lighten($primary-color, 10);
         // height: 24vh;
         transition: all .25s ease-in-out;
     }
@@ -146,9 +159,9 @@
     margin: 0 auto;
     font-size: 12px;
     width: 100%;
-    border: 1px solid;
+    // border: 1px solid;
     // height: 85%;
-    background-color: $secondary-color;
+    // background-color: $secondary-color;
     // transition: all 3s ease-in-out;
     animation-duration: .2s;
     animation-name: speecht;
@@ -160,8 +173,10 @@
     // column-count: 2;;
     &#st {
         border: none;
-        background-color: $primary-color;;
+        background-color: $primary-color;
+        ;
     }
+
     &__title {
         font-size: 150%;
         margin: .5em;
@@ -219,5 +234,28 @@
         width: 100%;
         height: 84vh;
         margin-top: 0em;
+    }
+}
+
+.end-button {
+    position: absolute;
+    // position: sticky;
+    grid-area: 2 / 2;
+    column-span: all;
+    bottom: 10px;
+    height: 10vh;
+    width: 10vh;
+    background-color: lighten($secondary-color, 20);
+    // display: block;
+    margin: 0 auto;
+    // width: 200px;
+    color: white;
+    border: 2px solid lighten($primary-color, 75);
+    font-size: 2em;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: $secondary-color;
+        @include transition-ease;
     }
 }

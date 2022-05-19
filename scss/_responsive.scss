@@ -2,7 +2,11 @@
   * {
     font-size: 1.0vw;
   }
-
+  
+  // .ColumnContainer {
+  //   grid-template-columns: repeat(3 35ch);
+  // }
+  
   .column_layout {
 
     .mainbody {
@@ -10,6 +14,7 @@
       margin: 0 auto;
       // background-color: dodgerblue;
     }
+
 
     ;
     // line-height: 1.25;
