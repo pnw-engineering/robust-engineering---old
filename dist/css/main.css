@@ -295,7 +295,6 @@ body__item__heading {
 }
 .topic__img-box {
   grid-area: 1/2/span 2/span 1;
-  z-index: 3;
   background-color: rgb(255, 255, 255);
 }
 .topic__img {
