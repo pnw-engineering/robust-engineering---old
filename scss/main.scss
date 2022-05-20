@@ -11,9 +11,9 @@
   // display: grid;
   display: flexbox;
   min-height: 6rem;
-  width: 100vw;
+  width: 100%;
   // grid-template-columns: 10vw 90vw;
-  padding-right: 5vw;
+  // padding-right: 5vw;
   border-bottom: 1px solid $text-color;
   position: fixed;
   z-index: 2;
@@ -22,7 +22,7 @@
   // overflow: hidden;
   color: $text-color;
   font-size: 24px;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   background-image: linear-gradient(55deg,
       hsl(240deg 36% 17%) 0%,
       hsl(251deg 41% 20%) 21%,
@@ -34,22 +34,18 @@
   // background-color: $primary-color;
 
   &__title {
-    // grid-area: 1 / 2;
     display: inline-block;
-    // float: right;
-    font-size: 100%;
-    // text-align: center;
+    font-size: 90%;
+    font-weight: bold;
     font-variant: small-caps;
     margin-left: 1rem;
     // background-color: aqua;
   }
 
   &__subtitle {
-    // grid-area: 2 / 2;
     display: flex;
     // margin-right: 4vw;
     margin-left: 3em;
-    ;
     text-align: center;
     font-size: 60%;
     letter-spacing: 1px;
