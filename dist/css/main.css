@@ -559,7 +559,7 @@ body__item__heading {
 }
 .header {
   display: flexbox;
-  height: 15vh;
+  height: 6rem;
   width: 100vw;
   padding-right: 5vw;
   border-bottom: 1px solid #f4f2e9;
