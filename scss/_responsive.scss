@@ -3,9 +3,13 @@
     font-size: 1.0vw;
   }
   
-  // .ColumnContainer {
-  //   grid-template-columns: repeat(3 35ch);
-  // }
+  .ColumnContainer {
+    // grid-template-columns: repeat(auto-fit, MIN(65ch, 1fr));
+    column-count:3;
+    article{
+      font-size: .75em;
+    }
+  }
   
   .column_layout {
 
@@ -15,9 +19,6 @@
       // background-color: dodgerblue;
     }
 
-
-    ;
-    // line-height: 1.25;
 
     details {
       font-size: .6em;

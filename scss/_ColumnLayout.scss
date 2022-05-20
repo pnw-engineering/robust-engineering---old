@@ -1,21 +1,63 @@
 .ColumnContainer {
-    // grid-area: 1 /2;
-    display: grid;
-    grid-template-columns: 1fr 65ch 1fr;
-    background-color: cornflowerblue;
-
-    h1 {
-        font-size: 2rem;
-        background-color: cornflowerblue;
+    width: 100%;
+    height: 80vh;
+    // display: grid;
+    // grid-template-columns: MIN(65ch, 100%);
+    // column-count: 1;
+    columns: 65ch, 3;
+    column-fill: auto;
+    column-gap: 5px;
+    // background-color: cornflowerblue;
+    .box {
+        display: block;
+        // border: solid 1px;
+        // background-color: cornflowerblue;
     }
 
-    atricle {
-        font-size: 1.25rem;
-        background-color: cornflowerblue;
+    h1 {
+        
+        position: relative;
+        top: 0;
+        padding-left: 5rem;
+        display: inline-block;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        padding-bottom: 10px;
+        // background-color: cornflowerblue;
+    }
+
+    article {
+        grid-column: 1;
+        width:100%;
+        font-size: .5rem;
+        padding-bottom: 5px;
+        text-justify: center;
+        // border: 1px solid;
+        // background-color: cornflowerblue;
 
         p {
-            font-size: 1.25rem;
-            background-color: cornflowerblue;
+            font-size: 1.55rem;
+            // background-color: cornflowerblue;
+        }
+
+        dfn {
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            ;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                font-size: 1rem;
+                // background-color: cornflowerblue;
+                details{
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 }

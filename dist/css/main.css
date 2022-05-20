@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-size: 2.2vw;
+  font-size: 16px;
 }
 
 * {
@@ -245,7 +245,7 @@ body__item__heading {
 .grid-body {
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   grid-gap: 10px;
   margin: 0 auto;
 }
@@ -255,7 +255,7 @@ body__item__heading {
 }
 .grid-item__title {
   width: 100%;
-  font-size: 200%;
+  font-size: 1.5rem;
   font-weight: bold;
   font-variant: small-caps;
   padding-bottom: 2px;
@@ -263,12 +263,12 @@ body__item__heading {
   margin: 1em;
 }
 .grid-item p {
-  font-size: 120%;
+  font-size: 1.2rem;
 }
 
 .topic {
   height: 10vh;
-  margin: auto;
+  margin: 0 auto;
   border: 1px solid black;
   box-shadow: 7px 7px #0b141d;
   cursor: pointer;
@@ -282,13 +282,13 @@ body__item__heading {
   padding-top: 5px;
   padding-left: 1em;
   padding-right: 1em;
-  font-size: 200%;
+  font-size: 1.5rem;
   font-variant: small-caps;
 }
 .topic__soundbite {
   grid-area: 2, 1, 1, 1;
   min-height: 2rem;
-  font-size: 100%;
+  font-size: 1rem;
   padding-bottom: 5px;
   padding-left: 1.5em;
   padding-right: 5px;
@@ -442,9 +442,65 @@ body__item__heading {
   transition: all 0.3s ease-in-out;
 }
 
+.ColumnContainer {
+  width: 100%;
+  height: 80vh;
+  -moz-columns: 65ch, 3;
+       columns: 65ch, 3;
+  -moz-column-fill: auto;
+       column-fill: auto;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.ColumnContainer .box {
+  display: block;
+}
+.ColumnContainer h1 {
+  position: relative;
+  top: 0;
+  padding-left: 5rem;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.ColumnContainer article {
+  grid-column: 1;
+  width: 100%;
+  font-size: 0.5rem;
+  padding-bottom: 5px;
+  text-justify: center;
+}
+.ColumnContainer article p {
+  font-size: 1.55rem;
+}
+.ColumnContainer article dfn {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.ColumnContainer article ul {
+  list-style: none;
+}
+.ColumnContainer article ul li {
+  font-size: 1rem;
+}
+.ColumnContainer article ul li details {
+  font-size: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
   * {
     font-size: 1vw;
+  }
+
+  .ColumnContainer {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+  .ColumnContainer article {
+    font-size: 0.75em;
   }
 
   .column_layout .mainbody {
@@ -555,6 +611,7 @@ body__item__heading {
 }
 
 .column_layout {
+  font-size: 0.5rem;
   display: grid;
   line-height: 1.25;
   grid-template-columns: 0 1fr;
@@ -568,22 +625,22 @@ body__item__heading {
   font-size: 180%;
 }
 .column_layout details {
-  font-size: 120%;
+  font-size: 1rem;
   margin-left: 2em;
   cursor: pointer;
 }
 .column_layout details summary {
-  font-size: 140%;
+  font-size: 1.25rem;
 }
 .column_layout .intro {
-  font-size: 120%;
+  font-size: 1rem;
 }
 .column_layout .intro a {
   color: red;
 }
 .column_layout .disclaimer {
   color: rgb(242, 245, 88);
-  font-size: 120%;
+  font-size: 1rem;
 }
 .column_layout .getstarted {
   position: absolute;
@@ -597,7 +654,7 @@ body__item__heading {
   margin: 0 auto;
   color: white;
   border: 2px solid #d2dfee;
-  font-size: 3em;
+  font-size: 3rem;
   border-radius: 50%;
 }
 .column_layout .getstarted:hover {
@@ -666,7 +723,6 @@ p {
   margin: 0 auto;
   border: none;
   background: transparent;
-  padding: 0;
   cursor: pointer;
   outline-offset: 4px;
   transition: filter 250ms;

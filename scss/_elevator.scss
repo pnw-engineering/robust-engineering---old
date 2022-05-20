@@ -2,7 +2,7 @@
     width: 90%;
     // height:100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
     grid-gap: 10px;
     // font-size: 1rem;
     margin: 0 auto;
@@ -16,7 +16,7 @@
 
     &__title {
         width: 100%;
-        font-size: 200%;
+        font-size: 1.5rem;
         font-weight: bold;
         font-variant: small-caps;
         padding-bottom: 2px;
@@ -28,13 +28,13 @@
     }
 
     p {
-        font-size: 120%;
+        font-size: 1.2rem;
     }
 }
 
 .topic {
     height: 10vh;
-    margin: auto;
+    margin: 0 auto;
     // background-color: $secondary-color;
     // background-color: darkmagenta;
     border: 1px solid black;
@@ -51,7 +51,7 @@
         padding-top: 5px;
         padding-left: 1em;
         padding-right: 1em;
-        font-size: 200%;
+        font-size: 1.5rem;
         font-variant: small-caps;
         // background-color: chocolate;
     }
@@ -59,7 +59,7 @@
     &__soundbite {
         grid-area: 2, 1, 1, 1;
         min-height: 2rem;
-        font-size: 100%;
+        font-size: 1rem;
         padding-bottom: 5px;
         padding-left: 1.5em;
         padding-right: 5px;
