@@ -559,7 +559,7 @@ body__item__heading {
 }
 .header {
   display: flexbox;
-  height: 6rem;
+  min-height: 6rem;
   width: 100vw;
   padding-right: 5vw;
   border-bottom: 1px solid #f4f2e9;
@@ -574,9 +574,8 @@ body__item__heading {
 .header__title {
   display: inline-block;
   font-size: 100%;
-  text-align: center;
   font-variant: small-caps;
-  margin-right: 4vw;
+  margin-left: 1rem;
 }
 .header__subtitle {
   display: flex;
@@ -586,6 +585,7 @@ body__item__heading {
   letter-spacing: 1px;
 }
 .header .menu-btn {
+  display: inline-block;
   width: 3em;
   font-size: 30px;
   cursor: pointer;

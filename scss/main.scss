@@ -10,7 +10,7 @@
 .header {
   // display: grid;
   display: flexbox;
-  height: 6rem;
+  min-height: 6rem;
   width: 100vw;
   // grid-template-columns: 10vw 90vw;
   padding-right: 5vw;
@@ -36,11 +36,11 @@
   &__title {
     // grid-area: 1 / 2;
     display: inline-block;
-    // align-self: right;
+    // float: right;
     font-size: 100%;
-    text-align: center;
+    // text-align: center;
     font-variant: small-caps;
-    margin-right: 4vw;
+    margin-left: 1rem;
     // background-color: aqua;
   }
 
@@ -57,7 +57,7 @@
   }
 
   .menu-btn {
-    // display: inline-block;
+    display: inline-block;
     // align-self: left;
     // position: relative;
     width: 3em;
