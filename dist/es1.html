@@ -1,33 +1,31 @@
 <!-- <div class="speech" id="sp1"> -->
 <div class="ColumnContainer">
-    <h1>--- Test For Success ---</h1>
+    <div class="ColumnContainer__heading">--- Test For Success ---</div>
     <article>
-        <p>Understanding requirements is essential to robust design, so
+        <p class="DropCap">Understanding requirements is essential to robust design, so
             be sure requirements are "SMART":</p>
-        <div class="box">
-            <p><dfn>Specific</dfn> - and clearly stated</p>
-            <p><dfn>Measurable</dfn> - including units of measure</p>
-            <p><dfn>Achievable</dfn> - otherwise its a waste of effort</p>
-            <p><dfn>Relevant</dfn> - must reflect what customers want</p>
-            <p><dfn>Time-Bound</dfn> - achievable within project timeframe</p>
-        </div>
+        <p><dfn>Specific</dfn> - and clearly stated</p>
+        <p><dfn>Measurable</dfn> - including units of measure</p>
+        <p><dfn>Achievable</dfn> - otherwise its a waste of effort</p>
+        <p><dfn>Relevant</dfn> - must reflect what customers want</p>
+        <p><dfn>Time-Bound</dfn> - achievable within project timeframe</p>
     </article>
     <article>
-        <p>Once requirements are understood, the methods for verification shoud be defined.
+        <p class="DropCap">Once requirements are understood, the methods for verification shoud be defined.
             These methods must include specific test procedures to be used,
             the units of measure, and the acceptance criteria.
         </p>
     </article>
     <article>
-        <p>There are several categories of testing done in product development.</p>
+        <p class="DropCap">There are several categories of testing done in product development.</p>
         <ul>
             <li>
                 <details>
                     <summary>Development Testing</summary>
-                    Testing done to understand the limits of the design space. To maximize information obtained
-                    tests should be designed so that limits are reached about half the time. This way, design
+                    Testing done to understand the limits of the design space. Tests should be designed so that limits
+                    are reached about half the time to maximize information obtained. This way, design
                     constraints are best defined. Sample sizes and test counts need to provide a good statistical basis
-                    for
+                    for drawing conclusions.
                 </details>
             </li>
             <li>
@@ -35,6 +33,13 @@
                     <summary>Verification Testing</summary>
                     Testing done to verify that functional requiremenst are met. Test failures at this point should be
                     rare and carefully evaluated if they occur.
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Reliability Testing</summary>
+                    Testing done to determine and/or verify expected product life. Testing must be done to failue to be
+                    sure that product strengths are well understood.
                 </details>
             </li>
         </ul>

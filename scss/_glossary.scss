@@ -10,20 +10,28 @@
 }
 
 .GridElement {
-    display: flex;
+    // display: flex;
     // font-size: 100%;
     // background-color: dodgerblue;
-    
+
     p {
         font-size: 1rem;
         // border: 1px solid red;
     }
-    
-    summary { 
+
+    summary {
         font-size: 150%;
         padding-bottom: 5px;
         border-bottom: 1px solid;
         // background-color: dodgerblue;
+        background-image: linear-gradient(55deg,
+                hsl(240deg 36% 17%) 0%,
+                hsl(251deg 41% 20%) 21%,
+                hsl(263deg 45% 24%) 37%,
+                hsl(275deg 50% 26%) 50%,
+                hsl(287deg 57% 27%) 61%,
+                hsl(298deg 68% 28%) 75%,
+                hsl(306deg 100% 27%) 100%);
     }
 
     // dl{

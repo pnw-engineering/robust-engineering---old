@@ -33,7 +33,7 @@
 }
 
 .topic {
-    height: 10vh;
+    min-height: 10vh;
     margin: 0 auto;
     // background-color: $secondary-color;
     // background-color: darkmagenta;
@@ -68,16 +68,15 @@
 
     &__img-box {
         grid-area: 1 / 2 / span 2 / span 1;
-        background-color: rgb(255, 255, 255);
+        height: 100%;
+        // background-color: rgb(255, 255, 255);
         // background-color: rgb(212, 30, 30);
     }
 
     &__img {
         width: 100%;
         max-height: 100%;
-        z-index: 1;
-        ;
-        // background-color: rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
     }
 
     &:hover {
