@@ -69,7 +69,7 @@ function toggleNav() {
 }
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "8em";
+  document.getElementById("mySidenav").style.width = "8rem";
   document.getElementById("myColumnLayout").style.gridTemplateColumns =
     "8em 1fr";
 }

@@ -118,27 +118,27 @@ body__item__heading {
   grid-area: 1/1;
   height: 100vh;
   width: 0;
-  position: absoliute;
+  position: relative;
   z-index: 2;
   top: 0;
   left: 0;
-  background-color: #4282a7;
+  background: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
   overflow-x: hidden;
   transition: 0.25s;
   text-align: center;
 }
 
 .sidenav a {
+  color: white;
   padding: 2px 2px 1px 2px;
   text-decoration: none;
   font-size: 16px;
-  color: #3f3f3f;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: white;
+  color: #3f3f3f;
 }
 
 .sidenav .closebtn {
@@ -213,26 +213,39 @@ body__item__heading {
 }
 
 .GridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
-  grid-gap: 50px;
-  padding-top: 20px;
+  -moz-columns: 65ch, 3;
+       columns: 65ch, 3;
+  -moz-column-fill: auto;
+       column-fill: auto;
+  padding-top: 5px;
   margin: 0 auto;
 }
 
+.GridElement {
+  display: flex;
+  padding-top: 10px;
+  min-height: 1rem;
+}
 .GridElement p {
   font-size: 1rem;
 }
-.GridElement summary {
+.GridElement__details {
+  min-height: 1rem;
+}
+.GridElement__details summary {
   font-size: 150%;
   padding-bottom: 5px;
   border-bottom: 1px solid;
-  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
+  background-image: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
+}
+.GridElement dl {
+  padding-top: 10px;
 }
 .GridElement dt {
   font-size: 130%;
   font-weight: bold;
   padding-bottom: 1px;
+  padding-top: 1px;
 }
 .GridElement dd {
   font-size: 110%;
@@ -243,7 +256,7 @@ body__item__heading {
 .grid-body {
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  grid-template-columns: repeat(auto-fit, min(65ch, 95%));
   grid-gap: 10px;
   margin: 0 auto;
 }
@@ -301,7 +314,7 @@ body__item__heading {
   background-color: rgb(255, 255, 255);
 }
 .topic:hover {
-  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
+  background-image: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
   transition: all 0.25s ease-in-out;
 }
 
@@ -461,7 +474,7 @@ body__item__heading {
   font-size: 1.5rem;
   font-variant: small-caps;
   font-weight: bold;
-  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
+  background-image: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
 }
 .ColumnContainer article {
   grid-column: 1;
@@ -478,10 +491,13 @@ body__item__heading {
   text-justify: center;
 }
 .ColumnContainer article p dfn {
-  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
+  background-image: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
 }
 .ColumnContainer article ul {
   list-style: none;
+}
+.ColumnContainer article ul li {
+  font-size: 100%;
 }
 .ColumnContainer article ul li details {
   display: block;
@@ -492,7 +508,7 @@ body__item__heading {
 }
 .ColumnContainer article ul li details summary {
   padding-bottom: 5px;
-  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
+  background-image: gradient1;
 }
 
 @media screen and (min-width: 768px) {
@@ -500,10 +516,10 @@ body__item__heading {
     font-size: 1vw;
   }
 
-  .ColumnContainer {
-    -moz-column-count: 3;
-         column-count: 3;
+  .sidenav {
+    width: 8rem;
   }
+
   .ColumnContainer article {
     font-size: 1rem;
   }
@@ -513,10 +529,10 @@ body__item__heading {
     margin: 0 auto;
   }
   .column_layout details {
-    font-size: 0.6em;
+    font-size: 1.2rem;
   }
   .column_layout details summary {
-    font-size: 0.6em;
+    font-size: 1.2rem;
   }
   .column_layout .intro {
     font-size: 50%;
@@ -574,7 +590,7 @@ body__item__heading {
   color: #f4f2e9;
   font-size: 16px;
   letter-spacing: 4px;
-  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
+  background-image: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
 }
 .header__title {
   display: inline-block;
@@ -628,16 +644,16 @@ body__item__heading {
 .column_layout .mainbody h1 {
   font-size: 180%;
 }
-.column_layout .mainbody details {
+.column_layout .mainbody > details {
   font-size: 1rem;
   margin-left: 2em;
   cursor: pointer;
   width: min(80ch, 90%);
   margin: 0 auto;
 }
-.column_layout .mainbody details summary {
+.column_layout .mainbody > details > summary {
   font-size: 1.25rem;
-  background-image: linear-gradient(55deg, hsl(240deg, 36%, 17%) 0%, hsl(251deg, 41%, 20%) 21%, hsl(263deg, 45%, 24%) 37%, hsl(275deg, 50%, 26%) 50%, hsl(287deg, 57%, 27%) 61%, hsl(298deg, 68%, 28%) 75%, hsl(306deg, 100%, 27%) 100%);
+  background-image: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
 }
 .column_layout .intro {
   font-size: 1rem;
@@ -732,7 +748,7 @@ p {
   position: -webkit-sticky;
   position: sticky;
   grid-area: 2/2;
-  bottom: 10px;
+  bottom: 15px;
   margin: 0 auto;
   border: none;
   background: transparent;
@@ -748,7 +764,7 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  background: hsla(240deg, 0%, 0%, 0.25);
+  background-color: rgb(25, 13, 34);
   will-change: transform;
   transform: translateY(2px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
@@ -771,7 +787,7 @@ p {
   border-radius: 12px;
   font-size: 1.25rem;
   color: white;
-  background: hsl(225deg, 50%, 25%);
+  background-color: rgba(79, 30, 117, 0.976);
   will-change: transform;
   transform: translateY(-4px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);

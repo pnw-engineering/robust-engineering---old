@@ -23,14 +23,7 @@
   color: $text-color;
   font-size: 16px;
   letter-spacing: 4px;
-  background-image: linear-gradient(55deg,
-      hsl(240deg 36% 17%) 0%,
-      hsl(251deg 41% 20%) 21%,
-      hsl(263deg 45% 24%) 37%,
-      hsl(275deg 50% 26%) 50%,
-      hsl(287deg 57% 27%) 61%,
-      hsl(298deg 68% 28%) 75%,
-      hsl(306deg 100% 27%) 100%);
+  background-image: $gradient1;
   // background-color: $primary-color;
 
   &__title {
@@ -112,7 +105,7 @@
       font-size: 180%;
       // background-color: dodgerblue;
     }
-    details {
+    > details {
       font-size: 1rem;
       margin-left: 2em;
       cursor: pointer;
@@ -120,16 +113,9 @@
       margin: 0 auto;
       // background-color: cadetblue;
   
-      summary {
+      > summary {
         font-size: 1.25rem;
-        background-image: linear-gradient(55deg,
-        hsl(240deg 36% 17%) 0%,
-        hsl(251deg 41% 20%) 21%,
-        hsl(263deg 45% 24%) 37%,
-        hsl(275deg 50% 26%) 50%,
-        hsl(287deg 57% 27%) 61%,
-        hsl(298deg 68% 28%) 75%,
-        hsl(306deg 100% 27%) 100%);
+        background-image: $gradient1;
         }
   }
 
@@ -250,7 +236,7 @@ p {
   position: relative;
   position: sticky;
   grid-area: 2 / 2;
-  bottom: 10px;
+  bottom: 15px;
   // height: 10vh;
   // width: 10vh;
   margin: 0 auto;
@@ -270,7 +256,7 @@ p {
   height: 100%;
   border-radius: 12px;
   // background: hsl(0deg 0% 0% / 0.25);
-  background: hsl(240deg 0% 0% / 0.25);
+  background-color: rgb(25, 13, 34);
   will-change: transform;
   transform: translateY(2px);
   transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
@@ -299,7 +285,8 @@ p {
   font-size: 1.25rem;
   color: white;
   // background: hsl(345deg 100% 47%);
-  background: hsl(225deg 50% 25%);
+  // background: hsl(225deg 50% 25%);
+  background-color: rgba(79, 30, 117, 0.976);
   will-change: transform;
   transform: translateY(-4px);
   transition:

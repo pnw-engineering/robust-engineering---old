@@ -2,15 +2,19 @@
   * {
     font-size: 1.0vw;
   }
-  
+
+  .sidenav{
+    width: 8rem;
+  }
   .ColumnContainer {
     // grid-template-columns: repeat(auto-fit, MIN(65ch, 1fr));
-    column-count:3;
-    article{
+    // column-count: 3;
+
+    article {
       font-size: 1rem;
     }
   }
-  
+
   .column_layout {
 
     .mainbody {
@@ -21,11 +25,11 @@
 
 
     details {
-      font-size: .6em;
+      font-size: 1.2rem;
 
       summary {
         // margin-left:1em;
-        font-size: .6em;
+        font-size: 1.2rem;
       }
     }
 
@@ -64,8 +68,8 @@
 
   .grid-body {
     width: 100%;
-    grid-gap: 30px // grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-      // background-color: blue;
+    grid-gap: 30px;
+    // background-color: blue;
   }
 
   .grid-item {

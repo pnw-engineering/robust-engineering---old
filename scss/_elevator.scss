@@ -2,7 +2,7 @@
     width: 90%;
     // height:100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    grid-template-columns: repeat(auto-fit, min(65ch, 95%));
     grid-gap: 10px;
     // font-size: 1rem;
     margin: 0 auto;
@@ -80,14 +80,7 @@
     }
 
     &:hover {
-        background-image: linear-gradient(55deg,
-                hsl(240deg 36% 17%) 0%,
-                hsl(251deg 41% 20%) 21%,
-                hsl(263deg 45% 24%) 37%,
-                hsl(275deg 50% 26%) 50%,
-                hsl(287deg 57% 27%) 61%,
-                hsl(298deg 68% 28%) 75%,
-                hsl(306deg 100% 27%) 100%);
+        background-image: $gradient1;
         // background-color: lighten($primary-color, 10);
         // height: 24vh;
         transition: all .25s ease-in-out;
