@@ -1,24 +1,119 @@
-<div class="ColumnContainer">
-    <div class="ColumnContainer__heading">--- Manage Variation ---</div>
-    <article>
-        <p class="DropCap">Variation occurs in all natural processes and if not managed, can cause undesireable effects.
-            Statistical methods are available to understand the types and amount of variation that occurs. <span
-                class="highlight">Common Cause</span> variation is the variation naturally seen from the processes being
-            used. <span class="highlight">Special Cause</span> variation is variation caused by some unusual factor that
-            can generally be controlled and eliminated. <span class="highlight">Control Charts</span> are a common tool
-            for keeping processes within their design limits.
-        </p>
-        <p>A good summary of control charts can be found <a target="_blank"
-                href="https://en.wikipedia.org/wiki/Control_chart"> here </a></p>
-    </article>
-    <article>
-        <p class="DropCap">
-        </p>
-    </article>
-    <article>
-        <p class="DropCap"></p>
-    </article>
-    <span>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Robust Design</title>
+</head>
+
+<body class="site" id="mysite">
+
+    <header class="header">
+        <div class="header__bgr" onclick="toggleNav()">&#9776</div>
+        <div class="header__title">
+            Robust Engineering
+        </div>
+        <div class="header__subtitle">
+            Using Science, Statistics, and Critical Thinking to improve product design
+            robustness
+        </div>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="Glossary.html">Glossary</a>
+        <a href="layout_test.html">???</a>
+
+    </div>
+
+    <main id="myContent" class="content">
+
+        <div class="ColumnContainer">
+            <div class="ColumnContainer__heading">--- Manage Variation ---</div>
+            <article>
+                <p class="DropCap">Understanding requirements is essential to robust design, so
+                    be sure requirements are "SMART":</p>
+                <p><dfn>Specific</dfn> - and clearly stated</p>
+                <p><dfn>Measurable</dfn> - including units of measure</p>
+                <p><dfn>Achievable</dfn> - otherwise its a waste of effort</p>
+                <p><dfn>Relevant</dfn> - must reflect what customers want</p>
+                <p><dfn>Time-Bound</dfn> - achievable within project timeframe</p>
+            </article>
+            <article>
+                <p class="DropCap">Once requirements are understood, the methods for verification shoud be defined.
+                    These methods must include specific test procedures to be used,
+                    the units of measure, and the acceptance criteria.
+                </p>
+            </article>
+            <article>
+                <p class="DropCap">There are several categories of testing done in product development.</p>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>Development Testing</summary>
+                            Testing done to understand the limits of the design space. Tests should be designed so that
+                            limits
+                            are reached about half the time to maximize information obtained. This way, design
+                            constraints are best defined. Sample sizes and test counts need to provide a good
+                            statistical
+                            basis
+                            for drawing conclusions.
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Verification Testing</summary>
+                            Testing done to verify that functional requiremenst are met. Test failures at this point
+                            should
+                            be
+                            rare and carefully evaluated if they occur.
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Reliability Testing</summary>
+                            Testing done to determine and/or verify expected product life. Testing must be done to
+                            failue to
+                            be
+                            sure that product strengths are well understood.
+                        </details>
+                    </li>
+                </ul>
+            </article>
+        </div>
+        <div class="ColumnContainer">
+            <div class="ColumnContainer__heading">--- Manage Variation ---</div>
+            <article>
+                <p class="DropCap">Variation occurs in all natural processes and if not managed, can cause undesireable effects.
+                    Statistical methods are available to understand the types and amount of variation that occurs. <span
+                        class="highlight">Common Cause</span> variation is the variation naturally seen from the processes being
+                    used. <span class="highlight">Special Cause</span> variation is variation caused by some unusual factor that
+                    can generally be controlled and eliminated. <span class="highlight">Control Charts</span> are a common tool
+                    for keeping processes within their design limits.
+                </p>
+                <p>A good summary of control charts can be found <a target="_blank"
+                        href="https://en.wikipedia.org/wiki/Control_chart"> here </a></p>
+            </article>
+            <article>
+                <p class="DropCap">
+                </p>
+            </article>
+            <article>
+                <p class="DropCap"></p>
+            </article>
+
+    </main>
+    <footer class="foot">
         <button class="pushable" onclick="window.location.href='start.html'">
             <span class="shadow"></span>
             <span class="edge"></span>
@@ -26,6 +121,10 @@
                 Back
             </span>
         </button>
-    </span>
-</div>
-<!-- </div> -->
+        <span style="float:right">&copy; Copyright 2022</span>
+    </footer>
+
+</body>
+
+<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+<script src="js/main.js"></script>

@@ -1,83 +1,116 @@
-body {
-  width: 100%;
-  // padding-top: 10vh;
-  // overflow: hidden;
-  // align-items: center;
-  // text-align: center;
-  // background-color: beige;
-  // display: inline-block;
-
-  &__items {
-    // background-color: beige;
-    width: 80vw;
-    margin: 2rem auto 0 auto;
-    align-items: center;
-    text-align: center;
+.site {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2rem;
-  }
+    grid-template:
+        "hdr       hdr" 60px
+        "nav      content" calc(100vh - 120px) 
+        "foot     foot" 60px
+        /0 1fr;
+    background-color: $primary-color;
 
-  &__item {
-    // background-color: beige;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    padding-left: 1em;
-    padding-right: 1em;
+    .header {
+        grid-area: hdr;
+        position: fixed;
+        position: sticky;
+        display: grid;
+        grid-template:
+        "bgr title" 1fr
+        ".   subtitle" 1fr
+        /30px 1fr;
+        width: 100%;
+        line-height: 1;
+        color: $text-color;
+        background-image: $gradient1;
+        // border: 1px solid  rgb(200, 19, 19) 
+        // background-color: $primary-color;
+        &__bgr {
+            position: sticky;
+            grid-area: bgr;
+            width: 1rem;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        &__title {
+            grid-area: title;
+            font-size: 2rem;
+            font-weight: bold;
+            font-variant: small-caps;
+            text-align: center;
+            letter-spacing: 10px;
+            // background-color: aqua;
+        }
+
+        &__subtitle {
+            grid-area: subtitle;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1rem;
+            letter-spacing: 5px;
+            // background-color:aquamarine;
+        }
+    }
+
+    .sidenav {
+        grid-area: nav;
+        // border: 1px solid  rgb(200, 19, 19) 
+    }
+
+    ;
+
+    .content {
+        position: static;
+        position: sticky;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        grid-area: content;
+        color: $text-color;
+        width: max(80ch, 95%);
+        margin: 0 auto;
+        // border: 1px solid  rgb(200, 19, 19) 
+    }
+
+    .foot {
+        grid-area: foot;
+        background-color: $primary-color;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        bottom: 0rem;
+        text-align: center;
+        padding: 1rem;
+        color: set-text-color($primary-color);
+        // background-color: rgb(19, 67, 200) 
+    }
+}
+
+.sidenav {
+    // position: static;
+    // z-index: 1;
+    top: 0;
+    left: 0;
+    // background-color: $secondary-color;
+    background: $gradient1;
+    overflow-x: hidden;
+    transition: .25s;
+    text-align: center;
+    // border: 1px solid red;
+}
+
+.sidenav a {
+    color: white;
+    padding: 2px 2px 1px 2px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: .3s;
+}
+
+.sidenav a:hover {
+    // color: #f1f1f1;
+    color: rgb(78, 89, 208);
+}
+
+.sidenav .closebtn {
     position: relative;
-    border-bottom: 1px solid $text-color;
-    border-top: 1px solid $text-color;
-    border-left: 1px solid $text-color;
-    border-right: 1px solid $text-color;
-    // overflow: hidden;
-    cursor: pointer;
-    text-align: left;
-    color: $text-color;
-
-    a {
-      padding-left: 2em;
-      padding-right: 2em;
-      color: $text-color;
-    }
-
-    img {
-      position: absolute;
-      top: 0px;
-      display: inline;
-    }
-
-    p {
-      color: $text-color;
-      padding-left: 2em;
-      padding-right: 2em;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 100%;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      color: #000000;
-      background: $secondary-color;
-      opacity: .5;
-      @include transition-ease;
-    }
-
-    &:hover {
-      &::after {
-        top: 0;
-        opacity: 0.2;
-      }
-    }
-
-    &__heading {
-      color: $text-color;
-      font-variant: small-caps;
-      padding-bottom: 0.5rem;
-    }
-
-  }
+    font-size: 24px;
 }

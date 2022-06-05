@@ -1,102 +1,108 @@
+@include media-ml {
+
+    //mobile-landscape
+    * {
+        font-size: .5rem;
+    }
+
+    .site {
+        grid-template-columns: 8rem 1fr;
+
+        .sidenav {
+            width: 8rem;
+            // border: 1px solid  rgb(200, 19, 19) 
+        }
+    }
+}
+
 @include media-md {
-  * {
-    font-size: 1.0vw;
-  }
 
-  .sidenav{
-    width: 8rem;
-  }
-  .ColumnContainer {
-    // grid-template-columns: repeat(auto-fit, MIN(65ch, 1fr));
-    // column-count: 3;
-
-    article {
-      font-size: 1rem;
-    }
-  }
-
-  .column_layout {
-
-    .mainbody {
-      width: 90%;
-      margin: 0 auto;
-      // background-color: dodgerblue;
+    //tablet-portrait
+    * {
+        font-size: .75rem;
     }
 
+    .header {
 
-    details {
-      font-size: 1.2rem;
-
-      summary {
-        // margin-left:1em;
-        font-size: 1.2rem;
-      }
+        // background-color: blue;
+        &__title {
+            font-size: .5rem;
+        }
     }
 
-    .intro {
-      font-size: 50%;
-
-    }
-
-    .disclaimer {
-      font-size: 500%;
-    }
-
-    .getstarted {
-      font-size: 1.1em;
-
-    }
-  }
-
-  .header {
-    // background-color: blue;
-
-    &__title {
-      letter-spacing: 5px;
-      font-size: 150%;
-      // background-color: aqua;
-    }
-
-    &__subtitle {
-      // width: 100vw;
-      letter-spacing: 2px;
-      font-size: 190%;
-      // background-color: aqua;
-    }
-  }
-
-
-  .grid-body {
-    width: 100%;
-    grid-gap: 30px;
-    // background-color: blue;
-  }
-
-  .grid-item {
-    // font-size: .5vw;
-    font-size: .75rem;
-    // width: 50%;
-    // background-color: burlywood;
-  }
 }
 
 @include media-lg {
 
-  .topics__badges {
-    font-size: 1.25rem;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    // background-color: aqua;
-  }
-
-  .contact__list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include media-xl {
-    .projects__bio-image {
-      height: 50vh;
+    //tablet-landscape
+    * {
+        font-size: 0.5vw;
     }
-  }
+
+    .ColumnContainer {
+        width: min(80ch, 90%);
+        // background-color: cornflowerblue;
+    }
+}
+
+@include media-xl {
+
+    //laptop
+    * {
+        font-size: 1rem;
+    }
+
+    .site {
+        grid-template-columns: 8rem 1fr;
+    }
+
+    .header {
+        // background-color: blue;
+
+        &__title {
+            letter-spacing: 5px;
+            font-size: 2rem;
+            // background-color: aqua;
+        }
+
+        &__subtitle {
+            // width: 100vw;
+            letter-spacing: 2px;
+            font-size: 1.75rem;
+            // background-color: aqua;
+        }
+    }
+
+    .ColumnContainer {
+        width: max(80ch, 70%);
+        // background-color: cornflowerblue;
+    }
+
+    .grid-container {
+        width: 100%;
+    }
+
+    .grid-body {
+        // width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: space-between;
+        justify-content: center;
+        // grid-gap: 30px;
+        // background-color: blue;
+    }
+
+    .grid-item {
+        // font-size: .5vw;
+        // font-size: .75rem;
+        width: 90ch;
+        // background-color: burlywood;
+    }
+}
+
+@include media-2xl {
+
+    //extra large screen
+    * {
+        font-size: 0.8vw;
+    }
 }

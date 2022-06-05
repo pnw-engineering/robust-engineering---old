@@ -1,324 +1,183 @@
 @import 'config';
 @import 'home';
-@import 'menu';
-@import 'tools';
-@import 'glossary';
+// @import 'menu';
+// @import 'tools';
+// @import 'glossary';
 @import 'elevator';
 @import 'ColumnLayout';
 @import 'responsive';
 
-.header {
-  // display: grid;
-  display: flexbox;
-  min-height: 6rem;
-  width: 100%;
-  // grid-template-columns: 10vw 90vw;
-  // padding-right: 5vw;
-  border-bottom: 1px solid $text-color;
-  position: fixed;
-  z-index: 2;
-  margin-bottom: 5vw;
-  // position: sticky;
-  // overflow: hidden;
-  color: $text-color;
-  font-size: 16px;
-  letter-spacing: 4px;
-  background-image: $gradient1;
-  // background-color: $primary-color;
-
-  &__title {
-    display: inline-block;
-    font-size: 90%;
-    font-weight: bold;
-    font-variant: small-caps;
-    margin-left: 1rem;
-    // background-color: aqua;
-  }
-
-  &__subtitle {
-    display: block;
-    // margin-right: 4vw;
-    // margin-left: 3em;
-    width: 75%;
-    margin: 0 auto;
-    // text-align: center;
-    font-size: 60%;
-    letter-spacing: 1px;
-    // background-color:aquamarine;
-  }
-
-  .menu-btn {
-    display: inline-block;
-    // align-self: left;
-    // position: relative;
-    width: 3em;
-    font-size: 30px;
-    cursor: pointer;
-    // background-color: cornflowerblue;
-  }
-
-  &__image {
-    // grid-area: 2 / 1 / span 1 / span 1;
-    grid-area: 2 / 1;
-    width: 100%;
-    max-height: 100%;
-    // padding-top: 2rem;
-    // border: 1px solid;
-  }
-
-}
-
-.body {
-  font-family: "Roboto", sans-serif;
-  background-color: $primary-color;
-  color: $text-color;
-  // background-color: dodgerblue;
-  height: 100vh;
-  // overflow: hidden;
-
-  main {
-    h1 {
-      padding-top: 5px;
-      font-variant: small-caps;
-      text-align: center;
-      // font-size: 24;
-      // background-color: coral;
-    }
-  }
-
-}
-
 .column_layout {
-  font-size: .5rem;
-  display: grid;
-  line-height: 1.25;
-  grid-template-columns: 0 1fr;
-  padding-top: 17vh;
-  // background-color: dodgerblue;
+    width: 100%;
+    font-size: .5rem;
+    line-height: 1.25;
+    display: grid;
+    grid-template-columns: 0 1fr;
+    padding-top: 6rem;
+    // background-color: dodgerblue;
+}
 
-  .mainbody {
-    grid-area: 1 / 2;
+details {
+    font-size: 1rem;
+    margin-left: 2em;
+    cursor: pointer;
+    width: min(80ch, 90%);
     margin: 0 auto;
-    // width: min(80ch, 100%);
+    // background-color: cadetblue;
 
-    h1 {
-      font-size: 180%;
-      // background-color: dodgerblue;
-    }
-    > details {
-      font-size: 1rem;
-      margin-left: 2em;
-      cursor: pointer;
-      width: min(80ch, 90%);
-      margin: 0 auto;
-      // background-color: cadetblue;
-  
-      > summary {
+    >summary {
         font-size: 1.25rem;
         background-image: $gradient1;
-        }
-  }
-
-  }
-
-  .intro {
-    font-size: 1rem;
-    width: min(80ch, 90%);
-    margin: 0 auto;
-
-    a {
-      // color: complement($text-color);
-      color: red;
     }
-  }
-
-  .disclaimer {
-    color: rgb(242, 245, 88);
-    font-size: 1rem;
-    width: min(80ch, 90%);
-    margin: 0 auto;
-    // background-color: dodgerblue;
-  }
-
-  .getstarted {
-    position: absolute;
-    position: sticky;
-    grid-area: 2 / 2;
-    bottom: 10px;
-    height: 10vh;
-    width: 10vh;
-    background-color: lighten($secondary-color, 20);
-    // display: block;
-    margin: 0 auto;
-    // width: 200px;
-    color: white;
-    border: 2px solid lighten($primary-color, 75);
-    font-size: 3rem;
-    border-radius: 50%;
-
-    &:hover {
-      background-color: $secondary-color;
-      @include transition-ease;
-    }
-  }
 }
 
-.main {
-  width: 100%;
-  margin: auto;
-  // background-color: darkkhaki;
-  background-color: $primary-color;
-  // display: flex;
-  // position: relative;
-  // border: 1px solid dodgerblue;
+.intro {
+    font-size: 1rem;
+
+    a {
+        // color: complement($text-color);
+        color: red;
+    }
+}
+
+.disclaimer {
+    color: rgb(242, 245, 88);
+    font-size: 1rem;
+    padding-top: 10px;
+    // background-color: dodgerblue;
 }
 
 h2,
 h3 {
-  font-weight: 400;
-  // background-color: coral;
+    font-weight: 400;
+    // background-color: coral;
 }
 
 a {
-  // color: set-text-color($primary-color);
-  color: lighten(crimson, 20);
-  // text-decoration: none;
-  font-size: 1em;
-  // background-color: red;
+    // color: set-text-color($primary-color);
+    color: lighten(crimson, 20);
+    // text-decoration: none;
+    font-size: 1em;
+    // background-color: red;
 
-  :hover {
-    // color: set-text-color(red);
-    color: crimson;
-    background-color: blue;
-    ;
-  }
-}
-
-.text-secondary {
-  color: $text-color;
-}
-
-footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
-  color: set-text-color($primary-color);
+    :hover {
+        // color: set-text-color(red);
+        color: crimson;
+        background-color: blue;
+        ;
+    }
 }
 
 p {
-  font-size: 1.25em;
-  text-align: justify;
-  padding-bottom: .5em;
-  margin-left: 2em;
-  margin-right: 2em;
-  // background-color: blue;
+    font-size: 1.25em;
+    text-align: justify;
+    padding-bottom: .5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    // background-color: blue;
 }
 
 .list {
-  font-size: 1.25em;
-
-  width: min(80ch, 90%);
-  margin: 0 auto;
-  // background-color:cornflowerblue;
+    font-size: 1.25em;
+    width: min(80ch, 90%);
+    margin: 0 auto;
+    // background-color:cornflowerblue;
 }
 
 .highlight {
-  font-size: larger;
-  font-style: italic;
-  color: rgb(159, 183, 235);
+    font-size: larger;
+    font-style: italic;
+    color: rgb(159, 183, 235);
 }
 
 //3D button ------------------------
 .pushable {
-  position: relative;
-  position: sticky;
-  grid-area: 2 / 2;
-  bottom: 15px;
-  // height: 10vh;
-  // width: 10vh;
-  margin: 0 auto;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  outline-offset: 4px;
-  transition: filter 250ms;
+    position: relative;
+    position: sticky;
+    grid-area: 2 / 2;
+    bottom: 15px;
+    // height: 10vh;
+    // width: 10vh;
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
 }
 
 .shadow {
-  position: absolute;
-  // position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  // background: hsl(0deg 0% 0% / 0.25);
-  background-color: rgb(25, 13, 34);
-  will-change: transform;
-  transform: translateY(2px);
-  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+    position: absolute;
+    // position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    // background: hsl(0deg 0% 0% / 0.25);
+    background-color: rgb(25, 13, 34);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
 .edge {
-  position: absolute;
-  // position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: linear-gradient(to left,
-      hsl(225deg 50% 5%) 0%,
-      hsl(225deg 50% 16%) 8%,
-      hsl(225deg 50% 16%) 92%,
-      hsl(225deg 50% 5%) 100%);
+    position: absolute;
+    // position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left,
+            hsl(225deg 50% 5%) 0%,
+            hsl(225deg 50% 16%) 8%,
+            hsl(225deg 50% 16%) 92%,
+            hsl(225deg 50% 5%) 100%);
 }
 
 .front {
-  display: block;
-  position: relative;
-  padding: 12px 42px;
-  border-radius: 12px;
-  font-size: 1.25rem;
-  color: white;
-  // background: hsl(345deg 100% 47%);
-  // background: hsl(225deg 50% 25%);
-  background-color: rgba(79, 30, 117, 0.976);
-  will-change: transform;
-  transform: translateY(-4px);
-  transition:
-    transform 600ms cubic-bezier(.3, .7, .4, 1);
+    display: block;
+    position: relative;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    color: white;
+    // background: hsl(345deg 100% 47%);
+    // background: hsl(225deg 50% 25%);
+    background-color: rgba(79, 30, 117, 0.976);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
 .pushable:hover {
-  filter: brightness(110%);
+    filter: brightness(110%);
 }
 
 .pushable:hover .front {
-  transform: translateY(-6px);
-  transition:
-    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(-6px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .pushable:active .front {
-  transform: translateY(-2px);
-  transition: transform 34ms;
+    transform: translateY(-2px);
+    transition: transform 34ms;
 }
 
 .pushable:hover .shadow {
-  transform: translateY(4px);
-  transition:
-    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform: translateY(4px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .pushable:active .shadow {
-  transform: translateY(1px);
-  transition: transform 34ms;
+    transform: translateY(1px);
+    transition: transform 34ms;
 }
 
 .pushable:focus:not(:focus-visible) {
-  outline: none;
+    outline: none;
 }

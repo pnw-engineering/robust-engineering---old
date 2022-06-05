@@ -11,7 +11,7 @@ $gradient1: linear-gradient(90deg,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: min(2.2vw, 2.2vh);
 }
 
 * {
@@ -73,20 +73,32 @@ h6 {
   }
 }
 
-@mixin media-md {
+@mixin media-ml {   //mobil-landscape
+  @media screen and (min-width: 640px){
+    @content;
+  }
+}
+
+@mixin media-md {   //tablet-portrait
   @media screen and (min-width: 768px) {
     @content;
   }
 }
 
-@mixin media-lg {
+@mixin media-lg {   //tablet-landscape
   @media screen and (min-width: 1024px) {
     @content;
   }
 }
 
-@mixin media-xl {
-  @media screen and (min-width: 1600px) {
+@mixin media-xl {   //laptop
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin media-2xl {   //large screen
+  @media screen and (min-width: 1536px) {
     @content;
   }
 }
