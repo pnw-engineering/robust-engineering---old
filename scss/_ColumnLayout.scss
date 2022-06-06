@@ -1,6 +1,7 @@
 .ColumnContainer {
     margin: 0 auto;
     font-size: .75rem;
+    width: max(80ch, 90%);
     // background-color: cornflowerblue;
 
     &__heading {
@@ -18,7 +19,7 @@
     }
 
     >article {
-        width: 100%;
+        // width: 100%;
         padding-bottom: 5px;
         // text-justify: center;
         text-align: justify;
@@ -50,7 +51,7 @@
                 font-size: 100%;
 
                 // background-color: cornflowerblue;
-                details {
+                > details {
                     display: block;
                     width: 90%;
                     padding-bottom: 5px;
@@ -59,7 +60,7 @@
                     text-align: justify;
                     // background-color: cornflowerblue;
 
-                    summary {
+                    > summary {
                         padding-bottom: 5px;
                         background-image: gradient1;
                     }
@@ -67,4 +68,9 @@
             }
         }
     }
+}
+
+.WideContainer {
+    width:90%;
+    margin: 0 auto;
 }

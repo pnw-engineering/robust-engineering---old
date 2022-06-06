@@ -101,7 +101,7 @@ h6 {
   overflow-x: hidden;
   grid-area: content;
   color: #f4f2e9;
-  width: max(80ch, 95%);
+  width: 100%;
   margin: 0 auto;
 }
 .site .foot {
@@ -251,6 +251,7 @@ h6 {
 .ColumnContainer {
   margin: 0 auto;
   font-size: 0.75rem;
+  width: max(80ch, 90%);
 }
 .ColumnContainer__heading {
   max-height: 3.5ch;
@@ -265,7 +266,6 @@ h6 {
   background-image: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
 }
 .ColumnContainer > article {
-  width: 100%;
   padding-bottom: 5px;
   text-align: justify;
 }
@@ -287,16 +287,21 @@ h6 {
 .ColumnContainer > article ul li {
   font-size: 100%;
 }
-.ColumnContainer > article ul li details {
+.ColumnContainer > article ul li > details {
   display: block;
   width: 90%;
   padding-bottom: 5px;
   margin-left: 0;
   text-align: justify;
 }
-.ColumnContainer > article ul li details summary {
+.ColumnContainer > article ul li > details > summary {
   padding-bottom: 5px;
   background-image: gradient1;
+}
+
+.WideContainer {
+  width: 90%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 640px) {
@@ -331,11 +336,14 @@ h6 {
 }
 @media screen and (min-width: 1280px) {
   * {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   .site {
     grid-template-columns: 8rem 1fr;
+  }
+  .site .content {
+    overflow-x: hidden;
   }
 
   .header__title {
@@ -348,21 +356,21 @@ h6 {
   }
 
   .ColumnContainer {
-    width: max(80ch, 70%);
+    width: min(80ch, 60%);
   }
 
   .grid-container {
-    width: 100%;
+    width: 80%;
   }
 
-  .grid-body {
+  .grid-container {
     grid-template-columns: repeat(2, 1fr);
     align-content: space-between;
     justify-content: center;
   }
 
   .grid-item {
-    width: 90ch;
+    width: 80ch;
   }
 }
 @media screen and (min-width: 1536px) {
@@ -389,6 +397,21 @@ details {
 details > summary {
   font-size: 1.25rem;
   background-image: linear-gradient(90deg, hsl(240deg, 36%, 17%) 0%, hsl(275deg, 50%, 26%) 50%, hsl(306deg, 100%, 27%) 100%);
+}
+details > dl > dt {
+  font-size: 1.25rem;
+  padding-left: 5px;
+}
+details > dl > dt::before {
+  content: "---";
+}
+details > dl > dd {
+  width: 90%;
+  font-size: 1rem;
+  padding-left: 5px;
+  width: min(80ch, 90%);
+  margin: 0 auto;
+  background-color: #4282a7;
 }
 
 .intro {
@@ -436,6 +459,42 @@ p {
   font-size: larger;
   font-style: italic;
   color: rgb(159, 183, 235);
+}
+
+table,
+th,
+td {
+  border: 1px solid #f4f2e9;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  font-size: 1.5rem;
+}
+
+td {
+  font-size: 1.1rem;
+  padding-left: 5px;
+}
+
+caption {
+  background-color: #1e3b4c;
+  text-align: left;
+  font-size: 2rem;
+  padding-top: 10px;
+  padding-bottom: 3px;
+}
+
+caption::after {
+  content: "  <<<";
+}
+
+caption::before {
+  content: ">>>  ";
 }
 
 .pushable {

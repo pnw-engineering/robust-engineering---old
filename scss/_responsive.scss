@@ -49,11 +49,17 @@
 
     //laptop
     * {
-        font-size: 1rem;
+        font-size: .85rem;
     }
 
     .site {
         grid-template-columns: 8rem 1fr;
+
+        .content {
+            // width: min(80ch, 70%);
+            overflow-x: hidden;
+            // width: 50%;
+        }
     }
 
     .header {
@@ -74,15 +80,15 @@
     }
 
     .ColumnContainer {
-        width: max(80ch, 70%);
+        width: min(80ch, 60%);
         // background-color: cornflowerblue;
     }
 
     .grid-container {
-        width: 100%;
+        width: 80%;
     }
 
-    .grid-body {
+    .grid-container {
         // width: 100%;
         grid-template-columns: repeat(2, 1fr);
         align-content: space-between;
@@ -94,7 +100,7 @@
     .grid-item {
         // font-size: .5vw;
         // font-size: .75rem;
-        width: 90ch;
+        width: 80ch;
         // background-color: burlywood;
     }
 }

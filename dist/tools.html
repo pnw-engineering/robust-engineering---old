@@ -2,91 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <title>Robust Design</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <title>Robust Design</title>
 </head>
 
-<body class="body">
+<body class="site" id="mysite">
+
   <header class="header">
+    <div class="header__bgr" onclick="toggleNav()">&#9776</div>
     <div class="header__title">
-        <span class="menu-btn" onclick="toggleNav()">&#9776</span>
-        --- Robust Engineering ---
+      Robust Engineering
     </div>
     <div class="header__subtitle">
-        Using Science, Statistics, and Critical Thinking to improve product design
-        robustness
+      Using Science, Statistics, and Critical Thinking to improve product design
+      robustness
     </div>
-</header>
+  </header>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="tools.html">Tools</a>
+    <a href="Glossary.html">Glossary</a>
+    <a href="#">???</a>
+  </div>
 
 
-  <main id="myColumnLayout" class="column_layout">
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">Home</a>
-      <a href="tools.html">Tools</a>
-      <a href="Glossary.html">Glossary</a>
-      <a href="#">???</a>
-    </div>
+  <main class="content">
 
-    <div class="mainbody">
-      <article class="tool-topic">
-        <div class="tool-topic__heading">Statistics</div>
-        <div class="tool-topic__img-box"></div>
-        <div class="tool-topic__body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora, sed
-          blanditiis officia eum, qui illum ipsam harum laudantium sit eveniet unde at velit incidunt rerum quidem.
+    <div class="columnContainer">
+      <div class="mainbody">
+        <div class="grid-container">
+          <div class="grid-item">
+            <article class="topic">
+              <div class="topic__heading">Statistics</div>
+              <div class="topic__soundbite">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora.
+              </div>
+            </article>
+          </div>
+          <div class="grid-item">
+            <article class="topic">
+              <div class="topic__heading"> Tool 2</div>
+              <div class="topic__img-box"></div>
+              <div class="topic__soundbite">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora.
+              </div>
+            </article>
+          </div>
+          <div class="grid-item">
+            <article class="topic">
+              <div class="topic__heading">Tool 3</div>
+              <div class="topic__img-box"></div>
+              <div class="topic__soundbite">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora.
+              </div>
+            </article>
+          </div>
+          <div class="grid-item">
+            <article class="topic">
+              <div class="topic__heading">Tool 4</div>
+              <div class="topic__img-box"></div>
+              <div class="topic__soundbite">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora.
+              </div>
+            </article>
+          </div>
+          <div class="grid-item">
+            <article class="topic">
+              <div class="topic__heading">Tool 5</div>
+              <div class="topic__img-box"></div>
+              <div class="topic__soundbite">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora.
+              </div>
+            </article>
+          </div>
+          <div class="grid-item">
+            <article class="topic">
+              <div class="topic__heading">Tool 6</div>
+              <div class="topic__img-box"></div>
+              <div class="topic__soundbite">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora.
+              </div>
+            </article>
+          </div>
         </div>
-      </article>
-      <article class="tool-topic">
-        <div class="tool-topic__heading"> Tool 2</div>
-        <div class="tool-topic__img-box"></div>
-        <div class="tool-topic__body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora, sed
-          blanditiis officia eum, qui illum ipsam harum laudantium sit eveniet unde at velit incidunt rerum quidem.
-        </div>
-      </article>
-      <!-- <article class="tool-topic">
-        <div class="tool-topic__heading">Tool 3</div>
-        <div class="tool-topic__img-box"></div>
-        <div class="tool-topic__body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora, sed
-          blanditiis officia eum, qui illum ipsam harum laudantium sit eveniet unde at velit incidunt rerum quidem.
-        </div>
-      </article>
-      <article class="tool-topic">
-        <div class="tool-topic__heading">Tool 4</div>
-        <div class="tool-topic__img-box"></div>
-        <div class="tool-topic__body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora, sed
-          blanditiis officia eum, qui illum ipsam harum laudantium sit eveniet unde at velit incidunt rerum quidem.
-        </div>
-      </article>
-      <article class="tool-topic">
-        <div class="tool-topic__heading">Tool 5</div>
-        <div class="tool-topic__img-box"></div>
-        <div class="tool-topic__body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora, sed
-          blanditiis officia eum, qui illum ipsam harum laudantium sit eveniet unde at velit incidunt rerum quidem.
-        </div>
-      </article>
-      <article class="tool-topic">
-        <div class="tool-topic__heading">Tool 6</div>
-        <div class="tool-topic__img-box"></div>
-        <div class="tool-topic__body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia corporis vero quisquam tempora, sed
-          blanditiis officia eum, qui illum ipsam harum laudantium sit eveniet unde at velit incidunt rerum quidem.
-        </div>
-      </article> -->
+      </div>
     </div>
   </main>
+  <footer class="foot">
+    <button class="pushable" onclick="history.back()">
+      <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front">Back</span>
+    </button>
+    <span style="float:right">&copy; Copyright 2022</span>
+  </footer>
 </body>
 <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
 <script src="js/main.js"></script>

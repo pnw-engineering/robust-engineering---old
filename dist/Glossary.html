@@ -9,17 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="css/main.css">
     <title>Robust Design</title>
 </head>
 
-<body class="body">
+<body class="site" id="mysite">
 
     <header class="header">
+        <div class="header__bgr" onclick="toggleNav()">&#9776</div>
         <div class="header__title">
-            <span class="menu-btn" onclick="toggleNav()">&#9776</span>
-            --- Robust Engineering ---
+            Robust Engineering
         </div>
         <div class="header__subtitle">
             Using Science, Statistics, and Critical Thinking to improve product design
@@ -27,23 +27,26 @@
         </div>
     </header>
 
-    <main id="myColumnLayout" class="column_layout">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">Home</a>
-            <a href="tools.html">Tools</a>
-            <a href="Glossary.html">Glossary</a>
-            <a href="#">???</a>
-        </div>
-        <div class="mainbody">
-            <h1>--- Glossary of terms ---</h1>
-            <div class="GridContainer">
-                <div class="GridElement">
-                    <details class="GridElement__details">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="Glossary.html">Glossary</a>
+        <a href="layout_test.html">???</a>
+
+    </div>
+
+    <main id="myContent" class="content">
+        <div class="columnContainer">
+            <div class="ColumnContainer__heading">--- Glossary of terms ---</div>
+            <div class="Grid-Container">
+                <div class="grid-item">
+                    <details>
                         <summary>General Engineering</summary>
                         <dl>
                             <dt>Robust Design</dt>
-                            <dd>A design that provides the intended functions, in stated conditions, for the specified
+                            <dd>A design that provides the intended functions, in stated conditions, for the
+                                specified
                                 time,
                                 in
                                 the presence of noise.</dd>
@@ -56,26 +59,30 @@
                                 relationships.
                             </dd>
                             <dt>Critical Parameter Management</dt>
-                            <dd>A process for ensuring parameters that are critical to product performane are clearly
+                            <dd>A process for ensuring parameters that are critical to product performane are
+                                clearly
                                 defined
                                 and accounted for.</dd>
                             <dt>NUD</dt>
-                            <dd>requirements that are "NEW, UNIQUE, AND DIFFICULT" and therefore warrent additional time
+                            <dd>requirements that are "NEW, UNIQUE, AND DIFFICULT" and therefore warrent additional
+                                time
                                 and
                                 attention to detail to prevent quality escapes.</dd>
                             <dt>DFMEA</dt>
-                            <dd>Design Failure Modes and Effects Analysis - a process for identification of potential
+                            <dd>Design Failure Modes and Effects Analysis - a process for identification of
+                                potential
                                 failure
                                 modes and methods for mitigation.</dd>
                         </dl>
                     </details>
                 </div>
-                <div class="GridElement">
-                    <details class="GridElement__details">
+                <div class="Grid-item">
+                    <details>
                         <summary>Statistics</summary>
                         <dl>
                             <dt>Normality</dt>
-                            <dd>The property that determines how well a set of data fits a normal distribution. Knowing
+                            <dd>The property that determines how well a set of data fits a normal distribution.
+                                Knowing
                                 this
                                 aids in selecting the best statistical tools for further analysis.</dd>
                             <dt>P value</dt>
@@ -85,35 +92,43 @@
                             <dt>Model</dt>
                             <dd>A fabrication intended to predict output parameters based on input parameters. Used
                                 regularly
-                                in development as an analytical tool that can be used in lieu of physical testing.</dd>
+                                in development as an analytical tool that can be used in lieu of physical testing.
+                            </dd>
                             <dt>Mean</dt>
-                            <dd>The statistical property that describes the central tendancy of a data set (assumed to
+                            <dd>The statistical property that describes the central tendancy of a data set (assumed
+                                to
                                 be
                                 normally distributed). Usually thought of as the "avarage".</dd>
                             <dt>Median</dt>
-                            <dd>The statistical property that describes the central tendancy of a data set (assumed not
+                            <dd>The statistical property that describes the central tendancy of a data set (assumed
+                                not
                                 to
                                 be
                                 normally distributed).</dd>
                             <dt>Standard deviation</dt>
-                            <dd>The statistical property that describes the spread of a data set (assumed to be normally
-                                distributed). The simbol σ is used to designate standard deviation. Calculated as the
+                            <dd>The statistical property that describes the spread of a data set (assumed to be
+                                normally
+                                distributed). The simbol σ is used to designate standard deviation. Calculated as
+                                the
                                 square
-                                root of the variance. One nice property of σ is that the unit of measure for σ is the
+                                root of the variance. One nice property of σ is that the unit of measure for σ is
+                                the
                                 same
                                 as
                                 that of the data in the set and is therefor more intuitive.</dd>
                             <dt>Variance</dt>
-                            <dd>The average of the squared difference from the mean of a data set. One nice property of
+                            <dd>The average of the squared difference from the mean of a data set. One nice property
+                                of
                                 variance
-                                is that they can be summed across data sets to determine vafriance for the sum of teh
+                                is that they can be summed across data sets to determine vafriance for the sum of
+                                teh
                                 sets.
                             </dd>
                         </dl>
                     </details>
                 </div>
-                <div class="GridElement">
-                    <details class="GridElement__details">
+                <div class="Grid-item">
+                    <details>
                         <summary>Reliability</summary>
                         <dl>
                             <dt>Stress/Strength relationship</dt>
@@ -121,7 +136,8 @@
                                 (generally
                                 measured) against stresses applied in teh field (generally assumed).</dd>
                             <dt>Failure Mode</dt>
-                            <dd>A way that a product or part can fail in the field. Quality escapes can be reduced by
+                            <dd>A way that a product or part can fail in the field. Quality escapes can be reduced
+                                by
                                 early
                                 identification and mitigation of failure modes.</dd>
                             <dt>Failure Site</dt>
@@ -134,16 +150,23 @@
                 </div>
             </div>
         </div>
-        <button class="pushable" onclick="window.location.href='index.html'">
+
+    </main>
+    <footer class="foot">
+        <button class="pushable" onclick="window.location.href='start.html'">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
                 Back
             </span>
         </button>
-    </main>
+        <span style="float:right">&copy; Copyright 2022</span>
+    </footer>
+
 </body>
-<footer>&copy; Copyright 2022</footer>
 
 <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
 <script src="js/main.js"></script>
+
+
+<body class="body">

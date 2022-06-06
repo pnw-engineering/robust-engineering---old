@@ -1,8 +1,5 @@
 @import 'config';
 @import 'home';
-// @import 'menu';
-// @import 'tools';
-// @import 'glossary';
 @import 'elevator';
 @import 'ColumnLayout';
 @import 'responsive';
@@ -28,6 +25,28 @@ details {
     >summary {
         font-size: 1.25rem;
         background-image: $gradient1;
+    }
+
+    >dl {
+        // background-color: aqua;
+
+        >dt {
+            font-size: 1.25rem;
+            padding-left: 5px;
+        }
+
+        >dt::before {
+            content: "---";
+        }
+
+        >dd {
+            width: 90%;
+            font-size: 1rem;
+            padding-left: 5px;
+            width: min(80ch, 90%);
+            margin: 0 auto;
+            background-color: $secondary-color;
+        }
     }
 }
 
@@ -90,7 +109,44 @@ p {
     color: rgb(159, 183, 235);
 }
 
-//3D button ------------------------
+table,
+th,
+td {
+    // border: 1px solid rgb(52, 72, 223);
+    border: 1px solid $text-color;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    font-size: 1.5rem;
+}
+
+td {
+    font-size: 1.1rem;
+    padding-left: 5px;
+}
+
+caption {
+    background-color: darken($secondary-color,25%);
+    text-align: left;
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+
+caption::after {
+    content: "  <<<";
+}
+caption::before {
+    content: ">>>  ";
+}
+
+ //3D button ------------------------
+
 .pushable {
     position: relative;
     position: sticky;
