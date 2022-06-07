@@ -123,6 +123,7 @@ table {
 
 th {
     font-size: 1.5rem;
+    background-image: $gradient1;
 }
 
 td {
@@ -131,21 +132,20 @@ td {
 }
 
 caption {
-    background-color: darken($secondary-color,25%);
-    text-align: left;
-    font-size: 2rem;
+    background-color: $text-color;
+    color: $primary-color;
+    text-align: center;
+    font-size: 2rem;font-weight: 700;
     padding-top: 10px;
     padding-bottom: 3px;
+    padding-left: 5px;
 }
 
-caption::after {
-    content: "  <<<";
-}
-caption::before {
-    content: ">>>  ";
-}
+// caption::before {
+//     content: "=> ";
+// }
 
- //3D button ------------------------
+//3D button ------------------------
 
 .pushable {
     position: relative;
@@ -202,6 +202,7 @@ caption::before {
     // background: hsl(345deg 100% 47%);
     // background: hsl(225deg 50% 25%);
     background-color: rgba(79, 30, 117, 0.976);
+    background-image: $gradient1;
     will-change: transform;
     transform: translateY(-4px);
     transition:
