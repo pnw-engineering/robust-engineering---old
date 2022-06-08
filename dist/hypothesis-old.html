@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Robust Design</title>
+</head>
+
+<body class="site" id="mysite">
+
+    <header class="header">
+        <div class="header__bgr" onclick="toggleNav()">&#9776</div>
+        <div class="header__title">
+            Robust Engineering
+        </div>
+        <div class="header__subtitle">
+            Using Science, Statistics, and Critical Thinking to improve product design
+            robustness
+        </div>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="Glossary.html">Glossary</a>
+        <a href="hypothesis.html">hypothesis tests</a>
+    </div>
+
+    <main id="myContent" class="content">
+        <div class="WideContainer">
+            <table>
+                <caption>Testing data shape, continuous data</caption>
+                <tr>
+                    <th>Issue being addressed</th>
+                    <th>Tool</th>
+                    <th>Ho</th>
+                    <th>Ha</th>
+                </tr>
+                <tr>
+                    <td>Are the data normally distributed?</td>
+                    <td>Normality Test</td>
+                    <td>normal</td>
+                    <td>not normal</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Issue being addressed</th>
+                    <th>Tool</th>
+                    <th>Ho</th>
+                    <th>Ha</th>
+                </tr>
+                <caption>Comparing data spread, continuous data</caption>
+                <tr>
+                    <td>Comparison of standard deviations- normally distributed data</td>
+                    <td>Test For Equal Variance, Bartlett's (or F) Test</td>
+                    <td>Standard deviations are the same</td>
+                    <td>at least one Standard deviation is different</td>
+                </tr>
+                <tr>
+                    <td>Comparison of Standard deviations - non-normally distributed data</td>
+                    <td>Test For Equal Variance, Levene's Test</td>
+                    <td>Standard deviations are the same</td>
+                    <td>at least one standard deviation is different</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Issue being addressed</th>
+                    <th>Tool</th>
+                    <th>Ho</th>
+                    <th>Ha</th>
+                </tr>
+                <caption>Comparing data central tendency, continuous data</caption>
+                <tr>
+                    <td>Does data conform to a standard - normally distributed data</td>
+                    <td>1-Sample t test</td>
+                    <td>mean = standard</td>
+                    <td>mean not = standard</td>
+                </tr>
+                <tr>
+                    <td>Are the averages for two groups of normally distributed data the same?</td>
+                    <td>2-Sample t test</td>
+                    <td>mean group 1 = mean group 2</td>
+                    <td>mean group 1 not = mean group 2</td>
+                </tr>
+                <tr>
+                    <td>Are the averages for three or more groups of normally distributed data the same?</td>
+                    <td>One Way ANOVA test</td>
+                    <td>mean of all groups are the same</td>
+                    <td>at least one group's mean is different than the others</td>
+                </tr>
+                <tr>
+                    <td>Does the median of a group of non-normal data comply to a standard</td>
+                    <td>1-Sample Wilcoxon test</td>
+                    <td>median not different than the standard</td>
+                    <td>median is different than the standard</td>
+                </tr>
+                <tr>
+                    <td>Comparing median of two groups of data, used for non-normal data</td>
+                    <td>Mann-Whitney test</td>
+                    <td>median group 1 = median group 2</td>
+                    <td>median group 1 not = median group 2</td>
+                </tr>
+                <tr>
+                    <td>Comparing median of three or more groups of data, used for non-normal data</td>
+                    <td>Mood's Median test, for when distribution of each group's data has similar shapes</td>
+                    <td>group 1 = median group 2 = median group 3</td>
+                    <td>at least one group's median is different from the others</td>
+                </tr>
+                <tr>
+                    <td>Comparing median of three or more groups of data, used for non-normal data</td>
+                    <td>Kruskal-Wallis Median test, for when distribution of each group's data has different shapes</td>
+                    <td>median group 1 = median group 2 = median group 3</td>
+                    <td>at least one group's median is different from the others</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Issue being addressed</th>
+                    <th>Tool</th>
+                    <th>Ho</th>
+                    <th>Ha</th>
+                </tr>
+                <caption>Comparing data proportions, from counts, attribute data</caption>
+                <tr>
+                    <td>Proportion of one group of data compared to a standard</td>
+                    <td>1 Proportion Test</td>
+                    <td>proportion = standard group proportion not = standard</td>
+                </tr>
+                <tr>
+                    <td>Proportion of one group of data compared to a second group's proportion</td>
+                    <td>2 Proportion Test</td>
+                    <td>group 1 proportion = group 2 proportion</td>
+                    <td>group 2 proportion not = group 2 proportion</td>
+                </tr>
+                <tr>
+                    <td>Comparing dependencies in groups/levels [proportion test of two or more groups of two or more
+                        levels]</td>
+                    <td>Chi-Square Test</td>
+                    <td>data are independent (not related); proportions are the same</td>
+                    <td>data are dependent (related); at least one proportion is different from another</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Issue being addressed</th>
+                    <th>Tool</th>
+                    <th>Ho</th>
+                    <th>Ha</th>
+                </tr>
+                <caption>Correlation & Regression</caption>
+                <tr>
+                    <td>Is the data correlated?</td>
+                    <td>Correlation Test</td>
+                    <td>data is not correlated</td>
+                    <td>data is correlated</td>
+                </tr>
+                <tr>
+                    <td>Testing regression model for significance in session window output after running Regression</td>
+                    <td></td>
+                    <td>model does not explain significant variation</td>
+                    <td>model does explain significant variation</td>
+                </tr>
+                <tr>
+                    <td>Testing constant for significance in session window output after running Regression</td>
+                    <td></td>
+                    <td>constant [y-intercept] is zero, it has no significance (or not zero and not significant)</td>
+                    <td>constant is not zero, it has significance</td>
+                </tr>
+                <tr>
+                    <td>Testing terms for significance in session window output after running Regression</td>
+                    <td></td>
+                    <td>term does not have significance, does not help explain the variation present</td>
+                    <td>term has significance and does explain the variation present</td>
+                </tr>
+                <tr>
+                    <td>Test of model fit Lack of Fit test under Regression Options</td>
+                    <td></td>
+                    <td> model has 'No Lack Of Fit', model passes this adequacy test</td>
+                    <td>model has 'Lack Of Fit', model is inadequate</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Issue being addressed</th>
+                    <th>Tool</th>
+                    <th>Ho</th>
+                    <th>Ha</th>
+                </tr>
+                <caption>DOE</caption>
+                <tr>
+                    <td>Testing the constant for significance in Session window output after running DOE analysis</td>
+                    <td></td>
+                    <td>constant is zero, not significant (or not zero and not significant)</td>
+                    <td>constant is not zero, it has significance</td>
+                </tr>
+                <tr>
+                    <td>Testing Main Effects for significance in Session window output after running DOE analysis</td>
+                    <td></td>
+                    <td>no Main Effects are significant</td>
+                    <td>at least one Main Effect is significant</td>
+                </tr>
+                <tr>
+                    <td>Testing 2-Way Interactions for significance (or n-Way) in Session window output after running
+                        DOE analysis and model includes higher order terms</td>
+                    <td></td>
+                    <td>no n-Way interactions are significant</td>
+                    <td>at least one n-Way interaction is significant</td>
+                </tr>
+                <tr>
+                    <td>Testing specific terms for significance in Session window output after running DOE analysis</td>
+                    <td></td>
+                    <td>term is not significant</td>
+                    <td>term is significant</td>
+                </tr>
+                <tr>
+                    <td>Testing for curvature in Session window output after running DOE analysis, center points exist
+                        and are included in the model</td>
+                    <td></td>
+                    <td>curvature is not significant</td>
+                    <td>curvature is significant</td>
+                </tr>
+                <tr>
+                    <td>Testing Blocks for significance in Session window output after running DOE analysis, blocks
+                        exist and are included in the model</td>
+                    <td></td>
+                    <td>no significant difference associated to blocks</td>
+                    <td>a significant difference can be attributed to blocks</td>
+                </tr>
+                <tr>
+                    <td>Testing for Lack of Fit Minitab will run this test when insignificant terms are removed from the
+                        model and sufficient degrees of freedom are available</td>
+                    <td></td>
+                    <td>model has 'No Lack Of Fit', model passes this adequacy test</td>
+                    <td>model has 'Lack Of Fit', model is inadequate</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Issue being addressed</th>
+                    <th>Tool</th>
+                    <th>Ho</th>
+                    <th>Ha</th>
+                </tr>
+                <caption>Response Surfaces</caption>
+                <tr>
+                    <td>Testing the constant for significance in Session window output after running analysis</td>
+                    <td></td>
+                    <td>constant is zero, not significant (or not zero and not significant)</td>
+                    <td>constant is not zero, it has significance</td>
+                </tr>
+                <tr>
+                    <td>Testing Linear terms for significance in Session window output after running analysis</td>
+                    <td></td>
+                    <td>no Linear terms are significant</td>
+                    <td>at least one Linear term is significant</td>
+                </tr>
+                <tr>
+                    <td>Testing Square terms for significance in Session window output after running analysis</td>
+                    <td></td>
+                    <td>no Square terms are significant</td>
+                    <td>at least one Square term is significant</td>
+                </tr>
+                <tr>
+                    <td>Testing Interactions for significance in Session window output after running analysis</td>
+                    <td></td>
+                    <td>no Interactions are significant</td>
+                    <td>at least one interaction is significant</td>
+                </tr>
+                <tr>
+                    <td>Testing specific terms for significance in Session window output after running analysis</td>
+                    <td></td>
+                    <td>term is not significant</td>
+                    <td>term is significant</td>
+                </tr>
+                <tr>
+                    <td>Testing for Lack of Fit in Session window after running analysis</td>
+                    <td></td>
+                    <td>model has 'No Lack Of Fit', model passes this adequacy test</td>
+                    <td>model has 'Lack Of Fit', model is inadequate</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer class="foot">
+        <button class="pushable" onclick="window.location.href='start.html'">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+                Back
+            </span>
+        </button>
+        <span style="float:right">&copy; Copyright 2022</span>
+    </footer>
+
+</body>
+
+<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+<script src="js/main.js"></script>

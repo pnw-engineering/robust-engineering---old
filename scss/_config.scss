@@ -5,10 +5,10 @@ $secondary-color: #4282a7;
 //     hsl(240deg 36% 17%) 0%,
 //     hsl(275deg 50% 26%) 50%,
 //     hsl(306deg 100% 27%) 100%);
-$gradient1: linear-gradient(120deg,
-    hsl(212deg 45% 13%) 1%,
-    hsl(202deg 42% 20%) 79%,
-    hsl(197deg 40% 28%) 100%);
+$gradient1: linear-gradient(90deg,
+    hsl(212deg 45% 13%) 0%,
+    hsl(207deg 44% 29%) 50%,
+    hsl(202deg 43% 46%) 100%);
 
 *,
 *::before,

@@ -47,11 +47,11 @@
             list-style: none;
             // background-color: cornflowerblue;
 
-            li {
+            > li {
                 font-size: 100%;
 
                 // background-color: cornflowerblue;
-                > details {
+                >details {
                     display: block;
                     width: 90%;
                     padding-bottom: 5px;
@@ -60,7 +60,7 @@
                     text-align: justify;
                     // background-color: cornflowerblue;
 
-                    > summary {
+                    >summary {
                         padding-bottom: 5px;
                         background-image: gradient1;
                     }
@@ -71,6 +71,6 @@
 }
 
 .WideContainer {
-    width:90%;
+    width: 90%;
     margin: 0 auto;
 }
