@@ -378,15 +378,6 @@ h6 {
     font-size: 0.8vw;
   }
 }
-.column_layout {
-  width: 100%;
-  font-size: 0.5rem;
-  line-height: 1.25;
-  display: grid;
-  grid-template-columns: 0 1fr;
-  padding-top: 6rem;
-}
-
 details {
   font-size: 1rem;
   margin-left: 2em;
@@ -424,6 +415,12 @@ details > dl > dd {
   color: rgb(242, 245, 88);
   font-size: 1rem;
   padding-top: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-left: 2rem;
+  font-weight: bold;
 }
 
 h2,
@@ -523,6 +520,73 @@ details.table-details .big-table > .table-content {
   font-size: 1.25rem;
   padding-left: 5px;
   border: 1px solid #f4f2e9;
+}
+
+.tool-table {
+  font-size: 1.5rem;
+  display: grid;
+  color: #f4f2e9;
+  margin: 0 auto;
+  grid-template: "Name   Name Name  Link" auto "h-Cond h-H0 h-HA  Link" auto "Cond   H0   HA    Link" auto/50% 20% 20% 10%;
+}
+.tool-table > .tool-name {
+  font-size: 2rem;
+  grid-area: Name;
+  text-align: center;
+  border: 1px solid #f4f2e9;
+}
+.tool-table .tool-head1 {
+  grid-area: h-Cond;
+  padding-left: 5px;
+  border: 1px solid #f4f2e9;
+}
+.tool-table .tool-head2 {
+  grid-area: h-H0;
+  text-align: center;
+  border: 1px solid #f4f2e9;
+}
+.tool-table .tool-head3 {
+  grid-area: h-HA;
+  text-align: center;
+  border: 1px solid #f4f2e9;
+}
+.tool-table .tool-cond {
+  grid-area: Cond;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #f4f2e9;
+}
+.tool-table .tool-H0 {
+  grid-area: H0;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #f4f2e9;
+}
+.tool-table .tool-HA {
+  grid-area: HA;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #f4f2e9;
+}
+.tool-table .tool-link {
+  grid-area: Link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f4f2e9;
+}
+.tool-table .tool-link img {
+  padding: 3px;
+  width: 100%;
+  height: auto;
+}
+
+a.W-Ref {
+  color: green;
+  align-self: right;
+  font-weight: 700;
+  font-family: "Brush Script MT", cursive;
+  font-style: oblique;
 }
 
 .pushable {
