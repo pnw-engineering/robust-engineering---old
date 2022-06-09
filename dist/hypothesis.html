@@ -278,179 +278,187 @@
         </div>
       </details>
       <br>
-      <div>
+      <div class="roadmap">
         <details>
           <summary>Type of data</summary>
+          <details>
+            <summary>Attribute</summary>
+            <details>
+              <summary>Number of Factors</summary>
               <details>
-                <summary>Attribute</summary>
+                <summary>2 Factors</summary>
+                <p>Contingency Table</p>
+                <p>H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are
+                  independant</p>
+                <p>H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are dependant
+                </p>
+              </details>
+              <details>
+                <summary>1 Factor</summary>
+                <details>
+                  <summary>1 or 2 samples?</summary>
+                  <details>
+                    <summary> 1 sample</summary>
+                    <p>1-Proportion Test</p>
+                    <p>H<sub>0</sub>: P<sub>1</sub> =
+                      P<sub>t</sub></p>
+                    <p>H<sub>A</sub>: P<sub>1</sub> &#8800
+                      P<sub>t</sub></p>
+                  </details>
+                  <details>
+                    <summary>2 Sample</summary>
+                    <p>2-Proportion Test</p>
+                    <p>H<sub>0</sub>: P<sub>1</sub> =
+                      P<sub>2</sub></p>
+                    <p>H<sub>A</sub>: P<sub>1</sub> &#8800
+                      P<sub>2</sub></p>
+                  </details>
+                </details>
+              </details>
+            </details>
+          </details>
+          <details>
+            <summary>Variable</summary>
+            <details>
+              <summary>1 or 2 (or more) factors?</summary>
+              <details>
+                <summary>Is the data Normally distributed?</summary>
+                <summary>Normal</summary>
+                <details>
+                  <summary>1, 2, or >2 Levels?</summary>
+                  <details>
+                    <summary>1 Level</summary>
                     <details>
-                      <summary>Number of Factors</summary>
+                      <summary>Test for Mean or Standard Deviation?</summary>
+
+
+                      <details>
+                        <summary>
+                          Standard Deviation
+                        </summary>
+                        <p>Chi<sup>2</sup>Test</p>
+                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
+                        </p>
+                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> &#8800
+                          &sigma;<sub>t</sub>
+                        </p>
+                      </details>
+
+
+                      <details>
+                        <summary>Mean</summary>
+                        <p>1 Sample t Test</p>
+                        <p>H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>t</sub></p>
+                        <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800 &mu;<sub>t</sub></p>
+                      </details>
+
+
+                    </details>
+                  </details>
+                  <details>
+                    <summary>2 Level</summary>
+                    <details>
+                      <summary>Test for Mean or Standard Deviation?</summary>
+                      <details>
+                        <summary>
+                          Standard Deviation
+                        </summary>
+                        <p>F Test</p>
+                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>1</sub>
+                        </p>
+                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> &#8800
+                          &sigma;<sub>2</sub>
+                        </p>
+                      </details>
+                      <details>
+                        <summary>Mean</summary>
+                        <details>
+                          <summary>Is data independant?</summary>
                           <details>
-                            <summary>2 Factors</summary>
-                            <p>Contingency Table</p>
-                            <p>H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are
-                              independant</p>
-                            <p>H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are dependant
+                            <summary>Yes - independant</summary>
+                            <p>2 Sample t Test</p>
+                            <p>H<sub>0</sub>: &mu;<sub>1</sub> =
+                              &mu;<sub>2</sub></p>
+                            <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800
+                              &mu;<sub>2</sub>
                             </p>
                           </details>
                           <details>
-                            <summary>1 Factor</summary>
-                                <details>
-                                  <summary>1 or 2 samples?</summary>
-                                      <details>
-                                        <summary> 1 sample</summary>
-                                        <p>1-Proportion Test</p>
-                                        <p>H<sub>0</sub>: P<sub>1</sub> =
-                                          P<sub>t</sub></p>
-                                        <p>H<sub>A</sub>: P<sub>1</sub> &#8800
-                                          P<sub>t</sub></p>
-                                      </details>
-                                      <details>
-                                        <summary>2 Sample</summary>
-                                        <p>2-Proportion Test</p>
-                                        <p>H<sub>0</sub>: P<sub>1</sub> =
-                                          P<sub>2</sub></p>
-                                        <p>H<sub>A</sub>: P<sub>1</sub> &#8800
-                                          P<sub>2</sub></p>
-                                      </details>
-                                    </details>
-                                  </details>
-                                </details>
-                              </details>
-                              <details>
-                <summary>Variable</summary>
-                    <details>
-                      <summary>1 or 2 (or more) factors?</summary>
-                          <details>
-                            <summary>Is the data Normally distributed?</summary>
-                                <details>
-                                  <summary>Normal</summary>
-                                      <details>
-                                        <summary>1, 2, or >2 Levels?</summary>
-                                            <details>
-                                              <summary>1 Level</summary>
-                                                  <details>
-                                                    <summary>Test for Mean or Standard Deviation?</summary>
-                                                        <details>
-                                                          <summary>
-                                                            Standard Deviation
-                                                          </summary>
-                                                          <p>Chi<sup>2</sup>Test</p>
-                                                          <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
-                                                          </p>
-                                                          <p>H<sub>0</sub>: &sigma;<sub>1</sub> &#8800
-                                                            &sigma;<sub>t</sub>
-                                                          </p>
-                                                        </details>
-                                                        <details>
-                                                          <summary>Mean</summary>
-                                                          <p>1 Sample t Test</p>
-                                                          <p>H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>t</sub></p>
-                                                          <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800 &mu;<sub>t</sub></p>
-                                                        </details>
-                                                  </details>
-                                            </details>
-                                            <details>
-                                              <summary>2 Level</summary>
-                                                  <details>
-                                                    <summary>Test for Mean or Standard Deviation?</summary>
-                                                        <details>
-                                                          <summary>
-                                                            Standard Deviation
-                                                          </summary>
-                                                          <p>F Test</p>
-                                                          <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>1</sub>
-                                                          </p>
-                                                          <p>H<sub>0</sub>: &sigma;<sub>1</sub> &#8800
-                                                            &sigma;<sub>2</sub>
-                                                          </p>
-                                                        </details>
-                                                        <details>
-                                                          <summary>Mean</summary>
-                                                              <details>
-                                                                <summary>Is data independant?</summary>
-                                                                    <details>
-                                                                      <summary>Yes - independant</summary>
-                                                                      <p>2 Sample t Test</p>
-                                                                      <p>H<sub>0</sub>: &mu;<sub>1</sub> =
-                                                                        &mu;<sub>2</sub></p>
-                                                                      <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800
-                                                                        &mu;<sub>2</sub>
-                                                                      </p>
-                                                                    </details>
-                                                                    <details>
-                                                                      <summary>No - Data is Paired</summary>
-                                                                      <p>Paired t Test</p>
-                                                                      <p>H<sub>0</sub>: &mu;<sub>1</sub> =
-                                                                        &mu;<sub>2</sub></p>
-                                                                      <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800
-                                                                        &mu;<sub>2</sub>
-                                                                      </p>
-                                                                    </details>
-                                                              </details>
-                                                        </details>
-                                                  </details>
-                                            </details>
-                                            <details>
-                                              <summary>More than 2 Levels</summary>
-                                              <p>Bartlets Test</p>
-                                              <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> =
-                                                &sigma;<sub>3</sub></p>
-                                              <p>H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i
-                                                &#8800; j (or at least one is different)</p>
-                                            </details>
-                                      </details>
-                                </details>
-                                <details>
-                                  <summary>Not Normal</summary>
-                                      <details>
-                                        <summary>1 or 2 (or more)levels?</summary>
-                                            <details>
-                                              <summary>1 level</summary>
-                                                  <details>
-                                                    <summary>test for Median or Standard Deviation?</summary>
-                                                        <details>
-                                                          <summary>Test for Median</summary>
-                                                          <p>1-sample Wilcoxon or 1-Sample Significance</p>
-                                                          <p>H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></p>
-                                                          <p>H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub></p>
-                                                          <p>(t = target)</p>
-                                                        </details>
-                                                  </details>
-                                            <details>
-                                              <summary>2 or more levels</summary>
-                                              <p>Levene's Test</p>
-                                              <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> = &sigma;<sub>3</sub></p>
-                                              <p>H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800; j (or at least 1 is different)</p>
-                                                  <details>
-                                                    <summary>Test for Median or Standard Deviation?</summary>
-                                                        <details>
-                                                          <summary>Test for Median</summary>
-                                                          <p>1-sample Wilcoxon or 1-Sample Significance</p>
-                                                          <p>H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></p>
-                                                          <p>H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub></p>
-                                                          <p>(t = target)</p>
-                                                        </details>
-                                                        <details>
-                                                          <summary>Test for Standard Deviation</summary>
-                                                          <p>Chi<sup>2</sup> Test</p>
-                                                          <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
-                                                          </p>
-                                                          <p>H<sub>A</sub>: &sigma;<sub>1</sub> &#8800;
-                                                            &sigma;<sub>t</sub></p>
-                                                          <p>(t = target)</p>
-                                                        </details>
-                                                  </details>
-                                            </details>
-                                      </details>
-                                </details>
+                            <summary>No - Data is Paired</summary>
+                            <p>Paired t Test</p>
+                            <p>H<sub>0</sub>: &mu;<sub>1</sub> =
+                              &mu;<sub>2</sub></p>
+                            <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800
+                              &mu;<sub>2</sub>
+                            </p>
                           </details>
+                        </details>
+                      </details>
                     </details>
+                    <details>
+                      <summary>More than 2 Levels</summary>
+                      <p>Bartlets Test</p>
+                      <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> =
+                        &sigma;<sub>3</sub></p>
+                      <p>H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i
+                        &#8800; j (or at least one is different)</p>
+                    </details>
+                  </details>
+                </details>
+                <details>
+                  <summary>Not Normal</summary>
+                  <details>
+                    <summary>1 or 2 (or more)levels?</summary>
+                    <details>
+                      <summary>1 level</summary>
+                      <details>
+                        <summary>test for Median or Standard Deviation?</summary>
+                        <details>
+                          <summary>Test for Median</summary>
+                          <p>1-sample Wilcoxon or 1-Sample Significance</p>
+                          <p>H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></p>
+                          <p>H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub></p>
+                          <p>(t = target)</p>
+                        </details>
+                      </details>
+                      <details>
+                        <summary>2 or more levels</summary>
+                        <p>Levene's Test</p>
+                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> = &sigma;<sub>3</sub></p>
+                        <p>H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800; j (or at least
+                          1
+                          is different)</p>
+                        <details>
+                          <summary>Test for Median or Standard Deviation?</summary>
+                          <details>
+                            <summary>Test for Median</summary>
+                            <p>1-sample Wilcoxon or 1-Sample Significance</p>
+                            <p>H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></p>
+                            <p>H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub></p>
+                            <p>(t = target)</p>
+                          </details>
+                          <details>
+                            <summary>Test for Standard Deviation</summary>
+                            <p>Chi<sup>2</sup> Test</p>
+                            <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
+                            </p>
+                            <p>H<sub>A</sub>: &sigma;<sub>1</sub> &#8800;
+                              &sigma;<sub>t</sub></p>
+                            <p>(t = target)</p>
+                          </details>
+                        </details>
+                      </details>
+                    </details>
+                  </details>
+                </details>
               </details>
+            </details>
+          </details>
+        </details>
         </details>
       </div>
       <br>
-      <img src="img/HypothesisRoadmap.jpg">
+      <!-- <img src="img/HypothesisRoadmap.jpg"> -->
     </div>
   </main>
   <footer class="foot">

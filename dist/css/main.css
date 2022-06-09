@@ -143,6 +143,13 @@ h6 {
   font-size: 24px;
 }
 
+.roadmap > details {
+  font-size: 1 rem;
+}
+.roadmap > summary {
+  font-size: 1.5rem;
+}
+
 .grid-container {
   width: 80%;
   display: grid;
@@ -251,10 +258,9 @@ h6 {
 .ColumnContainer {
   margin: 0 auto;
   font-size: 0.75rem;
-  width: max(80ch, 90%);
+  width: max(90ch, 90%);
 }
 .ColumnContainer__heading {
-  max-height: 3.5ch;
   margin: 0 auto;
   padding-bottom: 10px;
   margin-top: 10px;
@@ -265,15 +271,16 @@ h6 {
   border-top: 1px solid #000;
   background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
 }
-.ColumnContainer > article {
-  padding-bottom: 5px;
-  text-align: justify;
-}
-.ColumnContainer > article .DropCap::first-letter {
+.ColumnContainer .DropCap::first-letter {
   float: left;
   font-size: 2em;
   margin: 0 0.1em 0 0;
   line-height: 0.85;
+}
+.ColumnContainer > article {
+  width: 100%;
+  padding-bottom: 5px;
+  text-align: justify;
 }
 .ColumnContainer > article p {
   text-justify: center;
@@ -289,7 +296,7 @@ h6 {
 }
 .ColumnContainer > article ul > li > details {
   display: block;
-  width: 90%;
+  width: 100%;
   padding-bottom: 5px;
   margin-left: 0;
   text-align: justify;
@@ -331,12 +338,12 @@ h6 {
   }
 
   .ColumnContainer {
-    width: min(80ch, 90%);
+    width: min(100ch, 90%);
   }
 }
 @media screen and (min-width: 1280px) {
   * {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .site {
@@ -356,11 +363,11 @@ h6 {
   }
 
   .ColumnContainer {
-    width: min(80ch, 60%);
+    width: max(100ch, 70%);
   }
 
   .grid-container {
-    width: 80%;
+    width: 90%;
   }
 
   .grid-container {
@@ -383,9 +390,10 @@ details {
   margin-left: 2em;
   cursor: pointer;
   margin: 0 auto;
+  width: 100%;
 }
 details > summary {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
 }
 details > dl > dt {
@@ -447,8 +455,9 @@ p {
 
 .list {
   font-size: 1.25em;
-  width: min(80ch, 90%);
+  width: 100%;
   margin: 0 auto;
+  list-style: none;
 }
 
 .highlight {

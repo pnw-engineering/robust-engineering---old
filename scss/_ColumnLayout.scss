@@ -1,11 +1,10 @@
 .ColumnContainer {
     margin: 0 auto;
     font-size: .75rem;
-    width: max(80ch, 90%);
+    width: max(90ch, 90%);
     // background-color: cornflowerblue;
 
     &__heading {
-        max-height: 3.5ch;
         margin: 0 auto;
         padding-bottom: 10px;
         margin-top: 10px;
@@ -18,19 +17,18 @@
         // background-color: cornflowerblue;
     }
 
+    .DropCap::first-letter {
+        float: left;
+        font-size: 2em;
+        margin: 0 .1em 0 0;
+        line-height: 0.85;
+    }
+
     >article {
-        // width: 100%;
+        width: 100%;
         padding-bottom: 5px;
-        // text-justify: center;
         text-align: justify;
         // background-color: cornflowerblue;
-
-        .DropCap::first-letter {
-            float: left;
-            font-size: 2em;
-            margin: 0 .1em 0 0;
-            line-height: 0.85;
-        }
 
         p {
             // background-color: cornflowerblue;
@@ -53,7 +51,7 @@
                 // background-color: cornflowerblue;
                 >details {
                     display: block;
-                    width: 90%;
+                    width: 100%;
                     padding-bottom: 5px;
                     margin-left: 0;
                     ;

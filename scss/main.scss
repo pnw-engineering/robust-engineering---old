@@ -9,11 +9,11 @@ details {
     margin-left: 2em;
     cursor: pointer;
     margin: 0 auto;
-    // width: min(80ch, 90%);
+    width: 100%;
     // background-color: cadetblue;
 
     >summary {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         background-image: $gradient1;
     }
 
@@ -92,8 +92,10 @@ p {
 
 .list {
     font-size: 1.25em;
-    width: min(80ch, 90%);
+    // width: min(80ch, 90%);
+    width: 100%;
     margin: 0 auto;
+    list-style: none;
     // background-color:cornflowerblue;
 }
 

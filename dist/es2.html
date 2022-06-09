@@ -40,64 +40,15 @@
         <div class="ColumnContainer">
             <div class="ColumnContainer__heading">--- Manage Variation ---</div>
             <article>
-                <p class="DropCap">Understanding requirements is essential to robust design, so
-                    be sure requirements are "SMART":</p>
-                <p><dfn>Specific</dfn> - and clearly stated</p>
-                <p><dfn>Measurable</dfn> - including units of measure</p>
-                <p><dfn>Achievable</dfn> - otherwise its a waste of effort</p>
-                <p><dfn>Relevant</dfn> - must reflect what customers want</p>
-                <p><dfn>Time-Bound</dfn> - achievable within project timeframe</p>
-            </article>
-            <article>
-                <p class="DropCap">Once requirements are understood, the methods for verification shoud be defined.
-                    These methods must include specific test procedures to be used,
-                    the units of measure, and the acceptance criteria.
-                </p>
-            </article>
-            <article>
-                <p class="DropCap">There are several categories of testing done in product development.</p>
-                <ul>
-                    <li>
-                        <details>
-                            <summary>Development Testing</summary>
-                            Testing done to understand the limits of the design space. Tests should be designed so that
-                            limits
-                            are reached about half the time to maximize information obtained. This way, design
-                            constraints are best defined. Sample sizes and test counts need to provide a good
-                            statistical
-                            basis
-                            for drawing conclusions.
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary>Verification Testing</summary>
-                            Testing done to verify that functional requiremenst are met. Test failures at this point
-                            should
-                            be
-                            rare and carefully evaluated if they occur.
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary>Reliability Testing</summary>
-                            Testing done to determine and/or verify expected product life. Testing must be done to
-                            failue to
-                            be
-                            sure that product strengths are well understood.
-                        </details>
-                    </li>
-                </ul>
-            </article>
-        </div>
-        <div class="ColumnContainer">
-            <div class="ColumnContainer__heading">--- Manage Variation ---</div>
-            <article>
-                <p class="DropCap">Variation occurs in all natural processes and if not managed, can cause undesireable effects.
+                <p class="DropCap">Variation occurs in all natural processes and if not managed, can cause undesireable
+                    effects.
                     Statistical methods are available to understand the types and amount of variation that occurs. <span
-                        class="highlight">Common Cause</span> variation is the variation naturally seen from the processes being
-                    used. <span class="highlight">Special Cause</span> variation is variation caused by some unusual factor that
-                    can generally be controlled and eliminated. <span class="highlight">Control Charts</span> are a common tool
+                        class="highlight">Common Cause</span> variation is the variation naturally seen from the
+                    processes being
+                    used. <span class="highlight">Special Cause</span> variation is variation caused by some unusual
+                    factor that
+                    can generally be controlled and eliminated. <span class="highlight">Control Charts</span> are a
+                    common tool
                     for keeping processes within their design limits.
                 </p>
                 <p>A good summary of control charts can be found <a target="_blank"
@@ -105,7 +56,43 @@
             </article>
             <article>
                 <p class="DropCap">
-                </p>
+                    Key statistic concepts and terminology that are important for correctly to the practice of Robust
+                    Engineering.</p>
+                <details>
+                    <summary>Inferential Statistics</summary>
+                    <p class="DropCap">
+                        When we “infer” characteristics of the entire population based on characteristics of a sampling
+                        of the population. Since it is impractical to test entire populations, we will be infering
+                        characteristics measured in a limited sampling to the entire population. In plain english, we
+                        test a sampling of parts to determine how all parts will behave.
+                    </p>
+                </details>
+                <details>
+                    <summary>Central Tendancy</summary>
+                    <dl>
+                        <td class="DropCap"><span class="highlight">Mean</span> </td>
+                        <dd>average value for a normally distributed set of data.</dd>
+                        <td class="DropCap"><span class="highlight">Median</span> </td>
+                        <dd>middle value for non-normally distributed set of data.</dd>
+                        <td class="DropCap"><span class="highlight">Mode</span></td>
+                        <dd>most often occuring value for attribute data.</dd>
+                    </dl>
+                </details>
+                <details>
+                    <summary>Variability</summary>
+                    <dl>
+                        <td><span class="highlight">Range</span></td>
+                        <dd>distance between exreme values (Maximum - Minimum)</dd>
+                        <td><span class="highlight">Variance (&sigma;<sup>2</sup>)</span></td>
+                        <dd>the Average Squared Deviation of each data point from the Mean</dd>
+                        <td><span class="highlight">Standard Deviation (&sigma;)</span></td>
+                        <dd>the Square Root of the Variance</dd>
+                    </dl>
+                    <p>
+                        Range is most sensitive to outliers. &sigma; has same units as the data so is more intuitive.
+                        &sigma;<sup>2</sup> can be averaged so is a good metric for dealing with multiple datasets.
+                    </p>
+                </details>
             </article>
             <article>
                 <p class="DropCap"></p>
