@@ -52,7 +52,7 @@ h6 {
 
 .site {
   display: grid;
-  grid-template: "hdr       hdr" 60px "nav      content" calc(100vh - 120px) "foot     foot" 60px/0 1fr;
+  grid-template: "hdr       hdr" 63px "nav      content" calc(100vh - 120px) "foot     foot" 60px/0 1fr;
   background-color: #122030;
 }
 .site .header {
@@ -66,6 +66,7 @@ h6 {
   line-height: 1;
   color: #f4f2e9;
   background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
+  border-bottom: 3px solid #b43e0c;
 }
 .site .header__bgr {
   position: -webkit-sticky;
@@ -73,6 +74,7 @@ h6 {
   grid-area: bgr;
   width: 1rem;
   font-size: 30px;
+  margin: auto;
   cursor: pointer;
 }
 .site .header__title {
@@ -89,6 +91,7 @@ h6 {
   text-align: center;
   font-size: 1rem;
   letter-spacing: 5px;
+  border-bottom: 3px #b43e0c;
 }
 .site .sidenav {
   grid-area: nav;
@@ -135,7 +138,7 @@ h6 {
 }
 
 .sidenav a:hover {
-  color: rgb(78, 89, 208);
+  color: #b43e0c;
 }
 
 .sidenav .closebtn {
@@ -177,9 +180,8 @@ h6 {
 .topic {
   min-height: 10vh;
   margin: 0 auto;
-  background-color: #1e3b4c;
-  border: 1px solid black;
-  box-shadow: 7px 7px #0b141d;
+  background-color: hsl(207deg, 44%, 29%);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5568627451);
   cursor: pointer;
   display: block;
   margin-bottom: 10px;
@@ -463,7 +465,7 @@ p {
 .highlight {
   font-size: larger;
   font-style: italic;
-  color: #a6c8dc;
+  color: hsl(202deg, 43%, 46%);
 }
 
 table,
@@ -512,7 +514,7 @@ details.table-details > summary.table-summary {
   font-size: 1.8rem;
   font-weight: 700;
   background-image: none;
-  background-color: hsl(65deg, 73%, 87%);
+  background-color: #6fa6c6;
 }
 details.table-details .big-table {
   display: grid;
@@ -522,13 +524,13 @@ details.table-details .big-table .table-heading {
   padding-left: 5px;
   font-size: 1.75rem;
   font-weight: 700;
-  border: 1px solid #f4f2e9;
+  border: 1px solid #4282a7;
   background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
 }
 details.table-details .big-table > .table-content {
   font-size: 1.25rem;
   padding-left: 5px;
-  border: 1px solid #f4f2e9;
+  border: 1px solid #4282a7;
 }
 
 .tool-table {

@@ -32,10 +32,11 @@
 .topic {
     min-height: 10vh;
     margin: 0 auto;
-    background-color: darken($secondary-color, 25);
+    background-color:hsl(207, 44%, 29%);
     // background-color: darkmagenta;
-    border: 1px solid black;
-    box-shadow: 7px 7px darken($primary-color, 5);
+    // border: 1px solid black;
+    // box-shadow: 7px 7px darken($primary-color, 5);
+    box-shadow: 2px 2px 2px #0000008e;
     cursor: pointer;
     display: block;
     margin-bottom: 10px;

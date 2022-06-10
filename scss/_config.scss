@@ -1,13 +1,14 @@
 $primary-color: #122030;
 $text-color: #f4f2e9;
 $secondary-color: #4282a7;
+$accent-color: #b43e0c;
 // $gradient2: linear-gradient(90deg,
 //     hsl(240deg 36% 17%) 0%,
 //     hsl(275deg 50% 26%) 50%,
 //     hsl(306deg 100% 27%) 100%);
 $gradient1: linear-gradient(90deg,
     hsl(212deg 45% 13%) 0%,
-    hsl(207deg 44% 29%) 50%,
+    hsl(207, 44%, 29%) 50%,
     hsl(202deg 43% 46%) 100%);
 
 *,

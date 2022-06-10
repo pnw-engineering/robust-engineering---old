@@ -1,7 +1,7 @@
 .site {
     display: grid;
     grid-template:
-        "hdr       hdr" 60px
+        "hdr       hdr" 63px
         "nav      content" calc(100vh - 120px) 
         "foot     foot" 60px
         /0 1fr;
@@ -20,16 +20,18 @@
         line-height: 1;
         color: $text-color;
         background-image: $gradient1;
-        // border: 1px solid  rgb(200, 19, 19) 
+        border-bottom: 3px solid  $accent-color;
         // background-color: $primary-color;
         &__bgr {
             position: sticky;
             grid-area: bgr;
             width: 1rem;
             font-size: 30px;
+            margin: auto;
+            // color: $accent-color;
             cursor: pointer;
         }
-
+        
         &__title {
             grid-area: title;
             font-size: 2rem;
@@ -39,13 +41,14 @@
             letter-spacing: 10px;
             // background-color: aqua;
         }
-
+        
         &__subtitle {
             grid-area: subtitle;
             margin: 0 auto;
             text-align: center;
             font-size: 1rem;
             letter-spacing: 5px;
+            border-bottom: 3px $accent-color;
             // background-color:aquamarine;
         }
     }
@@ -107,7 +110,7 @@
 
 .sidenav a:hover {
     // color: #f1f1f1;
-    color: rgb(78, 89, 208);
+    color: $accent-color;
 }
 
 .sidenav .closebtn {
