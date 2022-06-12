@@ -2,474 +2,507 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
-    rel="stylesheet">
-  <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
-  <script src="js/main.js"></script>
-  <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
-  <link rel="stylesheet" href="css/main.css">
-  <title>Robust Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Robust Design</title>
 </head>
 
 <body class="site" id="mysite">
 
-  <header class="header">
-    <div class="header__bgr" onclick="toggleNav()">&#9776</div>
-    <div class="header__title">
-      Robust Engineering
+    <header class="header">
+        <div class="header__bgr" onclick="toggleNav()">&#9776</div>
+        <div class="header__title">
+            Robust Engineering
+        </div>
+        <div class="header__subtitle">
+            Using Science, Statistics, and Critical Thinking to improve product design
+            robustness
+        </div>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="Glossary.html">Glossary</a>
+        <a href="hypothesis.html">hypothesis tests</a>
     </div>
-    <div class="header__subtitle">
-      Using Science, Statistics, and Critical Thinking to improve product design
-      robustness
     </div>
-  </header>
 
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html">Home</a>
-    <a href="tools.html">Tools</a>
-    <a href="Glossary.html">Glossary</a>
-    <a href="hypothesis.html">hypothesis tests</a>
-  </div>
-  </div>
+    <main id="myContent" class="content">
+        <div class="WideContainer">
+            <h1>Hypothesis Testing Tool assumptions and definitions for Null and Alternate Hypotheses</h1>
+            <details class="table-details">
+                <summary class="table-summary">Testing data shape, continuous data</summary>
+                <div class="big-table">
+                    <div class="table-heading">Issue being addressed</div>
+                    <div class="table-heading">Tool</div>
+                    <div class="table-heading">Ho</div>
+                    <div class="table-heading">Ha</div>
 
-  <main id="myContent" class="content">
-    <div class="WideContainer">
-      <details class="table-details">
-        <summary class="table-summary">Testing data shape, continuous data</summary>
-        <div class="big-table">
-          <div class="table-heading">Issue being addressed</div>
-          <div class="table-heading">Tool</div>
-          <div class="table-heading">Ho</div>
-          <div class="table-heading">Ha</div>
-
-          <div class="table-content">Are the data normally distributed?</div>
-          <div class="table-content">Normality Test</div>
-          <div class="table-content">normal</div>
-          <div class="table-content">not normal</div>
-        </div>
-      </details>
-
-      <details class="table-details">
-        <summary class="table-summary">Comparing data spread, continuous data</summary>
-        <div class="big-table">
-          <div class="table-heading">Issue being addressed</div>
-          <div class="table-heading">Tool</div>
-          <div class="table-heading">Ho</div>
-          <div class="table-heading">Ha</div>
-
-          <div class="table-content">Comparison of standard deviations- normally distributed data</div>
-          <div class="table-content">Test For Equal Variance, Bartlett's (or F) Test</div>
-          <div class="table-content">Standard deviations are the same</div>
-          <div class="table-content">at least one Standard deviation is different</div>
-
-          <div class="table-content">Comparison of Standard deviations - non-normally distributed data</div>
-          <div class="table-content">Test For Equal Variance, Levene's Test</div>
-          <div class="table-content">Standard deviations are the same</div>
-          <div class="table-content">at least one standard deviation is different</div>
-        </div>
-      </details>
-
-      <details class="table-details">
-        <summary class="table-summary">Comparing data central tendency, continuous data</summary>
-        <div class="big-table">
-          <div class="table-heading">Issue being addressed</div>
-          <div class="table-heading">Tool</div>
-          <div class="table-heading">Ho</div>
-          <div class="table-heading">Ha</div>
-
-          <div class="table-content">Does data conform to a standard - normally distributed data</div>
-          <div class="table-content">1-Sample t test</div>
-          <div class="table-content">mean = standard</div>
-          <div class="table-content">mean not = standard</div>
-
-          <div class="table-content">Are the averages for two groups of normally distributed data the same?
-          </div>
-          <div class="table-content">2-Sample t test</div>
-          <div class="table-content">mean group 1 = mean group 2</div>
-          <div class="table-content">mean group 1 not = mean group 2</div>
-
-          <div class="table-content">Are the averages for three or more groups of normally distributed data
-            the same?</div>
-          <div class="table-content">One Way ANOVA test</div>
-          <div class="table-content">mean of all groups are the same</div>
-          <div class="table-content">at least one group's mean is different than the others</div>
-
-          <div class="table-content">Does the median of a group of non-normal data comply to a standard</div>
-          <div class="table-content">1-Sample Wilcoxon test</div>
-          <div class="table-content">median not different than the standard</div>
-          <div class="table-content">median is different than the standard</div>
-
-          <div class="table-content">Comparing median of two groups of data, used for non-normal data</div>
-          <div class="table-content">Mann-Whitney test</div>
-          <div class="table-content">median group 1 = median group 2</div>
-          <div class="table-content">median group 1 not = median group 2</div>
-
-          <div class="table-content">Comparing median of three or more groups of data, used for non-normal
-            data</div>
-          <div class="table-content">Mood's Median test, for when distribution of each group's data has
-            similar shapes</div>
-          <div class="table-content">group 1 = median group 2 = median group 3</div>
-          <div class="table-content">at least one group's median is different from the others</div>
-
-          <div class="table-content">Comparing median of three or more groups of data, used for non-normal
-            data</div>
-          <div class="table-content">Kruskal-Wallis Median test, for when distribution of each group's data
-            has different shapes
-          </div>
-          <div class="table-content">median group 1 = median group 2 = median group 3</div>
-          <div class="table-content">at least one group's median is different from the others</div>
-        </div>
-      </details>
-
-      <details class="table-details">
-        <summary class="table-summary">Comparing data proportions, from counts, attribute data</summary>
-        <div class="big-table">
-          <div class="table-heading">Issue being addressed</div>
-          <div class="table-heading">Tool</div>
-          <div class="table-heading">Ho</div>
-          <div class="table-heading">Ha</div>
-
-          <div class="table-content">Proportion of one group of data compared to a standard</div>
-          <div class="table-content">1 Proportion Test</div>
-          <div class="table-content">proportion = standard group proportion not = standard</div>
-          <div class="table-content">Proportion of one group of data compared to a second group's proportion
-          </div>
-
-          <div class="table-content">2 Proportion Test</div>
-          <div class="table-content">group 1 proportion = group 2 proportion</div>
-          <div class="table-content">group 2 proportion not = group 2 proportion</div>
-          <div class="table-content">Comparing dependencies in groups/levels [proportion test of two or more
-            groups of two or more levels]</div>
-          <div class="table-content">Chi-Square Test</div>
-          <div class="table-content">data are independent (not related); proportions are the same</div>
-          <div class="table-content">data are dependent (related); at least one proportion is different from
-            another</div>
-        </div>
-      </details>
-
-      <details class="table-details">
-        <summary class="table-summary">Correlation & Regression</summary>
-        <div class="big-table">
-          <div class="table-heading">Issue being addressed</div>
-          <div class="table-heading">Tool</div>
-          <div class="table-heading">Ho</div>
-          <div class="table-heading">Ha</div>
-          <div class="table-content">Is the data correlated?</div>
-          <div class="table-content">Correlation Test</div>
-          <div class="table-content">data is not correlated</div>
-          <div class="table-content">data is correlated</div>
-          <div class="table-content">Testing regression model for significance in session window output after
-            running Regression</div>
-          <div class="table-content"></div>
-          <div class="table-content">model does not explain significant variation</div>
-          <div class="table-content">model does explain significant variation</div>
-          <div class="table-content">Testing constant for significance in session window output after running
-            Regression</div>
-          <div class="table-content"></div>
-          <div class="table-content">constant [y-intercept] is zero, it has no significance (or not zero and
-            not significant)</div>
-          <div class="table-content">constant is not zero, it has significance</div>
-          <div class="table-content">Testing terms for significance in session window output after running
-            Regression</div>
-          <div class="table-content"></div>
-          <div class="table-content">term does not have significance, does not help explain the variation
-            present</div>
-          <div class="table-content">term has significance and does explain the variation present</div>
-          <div class="table-content">Test of model fit Lack of Fit test under Regression Options</div>
-          <div class="table-content"></div>
-          <div class="table-content"> model has 'No Lack Of Fit', model passes this adequacy test</div>
-          <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
-        </div>
-      </details>
-
-      <details class="table-details">
-        <summary class="table-summary">DOE</summary>
-        <div class="big-table">
-          <div class="table-heading">Issue being addressed</div>
-          <div class="table-heading">Tool</div>
-          <div class="table-heading">Ho</div>
-          <div class="table-heading">Ha</div>
-          <div class="table-content">Testing the constant for significance in Session window output after
-            running DOE analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">constant is zero, not significant (or not zero and not significant)</div>
-          <div class="table-content">constant is not zero, it has significance</div>
-          <div class="table-content">Testing Main Effects for significance in Session window output after
-            running DOE analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">no Main Effects are significant</div>
-          <div class="table-content">at least one Main Effect is significant</div>
-          <div class="table-content">Testing 2-Way Interactions for significance (or n-Way) in Session window
-            output after running
-            DOE analysis and model includes higher order terms</div>
-          <div class="table-content"></div>
-          <div class="table-content">no n-Way interactions are significant</div>
-          <div class="table-content">at least one n-Way interaction is significant</div>
-          <div class="table-content">Testing specific terms for significance in Session window output after
-            running DOE analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">term is not significant</div>
-          <div class="table-content">term is significant</div>
-          <div class="table-content">Testing for curvature in Session window output after running DOE
-            analysis, center points exist
-            and are included in the model</div>
-          <div class="table-content"></div>
-          <div class="table-content">curvature is not significant</div>
-          <div class="table-content">curvature is significant</div>
-          <div class="table-content">Testing Blocks for significance in Session window output after running
-            DOE analysis, blocks
-            exist and are included in the model</div>
-          <div class="table-content"></div>
-          <div class="table-content">no significant difference associated to blocks</div>
-          <div class="table-content">a significant difference can be attributed to blocks</div>
-          <div class="table-content">Testing for Lack of Fit Minitab will run this test when insignificant
-            terms are removed from the
-            model and sufficient degrees of freedom are available</div>
-          <div class="table-content"></div>
-          <div class="table-content">model has 'No Lack Of Fit', model passes this adequacy test</div>
-          <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
-        </div>
-      </details>
-
-      <details class="table-details">
-        <summary class="table-summary">Response Surfaces</summary>
-        <div class="big-table">
-          <div class="table-heading">Issue being addressed</div>
-          <div class="table-heading">Tool</div>
-          <div class="table-heading">Ho</div>
-          <div class="table-heading">Ha</div>
-
-          <div class="table-content">Testing the constant for significance in Session window output after
-            running analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">constant is zero, not significant (or not zero and not significant)</div>
-          <div class="table-content">constant is not zero, it has significance</div>
-
-          <div class="table-content">Testing Linear terms for significance in Session window output after
-            running analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">no Linear terms are significant</div>
-          <div class="table-content">at least one Linear term is significant</div>
-          <div class="table-content">Testing Square terms for significance in Session window output after
-            running analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">no Square terms are significant</div>
-          <div class="table-content">at least one Square term is significant</div>
-          <div class="table-content">Testing Interactions for significance in Session window output after
-            running analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">no Interactions are significant</div>
-          <div class="table-content">at least one interaction is significant</div>
-          <div class="table-content">Testing specific terms for significance in Session window output after
-            running analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">term is not significant</div>
-          <div class="table-content">term is significant</div>
-          <div class="table-content">Testing for Lack of Fit in Session window after running analysis</div>
-          <div class="table-content"></div>
-          <div class="table-content">model has 'No Lack Of Fit', model passes this adequacy test</div>
-          <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
-        </div>
-      </details>
-      <br>
-      <div class="roadmap">
-        <details>
-          <summary>Type of data</summary>
-          <details>
-            <summary>Attribute</summary>
-            <details>
-              <summary>Number of Factors</summary>
-              <details>
-                <summary>2 Factors</summary>
-                <p>Contingency Table</p>
-                <p>H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are
-                  independant</p>
-                <p>H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are dependant
-                </p>
-              </details>
-              <details>
-                <summary>1 Factor</summary>
-                <details>
-                  <summary>1 or 2 samples?</summary>
-                  <details>
-                    <summary> 1 sample</summary>
-                    <p>1-Proportion Test</p>
-                    <p>H<sub>0</sub>: P<sub>1</sub> =
-                      P<sub>t</sub></p>
-                    <p>H<sub>A</sub>: P<sub>1</sub> &#8800
-                      P<sub>t</sub></p>
-                  </details>
-                  <details>
-                    <summary>2 Sample</summary>
-                    <p>2-Proportion Test</p>
-                    <p>H<sub>0</sub>: P<sub>1</sub> =
-                      P<sub>2</sub></p>
-                    <p>H<sub>A</sub>: P<sub>1</sub> &#8800
-                      P<sub>2</sub></p>
-                  </details>
-                </details>
-              </details>
+                    <div class="table-content">Are the data normally distributed?</div>
+                    <div class="table-content">Normality Test</div>
+                    <div class="table-content">normal</div>
+                    <div class="table-content">not normal</div>
+                </div>
             </details>
-          </details>
-          <details>
-            <summary>Variable</summary>
-            <details>
-              <summary>1 or 2 (or more) factors?</summary>
-              <details>
-                <summary>Is the data Normally distributed?</summary>
-                <summary>Normal</summary>
-                <details>
-                  <summary>1, 2, or >2 Levels?</summary>
-                  <details>
-                    <summary>1 Level</summary>
-                    <details>
-                      <summary>Test for Mean or Standard Deviation?</summary>
 
+            <details class="table-details">
+                <summary class="table-summary">Comparing data spread, continuous data</summary>
+                <div class="big-table">
+                    <div class="table-heading">Issue being addressed</div>
+                    <div class="table-heading">Tool</div>
+                    <div class="table-heading">Ho</div>
+                    <div class="table-heading">Ha</div>
 
-                      <details>
-                        <summary>
-                          Standard Deviation
-                        </summary>
-                        <p>Chi<sup>2</sup>Test</p>
-                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
-                        </p>
-                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> &#8800
-                          &sigma;<sub>t</sub>
-                        </p>
-                      </details>
+                    <div class="table-content">Comparison of standard deviations- normally distributed data</div>
+                    <div class="table-content">Test For Equal Variance, Bartlett's (or F) Test</div>
+                    <div class="table-content">&sigma;s are the same</div>
+                    <div class="table-content">at least one &sigma; is different</div>
 
-
-                      <details>
-                        <summary>Mean</summary>
-                        <p>1 Sample t Test</p>
-                        <p>H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>t</sub></p>
-                        <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800 &mu;<sub>t</sub></p>
-                      </details>
-
-
-                    </details>
-                  </details>
-                  <details>
-                    <summary>2 Level</summary>
-                    <details>
-                      <summary>Test for Mean or Standard Deviation?</summary>
-                      <details>
-                        <summary>
-                          Standard Deviation
-                        </summary>
-                        <p>F Test</p>
-                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>1</sub>
-                        </p>
-                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> &#8800
-                          &sigma;<sub>2</sub>
-                        </p>
-                      </details>
-                      <details>
-                        <summary>Mean</summary>
-                        <details>
-                          <summary>Is data independant?</summary>
-                          <details>
-                            <summary>Yes - independant</summary>
-                            <p>2 Sample t Test</p>
-                            <p>H<sub>0</sub>: &mu;<sub>1</sub> =
-                              &mu;<sub>2</sub></p>
-                            <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800
-                              &mu;<sub>2</sub>
-                            </p>
-                          </details>
-                          <details>
-                            <summary>No - Data is Paired</summary>
-                            <p>Paired t Test</p>
-                            <p>H<sub>0</sub>: &mu;<sub>1</sub> =
-                              &mu;<sub>2</sub></p>
-                            <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800
-                              &mu;<sub>2</sub>
-                            </p>
-                          </details>
-                        </details>
-                      </details>
-                    </details>
-                    <details>
-                      <summary>More than 2 Levels</summary>
-                      <p>Bartlets Test</p>
-                      <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> =
-                        &sigma;<sub>3</sub></p>
-                      <p>H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i
-                        &#8800; j (or at least one is different)</p>
-                    </details>
-                  </details>
-                </details>
-                <details>
-                  <summary>Not Normal</summary>
-                  <details>
-                    <summary>1 or 2 (or more)levels?</summary>
-                    <details>
-                      <summary>1 level</summary>
-                      <details>
-                        <summary>test for Median or Standard Deviation?</summary>
-                        <details>
-                          <summary>Test for Median</summary>
-                          <p>1-sample Wilcoxon or 1-Sample Significance</p>
-                          <p>H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></p>
-                          <p>H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub></p>
-                          <p>(t = target)</p>
-                        </details>
-                      </details>
-                      <details>
-                        <summary>2 or more levels</summary>
-                        <p>Levene's Test</p>
-                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> = &sigma;<sub>3</sub></p>
-                        <p>H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800; j (or at least
-                          1
-                          is different)</p>
-                        <details>
-                          <summary>Test for Median or Standard Deviation?</summary>
-                          <details>
-                            <summary>Test for Median</summary>
-                            <p>1-sample Wilcoxon or 1-Sample Significance</p>
-                            <p>H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></p>
-                            <p>H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub></p>
-                            <p>(t = target)</p>
-                          </details>
-                          <details>
-                            <summary>Test for Standard Deviation</summary>
-                            <p>Chi<sup>2</sup> Test</p>
-                            <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
-                            </p>
-                            <p>H<sub>A</sub>: &sigma;<sub>1</sub> &#8800;
-                              &sigma;<sub>t</sub></p>
-                            <p>(t = target)</p>
-                          </details>
-                        </details>
-                      </details>
-                    </details>
-                  </details>
-                </details>
-              </details>
+                    <div class="table-content">Comparison of Standard deviations - non-normally distributed data</div>
+                    <div class="table-content">Test For Equal Variance, Levene's Test</div>
+                    <div class="table-content">Standard deviations are the same</div>
+                    <div class="table-content">at least one standard deviation is different</div>
+                </div>
             </details>
-          </details>
-        </details>
-        </details>
-      </div>
-      <br>
-      <!-- <img src="img/HypothesisRoadmap.jpg"> -->
-    </div>
-  </main>
-  <footer class="foot">
-    <button class="pushable" onclick="window.location.href='start.html'">
-      <span class="shadow"></span>
-      <span class="edge"></span>
-      <span class="front">
-        Back
-      </span>
-    </button>
-    <span style="float:right">&copy; Copyright 2022</span>
-  </footer>
+
+            <details class="table-details">
+                <summary class="table-summary">Comparing data central tendency, continuous data</summary>
+                <div class="big-table">
+                    <div class="table-heading">Issue being addressed</div>
+                    <div class="table-heading">Tool</div>
+                    <div class="table-heading">Ho</div>
+                    <div class="table-heading">Ha</div>
+
+                    <div class="table-content">Does data conform to a standard - normally distributed data</div>
+                    <div class="table-content">1-Sample t test</div>
+                    <div class="table-content">mean = standard</div>
+                    <div class="table-content">mean not = standard</div>
+
+                    <div class="table-content">Are the averages for two groups of normally distributed data the same?
+                    </div>
+                    <div class="table-content">2-Sample t test</div>
+                    <div class="table-content">mean group 1 = mean group 2</div>
+                    <div class="table-content">mean group 1 not = mean group 2</div>
+
+                    <div class="table-content">Are the averages for three or more groups of normally distributed data
+                        the same?</div>
+                    <div class="table-content">One Way ANOVA test</div>
+                    <div class="table-content">mean of all groups are the same</div>
+                    <div class="table-content">at least one group's mean is different than the others</div>
+
+                    <div class="table-content">Does the median of a group of non-normal data comply to a standard</div>
+                    <div class="table-content">1-Sample Wilcoxon test</div>
+                    <div class="table-content">median not different than the standard</div>
+                    <div class="table-content">median is different than the standard</div>
+
+                    <div class="table-content">Comparing median of two groups of data, used for non-normal data</div>
+                    <div class="table-content">Mann-Whitney test</div>
+                    <div class="table-content">median group 1 = median group 2</div>
+                    <div class="table-content">median group 1 not = median group 2</div>
+
+                    <div class="table-content">Comparing median of three or more groups of data, used for non-normal
+                        data</div>
+                    <div class="table-content">Mood's Median test, for when distribution of each group's data has
+                        similar shapes</div>
+                    <div class="table-content">group 1 = median group 2 = median group 3</div>
+                    <div class="table-content">at least one group's median is different from the others</div>
+
+                    <div class="table-content">Comparing median of three or more groups of data, used for non-normal
+                        data</div>
+                    <div class="table-content">Kruskal-Wallis Median test, for when distribution of each group's data
+                        has different shapes
+                    </div>
+                    <div class="table-content">median group 1 = median group 2 = median group 3</div>
+                    <div class="table-content">at least one group's median is different from the others</div>
+                </div>
+            </details>
+
+            <details class="table-details">
+                <summary class="table-summary">Comparing data proportions, from counts, attribute data</summary>
+                <div class="big-table">
+                    <div class="table-heading">Issue being addressed</div>
+                    <div class="table-heading">Tool</div>
+                    <div class="table-heading">Ho</div>
+                    <div class="table-heading">Ha</div>
+
+                    <div class="table-content">Proportion of one group of data compared to a standard</div>
+                    <div class="table-content">1 Proportion Test</div>
+                    <div class="table-content">proportion = standard group proportion not = standard</div>
+                    <div class="table-content">Proportion of one group of data compared to a second group's proportion
+                    </div>
+
+                    <div class="table-content">2 Proportion Test</div>
+                    <div class="table-content">group 1 proportion = group 2 proportion</div>
+                    <div class="table-content">group 2 proportion not = group 2 proportion</div>
+                    <div class="table-content">Comparing dependencies in groups/levels [proportion test of two or more
+                        groups of two or more levels]</div>
+                    <div class="table-content">Chi-Square Test</div>
+                    <div class="table-content">data are independent (not related); proportions are the same</div>
+                    <div class="table-content">data are dependent (related); at least one proportion is different from
+                        another</div>
+                </div>
+            </details>
+
+            <details class="table-details">
+                <summary class="table-summary">Correlation & Regression</summary>
+                <div class="big-table">
+                    <div class="table-heading">Issue being addressed</div>
+                    <div class="table-heading">Tool</div>
+                    <div class="table-heading">Ho</div>
+                    <div class="table-heading">Ha</div>
+                    <div class="table-content">Is the data correlated?</div>
+                    <div class="table-content">Correlation Test</div>
+                    <div class="table-content">data is not correlated</div>
+                    <div class="table-content">data is correlated</div>
+                    <div class="table-content">Testing regression model for significance in session window output after
+                        running Regression</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">model does not explain significant variation</div>
+                    <div class="table-content">model does explain significant variation</div>
+                    <div class="table-content">Testing constant for significance in session window output after running
+                        Regression</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">constant [y-intercept] is zero, it has no significance (or not zero and
+                        not significant)</div>
+                    <div class="table-content">constant is not zero, it has significance</div>
+                    <div class="table-content">Testing terms for significance in session window output after running
+                        Regression</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">term does not have significance, does not help explain the variation
+                        present</div>
+                    <div class="table-content">term has significance and does explain the variation present</div>
+                    <div class="table-content">Test of model fit Lack of Fit test under Regression Options</div>
+                    <div class="table-content"></div>
+                    <div class="table-content"> model has 'No Lack Of Fit', model passes this adequacy test</div>
+                    <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
+                </div>
+            </details>
+
+            <details class="table-details">
+                <summary class="table-summary">DOE</summary>
+                <div class="big-table">
+                    <div class="table-heading">Issue being addressed</div>
+                    <div class="table-heading">Tool</div>
+                    <div class="table-heading">Ho</div>
+                    <div class="table-heading">Ha</div>
+                    <div class="table-content">Testing the constant for significance in Session window output after
+                        running DOE analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">constant is zero, not significant (or not zero and not significant)</div>
+                    <div class="table-content">constant is not zero, it has significance</div>
+                    <div class="table-content">Testing Main Effects for significance in Session window output after
+                        running DOE analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">no Main Effects are significant</div>
+                    <div class="table-content">at least one Main Effect is significant</div>
+                    <div class="table-content">Testing 2-Way Interactions for significance (or n-Way) in Session window
+                        output after running
+                        DOE analysis and model includes higher order terms</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">no n-Way interactions are significant</div>
+                    <div class="table-content">at least one n-Way interaction is significant</div>
+                    <div class="table-content">Testing specific terms for significance in Session window output after
+                        running DOE analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">term is not significant</div>
+                    <div class="table-content">term is significant</div>
+                    <div class="table-content">Testing for curvature in Session window output after running DOE
+                        analysis, center points exist
+                        and are included in the model</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">curvature is not significant</div>
+                    <div class="table-content">curvature is significant</div>
+                    <div class="table-content">Testing Blocks for significance in Session window output after running
+                        DOE analysis, blocks
+                        exist and are included in the model</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">no significant difference associated to blocks</div>
+                    <div class="table-content">a significant difference can be attributed to blocks</div>
+                    <div class="table-content">Testing for Lack of Fit Minitab will run this test when insignificant
+                        terms are removed from the
+                        model and sufficient degrees of freedom are available</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">model has 'No Lack Of Fit', model passes this adequacy test</div>
+                    <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
+                </div>
+            </details>
+
+            <details class="table-details">
+                <summary class="table-summary">Response Surfaces</summary>
+                <div class="big-table">
+                    <div class="table-heading">Issue being addressed</div>
+                    <div class="table-heading">Tool</div>
+                    <div class="table-heading">Ho</div>
+                    <div class="table-heading">Ha</div>
+
+                    <div class="table-content">Testing the constant for significance in Session window output after
+                        running analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">constant is zero, not significant (or not zero and not significant)</div>
+                    <div class="table-content">constant is not zero, it has significance</div>
+
+                    <div class="table-content">Testing Linear terms for significance in Session window output after
+                        running analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">no Linear terms are significant</div>
+                    <div class="table-content">at least one Linear term is significant</div>
+                    <div class="table-content">Testing Square terms for significance in Session window output after
+                        running analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">no Square terms are significant</div>
+                    <div class="table-content">at least one Square term is significant</div>
+                    <div class="table-content">Testing Interactions for significance in Session window output after
+                        running analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">no Interactions are significant</div>
+                    <div class="table-content">at least one interaction is significant</div>
+                    <div class="table-content">Testing specific terms for significance in Session window output after
+                        running analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">term is not significant</div>
+                    <div class="table-content">term is significant</div>
+                    <div class="table-content">Testing for Lack of Fit in Session window after running analysis</div>
+                    <div class="table-content"></div>
+                    <div class="table-content">model has 'No Lack Of Fit', model passes this adequacy test</div>
+                    <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
+                </div>
+            </details>
+
+            <h1>Roadmap for selecting Hypothesis tesing tools</h1>
+            <div class="roadmap">
+                <details open class="roadmap">
+                    <summary>Type of data: Attribute or Variable?</summary>
+                    <details class="roadmap">
+                        <summary>Attribute</summary>
+                        <details class="roadmap">
+                            <summary>Number of Factors: 1 or 2 Factors?</summary>
+                            <details class="roadmap">
+                                <summary>1 Factor</summary>
+                                <details class="roadmap">
+                                    <summary>1 or 2 samples?</summary>
+                                    <details class="roadmap">
+                                        <summary> 1 sample</summary>
+                                        <div class="wideGrid">
+                                            <p>1-Proportion Test</p>
+                                            <p>H<sub>0</sub>: P<sub>1</sub> =
+                                                P<sub>t</sub></p>
+                                            <p>H<sub>A</sub>: P<sub>1</sub> &#8800
+                                                P<sub>t</sub></p>
+                                        </div>
+                                    </details>
+                                    <details class="roadmap">
+                                        <summary>2 Sample</summary>
+                                        <div class="wideGrid">
+                                            <p>2-Proportion Test</p>
+                                            <p>H<sub>0</sub>: P<sub>1</sub> =
+                                                P<sub>2</sub></p>
+                                            <p>H<sub>A</sub>: P<sub>1</sub> &#8800
+                                                P<sub>2</sub></p>
+                                        </div>
+                                    </details>
+                                </details>
+                            </details>
+                            <details class="roadmap">
+                                <summary>2 Factors</summary>
+                                <div class="wideGrid">
+                                    <p>Contingency Table</p>
+                                    <p>H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are independant</p>
+                                    <p>H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are dependant
+                                    </p>
+                                </div>
+                            </details>
+                        </details>
+                    </details>
+                    <details class="roadmap">
+                        <summary>Variable</summary>
+                        <details class="roadmap">
+                            <summary>1 or 2 (or more) factors?</summary>
+                            <details class="roadmap">
+                                <summary>1 factor</summary>
+                                <details class="roadmap">
+                                    <summary>Is the data Normally distributed?</summary>
+                                    <details class="roadmap">
+                                        <summary>Normal</summary>
+                                        <details class="roadmap">
+                                            <summary>1, 2, or >2 Levels?</summary>
+                                            <details class="roadmap">
+                                                <summary>1 Level</summary>
+                                                <details class="roadmap">
+                                                    <summary>Test for Mean or Standard Deviation?</summary>
+                                                    <details class="roadmap">
+                                                        <summary>Standard Deviation</summary>
+                                                        <div class="wideGrid">
+                                                            <p>Chi<sup>2</sup>Test</p>
+                                                            <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
+                                                            </p>
+                                                            <p>H<sub>0</sub>: &sigma;<sub>1</sub> &#8800
+                                                                &sigma;<sub>t</sub>
+                                                            </p>
+                                                        </div>
+                                                    </details>
+                                                    <details class="roadmap">
+                                                        <summary>Mean</summary>
+                                                        <div class="wideGrid">
+                                                            <p>1 Sample t Test</p>
+                                                            <p>H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>t</sub></p>
+                                                            <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800 &mu;<sub>t</sub>
+                                                            </p>
+                                                        </div>
+                                                    </details>
+                                                </details>
+                                            </details>
+                                            <details class="roadmap">
+                                                <summary>2 Level</summary>
+                                                <details class="roadmap">
+                                                    <summary>Test for Mean or Standard Deviation?</summary>
+                                                    <details class="roadmap">
+                                                        <summary>Standard Deviation</summary>
+                                                        <div class="wideGrid">
+                                                            <p>F Test</p>
+                                                            <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>1</sub>
+                                                            </p>
+                                                            <p>H<sub>0</sub>: &sigma;<sub>1</sub> &#8800
+                                                                &sigma;<sub>2</sub>
+                                                            </p>
+                                                        </div>
+                                                    </details>
+                                                    <details class="roadmap">
+                                                        <summary>Mean</summary>
+                                                        <details class="roadmap">
+                                                            <summary>Is data independant?</summary>
+                                                            <details class="roadmap">
+                                                                <summary>Yes - independant</summary>
+                                                                <div class="wideGrid">
+                                                                    <p>2 Sample t Test</p>
+                                                                    <p>H<sub>0</sub>: &mu;<sub>1</sub> =
+                                                                        &mu;<sub>2</sub></p>
+                                                                    <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800
+                                                                        &mu;<sub>2</sub>
+                                                                    </p>
+                                                                </div>
+                                                            </details>
+                                                            <details class="roadmap">
+                                                                <summary>No - Data is Paired</summary>
+                                                                <div class="wideGrid">
+                                                                    <p>Paired t Test</p>
+                                                                    <p>H<sub>0</sub>: &mu;<sub>1</sub> =
+                                                                        &mu;<sub>2</sub></p>
+                                                                    <p>H<sub>0</sub>: &mu;<sub>1</sub> &#8800
+                                                                        &mu;<sub>2</sub>
+                                                                    </p>
+                                                                </div>
+                                                            </details>
+                                                        </details>
+                                                    </details>
+                                                </details>
+                                            </details>
+                                            <details class="roadmap">
+                                                <summary>More than 2 Levels</summary>
+                                                <div class="wideGrid">
+                                                    <p>Bartlets Test</p>
+                                                    <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> =
+                                                        &sigma;<sub>3</sub></p>
+                                                    <p>H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub>
+                                                        for i
+                                                        &#8800; j (or at least one is different)</p>
+                                                </div>
+                                            </details>
+                                        </details>
+                                    </details>
+                                    <details class="roadmap">
+                                        <summary>Not Normal</summary>
+                                        <details class="roadmap">
+                                            <summary>1 or 2 (or more)levels?</summary>
+                                            <details class="roadmap">
+                                                <summary>1 level</summary>
+                                                <details class="roadmap">
+                                                    <summary>test for Median or Standard Deviation?
+                                                    </summary>
+                                                    <details class="roadmap">
+                                                        <summary>Test for Median</summary>
+                                                        <div class="wideGrid">
+                                                            <p>1-sample Wilcoxon or 1-Sample Significance</p>
+                                                            <p>H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></p>
+                                                            <p>H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub></p>
+                                                            <p>(t = target)</p>
+                                                        </div>
+                                                    </details>
+                                                </details>
+                                                <details class="roadmap">
+                                                    <summary>2 or more levels</summary>
+                                                    <div class="wideGrid">
+                                                        <p>Levene's Test</p>
+                                                        <p>H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> =
+                                                            &sigma;<sub>3</sub></p>
+                                                        <p>H<sub>A</sub>: &sigma;<sub>i</sub> &#8800;
+                                                            &sigma;<sub>j</sub>
+                                                            for i &#8800; j (or at least 1 is different)</p>
+                                                    </div>
+                                                    <details class="roadmap">
+                                                        <summary>Test for Median or Standard Deviation?</summary>
+                                                        <details class="roadmap">
+                                                            <summary>Test for Median</summary>
+                                                            <div class="wideGrid">
+                                                                <p>1-sample Wilcoxon or 1-Sample Significance</p>
+                                                                <p>H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></p>
+                                                                <p>H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub>
+                                                                </p>
+                                                                <p>(t = target)</p>
+                                                            </div>
+                                                        </details>
+                                                        <details class="roadmap">
+                                                            <summary>Test for Standard Deviation
+                                                            </summary>
+                                                            <div class="wideGrid">
+                                                                <p>Chi<sup>2</sup> Test</p>
+                                                                <p>H<sub>0</sub>: &sigma;<sub>1</sub> =
+                                                                    &sigma;<sub>t</sub>
+                                                                </p>
+                                                                <p>H<sub>A</sub>: &sigma;<sub>1</sub> &#8800;
+                                                                    &sigma;<sub>t</sub></p>
+                                                                <p>(t = target)</p>
+                                                            </div>
+                                                        </details>
+                                                    </details>
+                                                </details>
+                                            </details>
+                                        </details>
+                                    </details>
+                                </details>
+                            </details>
+                            <details class="roadmap">
+                                <summary>2 or more factors</summary>
+                                <div class="wideGrid">
+                                    <p>ANOVA or Multiple Regression</p>
+                                </div>
+                            </details>
+                        </details>
+                    </details>
+                </details>
+            </div>
+            <!-- <img src="img/HypothesisRoadmap.jpg"> -->
+        </div>
+    </main>
+    <footer class="foot">
+        <button class="pushable" onclick="window.location.href='start.html'">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+                Back
+            </span>
+        </button>
+        <span style="float:right">&copy; Copyright 2022</span>
+    </footer>
 
 </body>

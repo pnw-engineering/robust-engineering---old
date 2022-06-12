@@ -80,27 +80,22 @@
     }
 
     .ColumnContainer {
-        width: max(100ch, 70%);
+        width: max(80ch, 70%);
         // background-color: cornflowerblue;
     }
 
     .grid-container {
-        width: 90%;
-    }
-
-    .grid-container {
+        width: 95%;
         // width: 100%;
         grid-template-columns: repeat(2, 1fr);
-        align-content: space-between;
-        justify-content: center;
-        // grid-gap: 30px;
+        grid-gap: 30px;
         // background-color: blue;
     }
 
     .grid-item {
         // font-size: .5vw;
         // font-size: .75rem;
-        width: 80ch;
+        width: 100%;
         // background-color: burlywood;
     }
 }

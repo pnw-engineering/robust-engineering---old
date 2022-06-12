@@ -1,67 +1,82 @@
 .grid-container {
     width: 80%;
     display: grid;
+    justify-content: space-around;
+    grid-auto-flow: dense row;
     grid-template-columns: 1fr;
-    justify-content: center;
-    align-content: space-between;
+    column-gap: 2rem;
+    // justify-content: left;
+    // align-content: space-between;
     margin: 0 auto;
     // background-color: dodgerblue;
 }
 
 .grid-item {
+    display: block;
     margin: 0 auto;
+    width: 100%;
     // background-color: beige;
 
     &__title {
         // width: 100%;
-        font-size: 1.5rem;
-        font-weight: bold;
+        font-size: 2rem;
+        font-weight: 700;
         font-variant: small-caps;
         padding-bottom: 2px;
         padding-top: 10px;
-        margin: 1rem;
+        // margin-left: 1rem;
+        margin: 0 auto;
+        color: $accent-color;
         // background-color: aqua;
         // border-bottom: 1px;
     }
 
-    > p {
+    >p {
         font-size: 1.2rem;
     }
 }
 
 .topic {
-    min-height: 10vh;
+    height: auto;
+    width: 100%;
     margin: 0 auto;
-    background-color:hsl(207, 44%, 29%);
+    // background-color:hsl(207, 44%, 29%);
     // background-color: darkmagenta;
-    // border: 1px solid black;
-    // box-shadow: 7px 7px darken($primary-color, 5);
     box-shadow: 2px 2px 2px #0000008e;
     cursor: pointer;
     display: block;
+    // transition: all 2.5s ease-in-out;
     margin-bottom: 10px;
 
     &__heading {
         padding-bottom: 5px;
         padding-top: 5px;
         padding-left: 1em;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-variant: small-caps;
         font-weight: 800;
+        color: $highlight-color;
         // background-color: chocolate;
     }
 
     &__soundbite {
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding-bottom: 5px;
-        padding-left: 1.5em;
-        padding-right:10px;
+        // padding-left: 1.5em;
+        padding-right: 5px;
+        text-align: justify;
+
         // background-color: blue;
+        p {
+            margin-left: 1rem;
+            line-height: .75;
+            // background-color: blue;
+
+        }
     }
 
     &:hover {
         background-image: $gradient1;
-        transition: all .25s ease-in-out;
     }
 
 }

@@ -1,19 +1,20 @@
 .ColumnContainer {
     margin: 0 auto;
-    font-size: .75rem;
+    font-size: .25rem;
     width: max(90ch, 90%);
     // background-color: cornflowerblue;
 
     &__heading {
         margin: 0 auto;
         padding-bottom: 10px;
-        margin-top: 10px;
+        // margin-top: 10px;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-variant: small-caps;
-        font-weight: bold;
+        font-weight: 700;
         border-top: 1px solid #000;
-        background-image: $gradient1;
+        color: $accent-color;
+        background-image: $gradientv;
         // background-color: cornflowerblue;
     }
 
@@ -35,7 +36,7 @@
             text-justify: center;
 
             dfn {
-                background-image: $gradient1;
+                background-image: $gradientv;
                 // background-color: $secondary-color ;
             }
         }
@@ -66,6 +67,15 @@
             }
         }
     }
+}
+
+article.topic{
+    // background-color: aqua;;
+    height: auto;
+    font-size: .25rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 2px #0000008e;
 }
 
 .WideContainer {

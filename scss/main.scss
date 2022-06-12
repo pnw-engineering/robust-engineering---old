@@ -14,7 +14,7 @@ details {
 
     >summary {
         font-size: 1.5rem;
-        background-image: $gradient1;
+        background-image: $gradientv;
     }
 
     >dl {
@@ -50,18 +50,27 @@ details {
 }
 
 .disclaimer {
-    color: rgb(242, 245, 88);
+    // color: rgb(242, 245, 88);
+    color: $accent-color;
     font-size: 1rem;
     padding-top: 10px;
     // background-color: dodgerblue;
 }
 
-h1{
-    font-size: 2rem;margin-left: 2rem;
-    font-weight: bold;
+ul {
+    list-style-type: none;
+    // background-color: aqua;
 }
+
+h1 {
+    font-size: 2rem;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
 h2,
 h3 {
+    font-size: 1.5rem;
     font-weight: 400;
     // background-color: coral;
 }
@@ -95,14 +104,25 @@ p {
     // width: min(80ch, 90%);
     width: 100%;
     margin: 0 auto;
-    list-style: none;
+    list-style-image: none;
     // background-color:cornflowerblue;
+}
+
+.list::before {
+    content: '';
+    display: inline-block;
+    height: .75rem;
+    width: .75rem;
+    border-radius: 50%;
+    background-image: url("/dist/img/symbol1.jpg");
+    margin-right: 3px;
+
 }
 
 .highlight {
     font-size: larger;
     font-style: italic;
-    color:hsl(202deg 43% 46%);
+    color: $highlight-color;
 }
 
 table,
@@ -169,7 +189,7 @@ details.table-details {
             font-size: 1.75rem;
             font-weight: 700;
             border: 1px solid $secondary-color;
-            background-image: $gradient1;
+            background-image: $gradientv;
         }
 
         >.table-content {
@@ -189,11 +209,10 @@ details.table-details {
     display: grid;
     color: $text-color;
     margin: 0 auto;
-    grid-template:
-        "Name   Name Name  Link" auto
-        "h-Cond h-H0 h-HA  Link" auto
-        "Cond   H0   HA    Link" auto
-        /50% 20% 20% 10%;
+    grid-template: "Name   Name Name  Link" auto
+    "h-Cond h-H0 h-HA  Link" auto
+    "Cond   H0   HA    Link" auto
+    /50% 20% 20% 10%;
 
     >.tool-name {
         font-size: 2rem;
@@ -240,30 +259,32 @@ details.table-details {
         padding-right: 5px;
         border: 1px solid $text-color;
     }
-    .tool-link{
+
+    .tool-link {
         grid-area: Link;
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         border: 1px solid $text-color;
-        
-        img{
+
+        img {
             // margin: auto;
             padding: 3px;
             width: 100%;
-            height:auto;
+            height: auto;
         }
     }
 }
 
-a.W-Ref{
-    color:green;
-    align-self:right;
+a.W-Ref {
+    color: green;
+    align-self: right;
     font-weight: 700;
     font-family: 'Brush Script MT', cursive;
     font-style: oblique;
-    
+
 }
+
 //3D button ------------------------
 
 .pushable {
@@ -305,10 +326,10 @@ a.W-Ref{
     height: 100%;
     border-radius: 12px;
     background: linear-gradient(to left,
-            hsl(225deg 50% 5%) 0%,
-            hsl(225deg 50% 16%) 8%,
-            hsl(225deg 50% 16%) 92%,
-            hsl(225deg 50% 5%) 100%);
+        hsl(225deg 50% 5%) 0%,
+        hsl(225deg 50% 16%) 8%,
+        hsl(225deg 50% 16%) 92%,
+        hsl(225deg 50% 5%) 100%);
 }
 
 .front {
@@ -324,8 +345,7 @@ a.W-Ref{
     background-image: $gradient1;
     will-change: transform;
     transform: translateY(-4px);
-    transition:
-        transform 600ms cubic-bezier(.3, .7, .4, 1);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
 .pushable:hover {
@@ -334,8 +354,7 @@ a.W-Ref{
 
 .pushable:hover .front {
     transform: translateY(-6px);
-    transition:
-        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .pushable:active .front {
@@ -345,8 +364,7 @@ a.W-Ref{
 
 .pushable:hover .shadow {
     transform: translateY(4px);
-    transition:
-        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .pushable:active .shadow {
