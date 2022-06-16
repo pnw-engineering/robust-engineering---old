@@ -1,6 +1,6 @@
 @include media-ml {
 
-    //mobile-landscape
+    //mobile-landscape - 640px
     * {
         font-size: .5rem;
     }
@@ -13,11 +13,27 @@
             // border: 1px solid  rgb(200, 19, 19) 
         }
     }
+
+    .grid-container {
+        width: 95%;
+        // width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        // background-color: blue;
+    }
+
+    .grid-item {
+        // font-size: .5vw;
+        // font-size: .75rem;
+        width: 100%;
+        // background-color: burlywood;
+    }
 }
+
 
 @include media-md {
 
-    //tablet-portrait
+    //tablet-portrait - 768px
     * {
         font-size: .75rem;
     }
@@ -36,11 +52,11 @@
 
     //tablet-landscape
     * {
-        font-size: 0.5vw;
+        font-size: 1.25rem;
     }
 
     .ColumnContainer {
-        width: min(100ch, 90%);
+        width: inherit;
         // background-color: cornflowerblue;
     }
 }
@@ -49,7 +65,7 @@
 
     //laptop
     * {
-        font-size: .9rem;
+        font-size: 1.25rem;
     }
 
     .site {
@@ -79,16 +95,20 @@
         }
     }
 
-    .ColumnContainer {
-        width: max(80ch, 70%);
+    .columnContainer {
+        // width: 90%;
+        margin: 0 auto;
         // background-color: cornflowerblue;
     }
 
+    .singleColumn{
+        width: 60%;
+    }
     .grid-container {
         width: 95%;
         // width: 100%;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px;
+        grid-gap: 90px;
         // background-color: blue;
     }
 
@@ -104,6 +124,6 @@
 
     //extra large screen
     * {
-        font-size: 0.8vw;
+        font-size: 2remw;
     }
 }

@@ -2,7 +2,7 @@
     display: grid;
     grid-template:
         "hdr       hdr" 63px
-        "nav      content" calc(100vh - 120px) 
+        "nav      content" calc(100vh - 123px) 
         "foot     foot" 60px
         /0 1fr;
     background-color: $primary-color;
@@ -34,7 +34,7 @@
         
         &__title {
             grid-area: title;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
             font-variant: small-caps;
             text-align: center;
@@ -48,7 +48,7 @@
             margin: 0 auto;
             text-align: center;
             text-justify: center;
-            font-size: 1rem;
+            font-size: .75rem;
             letter-spacing: 3px;
             border-bottom: 3px $accent-color;
             // background-color:aquamarine;
@@ -78,7 +78,12 @@
         grid-area: foot;
         background-color: $primary-color;
         position: fixed;
+        position: sticky;
         width: 100%;
+        display: grid;
+        grid-template:
+            "button  copyr" 
+            / 1fr  16rem;
         height: 60px;
         bottom: 0rem;
         text-align: center;
@@ -86,6 +91,12 @@
         color: set-text-color($primary-color);
         // background-color: rgb(19, 67, 200) 
     }
+    .footButton{
+        grid-area: button;
+    }
+    
+    .footCR{grid-area: copyr;}
+    // background-color: rgb(19, 67, 200) 
 }
 
 .sidenav {

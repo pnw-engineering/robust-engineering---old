@@ -1,116 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="css/main.css">
-    <title>Robust Design</title>
-</head>
-
-<body class="site" id="mysite">
-
-    <header class="header">
-        <div class="header__bgr" onclick="toggleNav()">&#9776</div>
-        <div class="header__title">
-            Robust Engineering
-        </div>
-        <div class="header__subtitle">
-            Using Science, Statistics, and Critical Thinking to improve product design
-            robustness
-        </div>
-    </header>
-
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="tools.html">Tools</a>
-        <a href="Glossary.html">Glossary</a>
-        <a href="hypothesis.html">hypothesis tests</a>
-    </div>
-
     <main id="myContent" class="content">
 
         <div class="ColumnContainer">
             <div class="ColumnContainer__heading">--- Manage Variation ---</div>
-            <article>
-                <p class="DropCap">Variation occurs in all natural processes and if not managed, can cause undesireable
-                    effects.
-                    Statistical methods are available to understand the types and amount of variation that occurs. <span
-                        class="highlight">Common Cause</span> variation is the variation naturally seen from the
-                    processes being
-                    used. <span class="highlight">Special Cause</span> variation is variation caused by some unusual
-                    factor that
-                    can generally be controlled and eliminated. <span class="highlight">Control Charts</span> are a
-                    common tool
-                    for keeping processes within their design limits.
-                </p>
-                <p>A good summary of control charts can be found <a target="_blank"
-                        href="https://en.wikipedia.org/wiki/Control_chart"> here </a></p>
-            </article>
-            <article>
-                <p class="DropCap">
-                    Key statistic concepts and terminology that are important for correctly to the practice of Robust
-                    Engineering.</p>
-                <details>
-                    <summary>Inferential Statistics</summary>
-                    <p class="DropCap">
-                        When we “infer” characteristics of the entire population based on characteristics of a sampling
-                        of the population. Since it is impractical to test entire populations, we will be infering
-                        characteristics measured in a limited sampling to the entire population. In plain english, we
-                        test a sampling of parts to determine how all parts will behave.
-                    </p>
-                </details>
-                <details>
-                    <summary>Central Tendancy</summary>
-                    <dl>
-                        <td class="DropCap"><span class="highlight">Mean</span> </td>
-                        <dd>average value for a normally distributed set of data.</dd>
-                        <td class="DropCap"><span class="highlight">Median</span> </td>
-                        <dd>middle value for non-normally distributed set of data.</dd>
-                        <td class="DropCap"><span class="highlight">Mode</span></td>
-                        <dd>most often occuring value for attribute data.</dd>
-                    </dl>
-                </details>
-                <details>
-                    <summary>Variability</summary>
-                    <dl>
-                        <td><span class="highlight">Range</span></td>
-                        <dd>distance between exreme values (Maximum - Minimum)</dd>
-                        <td><span class="highlight">Variance (&sigma;<sup>2</sup>)</span></td>
-                        <dd>the Average Squared Deviation of each data point from the Mean</dd>
-                        <td><span class="highlight">Standard Deviation (&sigma;)</span></td>
-                        <dd>the Square Root of the Variance</dd>
-                    </dl>
-                    <p>
-                        Range is most sensitive to outliers. &sigma; has same units as the data so is more intuitive.
-                        &sigma;<sup>2</sup> can be averaged so is a good metric for dealing with multiple datasets.
-                    </p>
-                </details>
-            </article>
-            <article>
-                <p class="DropCap"></p>
-            </article>
+            <div class="mainbody">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <div class="grid-item__title">Nature of Variation</div>
+                        <article class="card">
+                            <div class="DropCap">Variation occurs in all natural processes and if not managed, can cause
+                                undesireable
+                                effects.
+                                Statistical methods are available to understand the types and amount of variation that
+                                occurs. <span class="highlight">Common Cause</span> variation is the variation naturally
+                                seen from the
+                                processes being
+                                used. <span class="highlight">Special Cause</span> variation is variation caused by some
+                                unusual
+                                factor that
+                                can generally be controlled and eliminated. <span class="highlight">Control
+                                    Charts</span> are a
+                                common tool
+                                for keeping processes within their design limits.
+                                </>
+                                <p>A good summary of control charts can be found <a target="_blank"
+                                        href="https://en.wikipedia.org/wiki/Control_chart"> here </a></p>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item__title">Key Concepts</div>
+                        <article class="card">
+                            <h1>Inferential Statistics</h1>
+                            <div class="DropCap">
+                                When we “infer” characteristics of the entire population based on characteristics of a
+                                sampling
+                                of the population. Since it is impractical to test entire populations, we will be
+                                infering
+                                characteristics measured in a limited sampling to the entire population. In plain
+                                english, we
+                                test a sampling of parts to determine how all parts will behave.
+                            </div>
+                            <h1>Central Tendancy</h1>
+                            <dl>
+                                <td class="DropCap"><span class="highlight">Mean</span> </td>
+                                <dd>average value for a normally distributed set of data.</dd>
+                                <td class="DropCap"><span class="highlight">Median</span> </td>
+                                <dd>middle value for non-normally distributed set of data.</dd>
+                                <td class="DropCap"><span class="highlight">Mode</span></td>
+                                <dd>most often occuring value for attribute data.</dd>
+                            </dl>
+                            <h1>Variability</h1>
+                            <dl>
+                                <td><span class="highlight">Range</span></td>
+                                <dd>distance between exreme values (Maximum - Minimum)</dd>
+                                <td><span class="highlight">Variance (&sigma;<sup>2</sup>)</span></td>
+                                <dd>the Average Squared Deviation of each data point from the Mean</dd>
+                                <td><span class="highlight">Standard Deviation (&sigma;)</span></td>
+                                <dd>the Square Root of the Variance</dd>
+                            </dl>
+                            <p>
+                                Range is most sensitive to outliers. &sigma; has same units as the data so is more
+                                intuitive.
+                                &sigma;<sup>2</sup> can be averaged so is a good metric for dealing with multiple
+                                datasets.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article class="card">
+                            <p class="DropCap"></p>
+                        </article>
+                    </div>
+                </div>
+            </div>
 
     </main>
-    <footer class="foot">
-        <button class="pushable" onclick="window.location.href='start.html'">
-            <span class="shadow"></span>
-            <span class="edge"></span>
-            <span class="front">
-                Back
-            </span>
-        </button>
-        <span style="float:right">&copy; Copyright 2022</span>
-    </footer>
-
-</body>
-
-<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
-<script src="js/main.js"></script>

@@ -36,84 +36,72 @@
 
     </div>
 
-    <main id="myColumnLayout" class="content">
-        <div class="columnContainer">
-            <div class="mainbody">
-                <div class="grid-container" id="gb1">
-                    <div class="grid-item">
-                        <div class="grid-item__title">
-                            For Individual Contributors:</div>
-                        <article class="topic" onclick="window.location.href='es1.html'">
-                            <div class="topic__heading">
-                                Test For Success
-                            </div>
-                            <div class="topic__soundbite">
-                                Ensure requirements met
-                            </div>
-                            <!-- <div class="topic__img-box">
-                            <img class="topic__img" src="img/NormalDist.jpg" alt="">
-                        </div> -->
-                        </article>
-                        <article class="topic" onclick="window.location.href='es2.html'">
-                            <div class="topic__heading">
-                                Manage Variation
-                            </div>
-                            <!-- <div class="topic__img-box">
-                            <img class=" topic__img" src="img/Skewed-Symmetric-Distribution.png" alt="">
-                        </div> -->
-                            <div class="topic__soundbite">
-                                Statistical methods to account for variation.
-                            </div>
-                        </article>
-                        <article class="topic" onclick="window.location.href='es3.html'">
-                            <div class="topic__heading">
-                                Eliminate Failure Modes
-                            </div>
-                            <!-- <div class="topic__img-box">
-                            <img class=" topic__img" src="img/robust2.png" alt="">
-                        </div> -->
-                            <div class="topic__soundbite">Know product history in field.</div>
-                        </article>
-                    </div>
-                    <div class="grid-item">
-                        <div class="grid-item__title">
-                            For Organizations:</div>
-                        <article class="topic" onclick="window.location.href='es4.html'">
-                            <div class="topic__heading">
-                                Design Reviews
-                            </div>
-                            <!-- <div class="topic__img-box">
-                            <img class=" topic__img" src="img/Bathtub.png" alt="">
-                        </div> -->
-                            <div class="topic__soundbite">Use Subject Mater Experts to leverage Tribal Knowledge.</div>
-                        </article>
-                        <article class="topic" onclick="window.location.href='es5.html'">
-                            <div class="topic__heading">FMEA/DFME
-                            </div>
-                            <!-- <div class="topic__img-box">
-                            <img class=" topic__img" src="img/Bathtub.png" alt="">
-                        </div> -->
-                            <div class="topic__soundbite">Systematic approach to improve design robustness.</div>
-                        </article>
-                        <article class="topic" onclick="window.location.href='es6.html'">
-                            <div class="topic__heading">FRACAS
-                            </div>
-                            <div class="topic__soundbite">Failure Reporting And Corrective Action System.</div>
-                        </article>
-                    </div>
+    <main id="myContent" class="content">
+        <div class="ColumnContainer">
+            <div class="grid-container" id="gb1">
+                <div class="grid-item">
+                    <div class="grid-item__title">
+                        For Individual Contributors:</div>
+                    <article class="topic" onclick="loadHTML('es1.html')">
+                        <!-- <article class="topic" onclick="window.location.href='es1.html'"> -->
+                        <div class="topic__heading">
+                            Test For Success
+                        </div>
+                        <div class="topic__soundbite">
+                            Ensure requirements met
+                        </div>
+                        <img class="topic__img" src="img/gene-7031244_1280.png" alt="">
+                    </article>
+                    <article class="topic" onclick="loadHTML('es2.html')">
+                        <div class="topic__heading">
+                            Manage Variation
+                        </div>
+                        <div class="topic__soundbite">
+                            Statistical methods to account for variation.
+                        </div>
+                        <img class=" topic__img" src="img/presentation-1454403__340.webp" alt="">
+                    </article>
+                    <article class="topic" onclick="loadHTML('es3.html')">
+                        <div class="topic__heading">
+                            Eliminate Failure Modes
+                        </div>
+                        <div class="topic__soundbite">Know product history in field.</div>
+                        <img class=" topic__img" src="img/geometry-5973004_1280.png" alt="">
+                    </article>
+                </div>
+                <div class="grid-item">
+                    <div class="grid-item__title">
+                        For Organizations:</div>
+                    <article class="topic" onclick="loadHTML('es4.html')">
+                        <div class="topic__heading">
+                            Design Reviews
+                        </div>
+                        <div class="topic__soundbite">Use Subject Mater Experts to leverage Tribal Knowledge.</div>
+                        <img class=" topic__img" src="img/Bathtub.png" alt="">
+                    </article>
+                    <article class="topic" onclick="loadHTML('es5.html')">
+                        <div class="topic__heading">FMEA/DFME
+                        </div>
+                        <div class="topic__soundbite">Systematic approach to improve design robustness.</div>
+                        <img class=" topic__img" src="img/Bathtub.png" alt="">
+                    </article>
+                    <article class="topic" onclick="loadHTML('es6.html')">
+                        <div class="topic__heading">FRACAS</div>
+                        <div class="topic__soundbite">Failure Reporting And Corrective Action System.</div>
+                        <img class=" topic__img" src="img/Bathtub.png" alt="">
+                    </article>
                 </div>
             </div>
         </div>
     </main>
 
     <footer class="foot">
-        <!-- <button class="pushable" onclick="window.location.href='index.html'"> -->
-        <button class="pushable" onclick="history.back()">
+        <button class="footButton pushable" onclick="history.back()">
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">Back</span>
         </button>
-        <span style="float:right">&copy; Copyright 2022</span>
+        <div class="footCR">&copy; Copyright 2022</div>
     </footer>
 </body>
 

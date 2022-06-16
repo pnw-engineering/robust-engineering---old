@@ -36,80 +36,79 @@
   </div>
 
 
-  <main class="content">
+  <main id="myContent" class="content">
 
     <div class="ColumnContainer">
       <div class="mainbody">
-        
-        <h1>Statistical Tests</h1>
-        <details>
-          <summary>Student t-Test</summary>
-          <div class="tool-table">
-            <div class="tool-name">Students t-Test </div>
-            <div class="tool-link"><a class="W-Ref" target="_blank"
-                href="https://en.wikipedia.org/wiki/Student%27s_t-test"><img src="img/W-Logo.png" alt=""></a></div>
-            <div class="tool-head1">Conditions</div>
-            <div class="tool-head2">H<sub>0</sub></div>
-            <div class="tool-head3">H<sub>A</sub></div>
-            <div class="tool-cond">Normally distributed data</div>
-            <div class="tool-H0">&mu;<sub>1</sub> = &mu;<sub>t</sub></div>
-            <div class="tool-HA">&mu;<sub>1</sub> &#8800; &mu;<sub>t</sub></div>
+
+        <div class="ColumnContainer__heading">Statistical Tests</div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="topic__heading">Student t-Test</div>
+            <div class="tool-table">
+              <div class="tool-link"><a class="W-Ref" target="_blank"
+                  href="https://en.wikipedia.org/wiki/Student%27s_t-test"><img src="img/W-Logo.png" alt=""></a></div>
+              <div class="tool-head1">Conditions</div>
+              <div class="tool-head2">H<sub>0</sub></div>
+              <div class="tool-head3">H<sub>A</sub></div>
+              <div class="tool-cond">Normally distributed data</div>
+              <div class="tool-H0">&mu;<sub>1</sub> = &mu;<sub>t</sub></div>
+              <div class="tool-HA">&mu;<sub>1</sub> &#8800; &mu;<sub>t</sub></div>
+            </div>
           </div>
-        </details>
-        <br>
-        <details>
-          <summary>Bartlett's Test</summary>
-          <div class="tool-table">
-            <div class="tool-name">Bartlett's Test </div>
-            <div class="tool-link"><a class="W-Ref" target="_blank"
-                href="https://en.wikipedia.org/wiki/Bartlett%27s_test"><img src="img/W-Logo.png" alt=""></a></div>
-            <div class="tool-head1">Conditions</div>
-            <div class="tool-head2">H<sub>0</sub></div>
-            <div class="tool-head3">H<sub>A</sub></div>
-            <div class="tool-cond">Normally distributed data and more than 2 levels</div>
-            <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>2</sub></sub> = &sigma;<sub>3</sub> ...</div>
-            <div class="tool-HA">&sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800; j or at least 1 is different</div>
+          <div class="grid-item">
+            <div class="topic__heading">Bartlett's Test</div>
+            <div class="tool-table">
+              <div class="tool-link"><a class="W-Ref" target="_blank"
+                  href="https://en.wikipedia.org/wiki/Bartlett%27s_test"><img src="img/W-Logo.png" alt=""></a></div>
+              <div class="tool-head1">Conditions</div>
+              <div class="tool-head2">H<sub>0</sub></div>
+              <div class="tool-head3">H<sub>A</sub></div>
+              <div class="tool-cond">Normally distributed data and more than 2 levels</div>
+              <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>2</sub></sub> = &sigma;<sub>3</sub> ...</div>
+              <div class="tool-HA">&sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800; j or at least 1 is
+                different</div>
+            </div>
           </div>
-        </details>
-        <br>
-        <details>
-          <summary>Chi<sup>2</sup> Test</summary>
-          <div class="tool-table">
-            <div class="tool-name">Chi<sup>2</sup> Test </div>
-            <div class="tool-link"><a class="W-Ref" target="_blank"
-                href="https://en.wikipedia.org/wiki/Chi-squared_test"><img src="img/W-Logo.png" alt=""></a></div>
-            <div class="tool-head1">Conditions</div>
-            <div class="tool-head2">H<sub>0</sub></div>
-            <div class="tool-head3">H<sub>A</sub></div>
-            <div class="tool-cond">Normally distributed data with 1 levels looking for Standard Deviation compared to target (t)</div>
-            <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>t</sub></div>
-            <div class="tool-HA">&sigma;<sub>1</sub> &#8800; &sigma;<sub>t</sub></div>
+          <div class="grid-item">
+            <div class="topic__heading">Chi<sup>2</sup> Test</div>
+            <div class="tool-table">
+              <div class="tool-name">Chi<sup>2</sup> Test </div>
+              <div class="tool-link"><a class="W-Ref" target="_blank"
+                  href="https://en.wikipedia.org/wiki/Chi-squared_test"><img src="img/W-Logo.png" alt=""></a></div>
+              <div class="tool-head1">Conditions</div>
+              <div class="tool-head2">H<sub>0</sub></div>
+              <div class="tool-head3">H<sub>A</sub></div>
+              <div class="tool-cond">Normally distributed data with 1 levels looking for Standard Deviation compared to
+                target (t)</div>
+              <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>t</sub></div>
+              <div class="tool-HA">&sigma;<sub>1</sub> &#8800; &sigma;<sub>t</sub></div>
+            </div>
           </div>
-        </details>
-        <br>
-        <details>
-          <summary>F Test</summary>
-          <div class="tool-table">
-            <div class="tool-name">F Test </div>
-            <div class="tool-link"><a class="W-Ref" target="_blank"
-                href="https://en.wikipedia.org/wiki/F-test"><img src="img/W-Logo.png" alt=""></a></div>
-            <div class="tool-head1">Conditions</div>
-            <div class="tool-head2">H<sub>0</sub></div>
-            <div class="tool-head3">H<sub>A</sub></div>
-            <div class="tool-cond">Normally distributed data with 2 levels looking for Standard Deviation</div>
-            <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>2</sub></div>
-            <div class="tool-HA">&sigma;<sub>1</sub> &#8800; &sigma;<sub>2</sub></div>
+          <div class="grid-item">
+            <div class="topic__heading">F Test</div>
+            <div class="tool-table">
+              <!-- <div class="tool-name">F Test </div> -->
+              <div class="tool-link"><a class="W-Ref" target="_blank" href="https://en.wikipedia.org/wiki/F-test"><img
+                    src="img/W-Logo.png" alt=""></a></div>
+              <div class="tool-head1">Conditions</div>
+              <div class="tool-head2">H<sub>0</sub></div>
+              <div class="tool-head3">H<sub>A</sub></div>
+              <div class="tool-cond">Normally distributed data with 2 levels looking for Standard Deviation</div>
+              <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>2</sub></div>
+              <div class="tool-HA">&sigma;<sub>1</sub> &#8800; &sigma;<sub>2</sub></div>
+            </div>
           </div>
-        </details>
+        </div>
       </div>
   </main>
   <footer class="foot">
-    <button class="pushable" onclick="history.back()">
+    <button class="footButton pushable" onclick="history.back()">
       <span class="shadow"></span>
       <span class="edge"></span>
       <span class="front">Back</span>
     </button>
-    <span style="float:right">&copy; Copyright 2022</span>
+    <div class="footCR">&copy; Copyright 2022</div>
   </footer>
 </body>
 <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>

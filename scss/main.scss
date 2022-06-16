@@ -42,6 +42,8 @@ details {
 
 .intro {
     font-size: 1rem;
+    color: $text-color;
+    background-color: $primary-color;
 
     a {
         // color: complement($text-color);
@@ -52,10 +54,23 @@ details {
 .disclaimer {
     // color: rgb(242, 245, 88);
     color: $accent-color;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding-top: 10px;
+
     // background-color: dodgerblue;
 }
+
+.DropCap::first-letter {
+    float: left;
+    font-size: 2em;
+    margin: 0 .1em 0 0;
+    // margin: 0.1em 0.1em 0.2em 0;
+    line-height: 0.85;
+    line-height: 0.65;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    // font-size: 6rem;
+}
+
 
 ul {
     list-style-type: none;
@@ -94,27 +109,36 @@ p {
     font-size: 1.25em;
     text-align: justify;
     padding-bottom: .5em;
-    margin-left: 2em;
-    margin-right: 2em;
     // background-color: blue;
 }
 
 .list {
     font-size: 1.25em;
-    // width: min(80ch, 90%);
+    color: $highlight-color;
+    padding-left: 6rel;
+    // background'-color:cornflowerblue;
+}
+
+.accent {
     width: 100%;
-    margin: 0 auto;
-    list-style-image: none;
-    // background-color:cornflowerblue;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: $accent-color;
+}
+
+.indent {
+    font-size: 60%;
+    padding-left: 6ch;
+    line-height: 1.0;
 }
 
 .list::before {
-    content: '';
+    // content: ">  ";
     display: inline-block;
     height: .75rem;
     width: .75rem;
-    border-radius: 50%;
-    background-image: url("/dist/img/symbol1.jpg");
+    // border-radius: 50%;
+    // background-image: &#x02043;
     margin-right: 3px;
 
 }
@@ -123,6 +147,7 @@ p {
     font-size: larger;
     font-style: italic;
     color: $highlight-color;
+    margin-right: .25rem;
 }
 
 table,
@@ -204,15 +229,15 @@ details.table-details {
 }
 
 .tool-table {
-    // width: 90%;
+    width: 90%;
     font-size: 1.5rem;
     display: grid;
     color: $text-color;
     margin: 0 auto;
     grid-template: "Name   Name Name  Link" auto
-    "h-Cond h-H0 h-HA  Link" auto
-    "Cond   H0   HA    Link" auto
-    /50% 20% 20% 10%;
+        "h-Cond h-H0 h-HA  Link" auto
+        "Cond   H0   HA    Link" auto
+        /50% 20% 20% 10%;
 
     >.tool-name {
         font-size: 2rem;
@@ -270,10 +295,16 @@ details.table-details {
         img {
             // margin: auto;
             padding: 3px;
-            width: 100%;
+            width: 95%;
             height: auto;
+            background-color: transparent;
         }
     }
+}
+
+.tool-link:hover {
+    background-color: $secondary-color;
+
 }
 
 a.W-Ref {
@@ -282,7 +313,6 @@ a.W-Ref {
     font-weight: 700;
     font-family: 'Brush Script MT', cursive;
     font-style: oblique;
-
 }
 
 //3D button ------------------------
@@ -326,10 +356,10 @@ a.W-Ref {
     height: 100%;
     border-radius: 12px;
     background: linear-gradient(to left,
-        hsl(225deg 50% 5%) 0%,
-        hsl(225deg 50% 16%) 8%,
-        hsl(225deg 50% 16%) 92%,
-        hsl(225deg 50% 5%) 100%);
+            hsl(225deg 50% 5%) 0%,
+            hsl(225deg 50% 16%) 8%,
+            hsl(225deg 50% 16%) 92%,
+            hsl(225deg 50% 5%) 100%);
 }
 
 .front {

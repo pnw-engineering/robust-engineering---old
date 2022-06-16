@@ -1,10 +1,10 @@
 .grid-container {
-    width: 80%;
+    width: 95%;
     display: grid;
-    justify-content: space-around;
-    grid-auto-flow: dense row;
+    // justify-content: space-around;
+    // grid-auto-flow: dense row;
     grid-template-columns: 1fr;
-    column-gap: 2rem;
+    // column-gap: 2rem;
     // justify-content: left;
     // align-content: space-between;
     margin: 0 auto;
@@ -15,7 +15,7 @@
     display: block;
     margin: 0 auto;
     width: 100%;
-    // background-color: beige;
+    background-color: $primary-color;
 
     &__title {
         // width: 100%;
@@ -37,22 +37,27 @@
 }
 
 .topic {
-    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template: 
+        "title   image" 35px
+        "sb      image" 65px
+        /1fr 100px;
+    // height: auto;
     width: 100%;
     margin: 0 auto;
     // background-color:hsl(207, 44%, 29%);
     // background-color: darkmagenta;
     box-shadow: 2px 2px 2px #0000008e;
     cursor: pointer;
-    display: block;
-    // transition: all 2.5s ease-in-out;
     margin-bottom: 10px;
 
     &__heading {
-        padding-bottom: 5px;
-        padding-top: 5px;
+        grid-area: title;
+        // padding-bottom: 5px;
+        padding-top: 3px;
         padding-left: 1em;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-variant: small-caps;
         font-weight: 800;
         color: $highlight-color;
@@ -60,20 +65,28 @@
     }
 
     &__soundbite {
+        grid-area: sb;
         font-size: 1rem;
         padding-bottom: 5px;
-        // padding-left: 1.5em;
+        padding-left: 1.5em;
         padding-right: 5px;
-        text-align: justify;
-
+        // text-align: justify;
         // background-color: blue;
         p {
             margin-left: 1rem;
             line-height: .75;
             // background-color: blue;
-
+            
         }
-    }
+        .topic__img{
+            margin-top: auto;
+            margin-bottom: auto;
+            grid-area: image;
+            max-width: 100%;
+            background-color: white;;
+            object-fit: cover;
+        }
+        }
 
     &:hover {
         background-image: $gradient1;

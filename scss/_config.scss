@@ -1,5 +1,6 @@
 $primary-color: #122030;
-$text-color: #f4f2e9;
+$text-color: hsl(60, 30%, 90%);
+// $text-color: #f4f2e9;
 $secondary-color: #4282a7;
 $accent-color: #b43e0c;
 $highlight-color: hsl(202deg 43% 66%);
@@ -21,7 +22,7 @@ $gradientv: linear-gradient(0deg,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-size: min(2.2vw, 2.2vh);
+  font-size: min(3vw, 3vh);
   font-family: Roboto;
 }
 
