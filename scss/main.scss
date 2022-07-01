@@ -2,6 +2,7 @@
 @import 'home';
 @import 'elevator';
 @import 'ColumnLayout';
+@import 'hypothesis';
 @import 'responsive';
 
 details {
@@ -319,7 +320,7 @@ a.W-Ref {
 
 .pushable {
     position: relative;
-    position: sticky;
+    position: webkit-sticky;
     grid-area: 2 / 2;
     bottom: 15px;
     // height: 10vh;

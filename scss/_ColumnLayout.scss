@@ -64,6 +64,7 @@
 .singleColumn{
     width: 95%;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 article.card {
     // background-color: aqua;;
@@ -80,5 +81,6 @@ article.card:hover {
 
 .WideContainer {
     width: 90%;
+    height:100%;
     margin: 0 auto;
 }
