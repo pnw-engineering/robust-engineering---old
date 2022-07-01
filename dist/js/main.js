@@ -59,5 +59,6 @@ function toggleElement(i, j, k) {
     document.getElementById(k).style.display = "none";
   }
   // alert(--accentColor);
-  document.getElementById("h-roadmap").scrollIntoView(false);
+  // document.getElementById("h-roadmap").scrollIntoView({block: 'end',  behavior: 'instant'});
+  document.getElementById("h-roadmap").scrollIntoView({block: 'end',  behavior: 'smooth'});
 }
