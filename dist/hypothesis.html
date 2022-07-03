@@ -283,25 +283,25 @@
             <div class="roadmap" id="h-roadmap">
                 <div class="mapQuestion">Type of data?</div>
                 <div class="ButtonSet">
-                    <button type="button" class="MapButton" onclick="toggleElement('1', '2')">
+                    <button type="button" class="MapButton" id="b1" onclick="toggleElement()">
                         Attribute</button>
-                    <button type="button" class="MapButton" onclick="toggleElement('2', '1')">
+                    <button type="button" class="MapButton" id="b2" onclick="toggleElement()">
                         Variable</button>
                 </div>
                 <div class="MapLine" id='1'>
                     <div class="mapQuestion">Attribute: Number of Factors?</div>
                     <div class="ButtonSet">
-                        <button type="button" class="MapButton" onclick="toggleElement('11', '12')">
+                        <button type="button" class="MapButton" id="b11" onclick="toggleElement()">
                             1</button>
-                        <button type="button" class="MapButton" onclick="toggleElement('12', '11')">
+                        <button type="button" class="MapButton" id="b12" onclick="toggleElement()">
                             2</button>
                     </div>
                     <div class=" MapLine" id="11">
                         <div class="mapQuestion">Number of samples?</div>
                         <div class="ButtonSet">
-                            <button type="button" class="MapButton" onclick="toggleElement('111', '112')">1
+                            <button type="button" class="MapButton" id="b111" onclick="toggleElement()">1
                             </button>
-                            <button type="button" class="MapButton" onclick="toggleElement('112', '111')">2
+                            <button type="button" class="MapButton" id="b112" onclick="toggleElement()">2
                             </button>
                         </div>
                         <div class="MapLine" id="111">
@@ -335,92 +335,101 @@
                 <div class="MapLine" id="2">
                     <div class="mapQuestion">Number of factors?</div>
                     <div class="ButtonSet">
-                        <button type="button" class="MapButton" onclick="toggleElement('21', '22')">1
+                        <button type="button" class="MapButton" id="B21" onclick="toggleElement()">1
                         </button>
-                        <button type="button" class="MapButton" onclick="toggleElement('22', '21')">More than 1
+                        <button type="button" class="MapButton" id="b22" onclick="toggleElement()">More than 1
                         </button>
                     </div>
                     <div class="MapLine" ID="21">
                         <div class="mapQuestion">Is data Normal or Non-Normal?</div>
                         <div class="ButtonSet">
-                            <button type="button" class="MapButton"
-                                onclick="toggleElement('211', '212')">Normal</button>
-                            <button type="button" class="MapButton"
-                                onclick="toggleElement('212', '211')">Not Normal</button>
+                            <button type="button" class="MapButton" id="b211"
+                                onclick="toggleElement()">Normal</button>
+                            <button type="button" class="MapButton" id="b212" onclick="toggleElement()">Not
+                                Normal</button>
                         </div>
                         <div class="MapLine" id="211">
                             <div class="mapQuestion">Number of Levels?</div>
                             <div class="buttonSet">
-                                <button type="button" class="MapButton"
-                                    onclick="toggleElement('2111', '2112', '2113')">1</button>
-                                <button type="button" class="MapButton"
-                                    onclick="toggleElement('2112', '2111', '2113')">2</button>
-                                <button type="button" class="MapButton"
-                                    onclick="toggleElement('2113', '2111', '2112')">More than
+                                <button type="button" class="MapButton" id="b2111"
+                                    onclick="toggleElement()">1</button>
+                                <button type="button" class="MapButton" id="b2112"
+                                    onclick="toggleElement()">2</button>
+                                <button type="button" class="MapButton" id="b2113"
+                                    onclick="toggleElement()">More than
                                     2</button>
                             </div>
                             <div class="MapLine" id="2111">
                                 <div class="mapQuestion">Type of Test for 1 Level?</div>
                                 <div class="buttonSet">
-                                    <button type="button" class="MapButton"
-                                        onclick="toggleElement('21111', '21112')">Mean</button>
-                                    <button type="button" class="MapButton"
-                                        onclick="toggleElement('21112', '21111')">Standard
+                                    <button type="button" class="MapButton" id="b21111"
+                                        onclick="toggleElement()">Mean</button>
+                                    <button type="button" class="MapButton" id="b21112"
+                                        onclick="toggleElement()">Standard
                                         Deviation</button>
                                 </div>
                                 <div class="MapLine" id="21112">
                                     <div class="HypoTable">
                                         <div class="HTableName">Chi<sup>2</sup>Test</div>
-                                        <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub></div>
-                                        <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub> & &sigma;<sub>t</sub></div>
+                                        <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
+                                        </div>
+                                        <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub> & &sigma;<sub>t</sub>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="MapLine" id="21111">
                                     <div class="HypoTable">
                                         <div class="HTableName">1 Sample t Test</div>
                                         <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>t</sub></div>
-                                        <div class="HTableHA">H<sub>A</sub>:  &mu;<sub>1</sub> &#8800 &mu;<sub>t</sub></div>
+                                        <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &#8800 &mu;<sub>t</sub>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="MapLine" id="2112">
                                 <div class="mapQuestion">Type of Test for 2 Levels?</div>
                                 <div class="buttonSet">
-                                    <button type="button" class="MapButton"
-                                        onclick="toggleElement('21121', '21122')">Mean</button>
-                                    <button type="button" class="MapButton"
-                                        onclick="toggleElement('21122', '21121')">Standard
+                                    <button type="button" class="MapButton" id="b21121"
+                                        onclick="toggleElement()">Mean</button>
+                                    <button type="button" class="MapButton" id="b21122"
+                                        onclick="toggleElement()">Standard
                                         Deviation</button>
                                 </div>
                                 <div class="MapLine" id="21122">
                                     <div class="HypoTable">
                                         <div class="HTableName">F Test</div>
-                                        <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>1</sub></div>
-                                        <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub> &#8800&sigma;<sub>2</sub></div>
+                                        <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>1</sub>
+                                        </div>
+                                        <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub>
+                                            &#8800&sigma;<sub>2</sub></div>
                                     </div>
                                 </div>
                                 <div class="MapLine" id="21121">
                                     <div class="mapQuestion">Is data independant?</div>
                                     <div class="buttonSet">
-                                        <button type="button" class="MapButton"
-                                            onclick="toggleElement('211211', '211212')">
+                                        <button type="button" class="MapButton" id="b211211"
+                                            onclick="toggleElement()">
                                             Independant</button>
-                                        <button type="button" class="MapButton"
-                                            onclick="toggleElement('211212', '211211')">
+                                        <button type="button" class="MapButton" id="b211212"
+                                            onclick="toggleElement()">
                                             Dependant</button>
                                     </div>
                                     <div class="MapLine" id="211211">
                                         <div class="HypoTable">
                                             <div class="HTableName">2 Sample t Test</div>
-                                            <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>2</sub></div>
-                                            <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &#8800 &mu;<sub>2</sub></div>
+                                            <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>2</sub>
+                                            </div>
+                                            <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &#8800
+                                                &mu;<sub>2</sub></div>
                                         </div>
                                     </div>
                                     <div class="MapLine" id="211212">
                                         <div class="HypoTable">
                                             <div class="HTableName">Paired t Test</div>
-                                            <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>2</sub></div>
-                                            <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &#8800&mu;<sub>2</sub></div>
+                                            <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>2</sub>
+                                            </div>
+                                            <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &#8800&mu;<sub>2</sub>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -430,7 +439,8 @@
                                     <div class="HTableName">Bartlets Test</div>
                                     <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> =
                                         &sigma;<sub>3</sub></div>
-                                    <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800;
+                                    <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub>
+                                        for i &#8800;
                                         j (or at
                                         least one is different)</div>
                                 </div>
@@ -440,20 +450,20 @@
                         <div class="MapLine" id="212">
                             <div class="mapQuestion">Number of levels?</div>
                             <div class="buttonSet">
-                                <button type="button" class="MapButton"
-                                    onclick="toggleElement('2121', '2122')">1</button>
-                                <button type="button" class="MapButton"
-                                    onclick="toggleElement('2122', '2121')">2 or more</button>
+                                <button type="button" class="MapButton" id="b2121"
+                                    onclick="toggleElement()">1</button>
+                                <button type="button" class="MapButton" id="b2122"
+                                    onclick="toggleElement()">2 or more</button>
                             </div>
                             <!-- 1 level -->
                             <div class="MapLine" id="2121">
                                 <div class="mapQuestion">Test Type?</div>
                                 <div class="buttonSet">
-                                    <button type="button" class="MapButton"
-                                        onclick="toggleElement('21211', '21212')">Median
+                                    <button type="button" class="MapButton" id="b21211"
+                                        onclick="toggleElement()">Median
                                     </button>
-                                    <button type="button" class="MapButton"
-                                        onclick="toggleElement('21212', '21211')">Standard
+                                    <button type="button" class="MapButton" id="b21212"
+                                        onclick="toggleElement()">Standard
                                         Deviation</button>
                                 </div>
                                 <!-- Test for Median -->
@@ -461,14 +471,17 @@
                                     <div class="HypoTable">
                                         <div class="HTableName">1-sample Wilcoxon or 1-Sample Significance</div>
                                         <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></div>
-                                        <div class="HTableHA">H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub> (t = target)</div>
+                                        <div class="HTableHA">H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub> (t =
+                                            target)</div>
                                     </div>
                                 </div>
                                 <div class="MapLine" id="21212">
                                     <div class="HypoTable">
                                         <div class="HTableName">Chi<sup>2</sup> Test</div>
-                                        <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub></div>
-                                        <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub> &#8800; &sigma;<sub>t</sub> (t =
+                                        <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub>
+                                        </div>
+                                        <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub> &#8800;
+                                            &sigma;<sub>t</sub> (t =
                                             target)</div>
                                     </div>
                                 </div>
@@ -479,26 +492,31 @@
                                     <div class="HTableName">Levene's Test</div>
                                     <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> =
                                         &sigma;<sub>3</sub> ...</div>
-                                    <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800;
+                                    <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub>
+                                        for i &#8800;
                                         j (or at least 1 is different)</div>
                                 </div>
                                 <div class="mapQuestion">Test Results?<sub></div>
-                                <button type="button" class="MapButton"
-                                    onclick="toggleElement('21221', '21222')">Reject H<sub>0</sub></button>
-                                <button type="button" class="MapButton" onclick="toggleElement('21222', '21221')">Fail
+                                <button type="button" class="MapButton" id="b21221"
+                                    onclick="toggleElement()">Reject H<sub>0</sub></button>
+                                <button type="button" class="MapButton" id="b21222"
+                                    onclick="toggleElement()">Fail
                                     to Reject H<sub>0</sub>
                                 </button>
                                 <div class="MapLine" id="21221">
                                     <div class="HypoTable">
                                         <div class="HTableName">2 Sample t Test</div>
                                         <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>t</sub></div>
-                                        <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &ne; &mu;<sub>t</sub></div>
+                                        <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &ne; &mu;<sub>t</sub>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="MapLine" id="21222">
                                     <div class="mapQuestion">Number of Levels?</div>
-                                    <button type="button" class="MapButton" onclick="toggleElement('212221', '212222')">2</button>
-                                    <button type="button" class="MapButton" onclick="toggleElement('212222', '212221')">More than
+                                    <button type="button" class="MapButton" id="b212221"
+                                        onclick="toggleElement()">2</button>
+                                    <button type="button" class="MapButton" id="b212222"
+                                        onclick="toggleElement()">More than
                                         2</button>
                                 </div>
                                 <div class="MapLine" id="212221">
@@ -511,15 +529,19 @@
                                 <div class="MapLine" id="212222">
                                     <div class="HypoTable">
                                         <div class="HTableName">Moods Median Test (used with outlier)</div>
-                                        <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>2</sub> = M<sub>3</sub>...</div>
-                                        <div class="HTableHA">H<sub>A</sub>: M<sub>i</sub> &ne; M<sub>j</sub> for i&ne;j (or at least 1
+                                        <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>2</sub> =
+                                            M<sub>3</sub>...</div>
+                                        <div class="HTableHA">H<sub>A</sub>: M<sub>i</sub> &ne; M<sub>j</sub> for i&ne;j
+                                            (or at least 1
                                             is different)
                                         </div>
                                     </div>
                                     <div class="HypoTable">
                                         <div class="HTableName">Kruskal-Wallis Test (used with no outlier)</div>
-                                        <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>2</sub> = M<sub>3</sub>...</div>
-                                        <div class="HTableHA">H<sub>A</sub>: M<sub>i</sub> &ne; M<sub>j</sub> for i&ne;j (or at least 1
+                                        <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>2</sub> =
+                                            M<sub>3</sub>...</div>
+                                        <div class="HTableHA">H<sub>A</sub>: M<sub>i</sub> &ne; M<sub>j</sub> for i&ne;j
+                                            (or at least 1
                                             is different)
                                         </div>
                                     </div>

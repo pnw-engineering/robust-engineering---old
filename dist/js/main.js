@@ -26,39 +26,50 @@ function loadHTML(fileToLoad) {
     .then((text) => (document.getElementById("myContent").innerHTML = text));
 }
 
-function sibsOff(element) {
-  var sibs = [];
-  el = element;
-  while ((el = el.previousSibling)) {
-    sibs.push(el);
-  }
-  el = element;
-  while ((el = el.nextSibling)) {
-    sibs.push(el);
-  }
+function sibsOff(i) {
+  o = i;
 
-  while (sibs) {
-    // sibs[0].style.display="none";
-    el = sibs.pop();
-    alert(el);
-    el.style.display = "none";
+  base = Math.floor(parseInt(i, 10) / 10) * 10;
+  me = parseInt(i.substring(i.length - 1, i.length), 10);
+  console.log("i = ", i, "base = ", base, "Me = ", me);
+  console.log("turning off ", i, "'s siblings");
+  console.log("last digit = ", me);
+  for (let j = 1; j < 4; j++) {
+    if (j != me){
+      id = base + j;
+      console.log(base, "+", j, "=", id, "turned off ");
+      el = document.getElementById(id.toString());
+      if (el != undefined) {
+        el.style.display = "none";
+      }
+    }
   }
+  i = o;
+  i = i.substring(i.length - 1, i.lenght);
 }
 
 function toggleElement(i, j, k) {
+  b = event.target.id;
+  i = b.substring(1, b.length);
   el = document.getElementById(i);
   if (el.style.display == "none") {
     el.style.display = "block";
-    // event.target.style.backgroundColor = 'red';
+    document.getElementById(b).style.borderColor = "red";
+    console.log(i," turned on")
   } else {
     el.style.display = "none";
+    document.getElementById(b).style.borderColor = event.target.style.color;
     // event.target.style.backgroundColor = 'blue';
   }
-  document.getElementById(j).style.display = "none";
-  if (document.getElementById(k)) {
-    document.getElementById(k).style.display = "none";
-  }
-  // alert(--accentColor);
+  sibsOff(i);
+
+  // document.getElementById(j).style.display = "none";
+  // if (document.getElementById(k)) {
+  //   document.getElementById(k).style.display = "none";
+  // }
+  // console.log(b, l, i);
   // document.getElementById("h-roadmap").scrollIntoView({block: 'end',  behavior: 'instant'});
-  document.getElementById("h-roadmap").scrollIntoView({block: 'end',  behavior: 'smooth'});
+  document
+    .getElementById("h-roadmap")
+    .scrollIntoView({ block: "end", behavior: "smooth" });
 }
