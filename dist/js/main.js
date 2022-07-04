@@ -26,26 +26,45 @@ function loadHTML(fileToLoad) {
     .then((text) => (document.getElementById("myContent").innerHTML = text));
 }
 
-function sibsOff(i) {
-  o = i;
+function MapButtonOff(btn) {
+  if (btn != undefined) {
+    btn.style.boxShadow = "none";
+    // console.log("button", btn.id, "turned  off");
+  }
+}
 
-  base = Math.floor(parseInt(i, 10) / 10) * 10;
-  me = parseInt(i.substring(i.length - 1, i.length), 10);
-  console.log("i = ", i, "base = ", base, "Me = ", me);
-  console.log("turning off ", i, "'s siblings");
-  console.log("last digit = ", me);
-  for (let j = 1; j < 4; j++) {
-    if (j != me){
-      id = base + j;
-      console.log(base, "+", j, "=", id, "turned off ");
-      el = document.getElementById(id.toString());
-      if (el != undefined) {
-        el.style.display = "none";
+function MapElementOff(el) {
+  if (el != undefined) {
+    el.style.display = "none";
+    MapButtonOff(document.getElementById("b" + el.id));
+    // console.log(base, "+", j, "=", id, "turned off ");
+
+    elSet = el.getElementsByClassName("MapLine");
+    console.log(elSet.length, "elements found");
+    for (var i = 0; i < elSet.length; i++) {
+      if (elSet[i].style.display != "none") {
+        elSet[i].style.display = "none";
+        // MapButtonOff("b" + elSet[i].id);
+      }
+    }
+    bSet = el.getElementsByClassName("MapButton");
+    for (var i = 0; i < bSet.length; i++) {
+      if (bSet[i].style.boxShadow != "none") {
+        elSet[i].style.boxShadow = "none";
+        // MapButtonOff("b" + elSet[i].id);
       }
     }
   }
-  i = o;
-  i = i.substring(i.length - 1, i.lenght);
+}
+function sibsOff(i) {
+  base = Math.floor(parseInt(i, 10) / 10) * 10;
+  me = parseInt(i.substring(i.length - 1, i.length), 10);
+  for (let j = 1; j < 4; j++) {
+    if (j != me) {
+      id = base + j;
+      MapElementOff(document.getElementById(id.toString()));
+    }
+  }
 }
 
 function toggleElement(i, j, k) {
@@ -54,21 +73,14 @@ function toggleElement(i, j, k) {
   el = document.getElementById(i);
   if (el.style.display == "none") {
     el.style.display = "block";
-    document.getElementById(b).style.borderColor = "red";
-    console.log(i," turned on")
+    document.getElementById(b).style.boxShadow = "0px 0px 5px 5px red";
+    console.log(i, " turned on");
   } else {
     el.style.display = "none";
-    document.getElementById(b).style.borderColor = event.target.style.color;
-    // event.target.style.backgroundColor = 'blue';
+    document.getElementById(b).style.boxShadow = "none";
   }
   sibsOff(i);
 
-  // document.getElementById(j).style.display = "none";
-  // if (document.getElementById(k)) {
-  //   document.getElementById(k).style.display = "none";
-  // }
-  // console.log(b, l, i);
-  // document.getElementById("h-roadmap").scrollIntoView({block: 'end',  behavior: 'instant'});
   document
     .getElementById("h-roadmap")
     .scrollIntoView({ block: "end", behavior: "smooth" });
