@@ -422,6 +422,7 @@ article.card:hover {
 }
 
 .HTableName {
+  font-size: 1.5rem;
   grid-area: Name;
   padding-left: 10px;
   display: block;
@@ -429,6 +430,7 @@ article.card:hover {
 }
 
 .HTableH0 {
+  font-size: 1.5rem;
   grid-area: H0;
   text-align: center;
   display: block;
@@ -436,6 +438,7 @@ article.card:hover {
 }
 
 .HTableHA {
+  font-size: 1.5rem;
   grid-area: HA;
   text-align: center;
   display: block;
