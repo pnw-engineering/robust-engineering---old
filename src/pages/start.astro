@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import Card from "../components/Card.astro";
+---
+
+<Layout title="Start Page">
+    <main id="myContent" class="content">
+        <div class="deck-container" id="gb1">
+
+            <div class="deck">
+                <h1>For Individual Contributors:</h1>
+                <div class="card" onclick="location ='/es1'">
+                    <div class="title">Test For Success</div>
+                    <div class="text">Ensure requirements are met</div>
+                    <img src="/gene-7031244_1280.png" alt="">
+                </div>
+                <div class="card" onclick="location ='/es2'">
+                    <div class="title">Manage Variation</div>
+                    <div class="text">Statistical methods</div>
+                    <img src="/bar-chart.svg" alt="">
+                </div>
+                <div class="card" onclick="location='/es3'">
+                    <div class="title">Eliminate Failure Modes</div>
+                    <div class="text">Know product history in field.</div>
+                    <img src="/derailing-toy-train-engine.svg" alt="">
+                </div>
+            </div>
+            <div class="deck">
+                <h1>For Organizations:</h1>
+                <div class="card" onclick="location='/es4'">
+                    <div class="title">Design Reviews</div>
+                    <div class="text">Leverage Tribal Knowledge.</div>
+                    <img src="/Fourth561-572.svg" alt="">
+                </div>
+                <div class="card" onclick="location='/es5'">
+                    <div class="title">FMEA/DFME</div>
+                    <div class="text">Improve design robustness.</div>
+                    <img src="/Bathtub.png" alt="">
+                </div>
+                <div class="card" onclick="location='/es6'">
+                    <div class="title">FRACAS</div>
+                    <div class="text">Failure Reporting And Corrective Action</div>
+                    <img src="/filing_cabinets.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+    </main>
+</Layout>

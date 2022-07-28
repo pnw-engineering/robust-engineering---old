@@ -1,0 +1,443 @@
+@use '../abstracts' as *;
+
+body {
+  background-color: $body-color;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: lighten($color: $primary-color, $amount: 10);
+  color: $white;
+}
+
+/* preloader */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFDC11;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  margin: 0px;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a,
+button,
+select {
+  cursor: pointer;
+  transition: .2s ease;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+a:hover {
+  color: $primary-color;
+}
+
+a.text-primary:hover {
+  color: $primary-color!important;
+}
+
+a.text-light:hover {
+  color: $primary-color!important;
+}
+
+h4{
+  transition: .2s ease;
+}
+a h4{
+  &:hover{
+    color: $primary-color;
+  }
+}
+
+.slick-slide {
+  outline: 0;
+}
+
+.section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  &-sm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &-title {
+    margin-bottom: 30px;
+  }
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.border-primary {
+  border-color: $border-color !important;
+}
+
+/* overlay */
+
+.overlay {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: $secondary-color;
+    opacity: .8;
+  }
+}
+
+.outline-0 {
+  outline: 0 !important;
+}
+
+.d-unset {
+  display: unset !important;
+}
+
+.bg-primary {
+  background: $primary-color !important;
+}
+
+.bg-secondary {
+  background: $secondary-color !important;
+}
+
+.bg-gray {
+  background: $gray;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.text-color {
+  color: $text-color;
+}
+
+.text-light {
+  color: $text-color-light !important;
+}
+
+.text-lighten{
+  color: #d6d6e0 !important;
+}
+
+.text-muted {
+  color: #b5b5b7 !important;
+}
+
+.text-dark {
+  color: $text-color-dark !important;
+}
+
+.font-secondary {
+  font-family: $secondary-font;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.mb-70 {
+  margin-bottom: 70px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mb-90 {
+  margin-bottom: 90px !important;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
+}
+
+.pl-150 {
+  padding-left: 150px;
+}
+
+.zindex-1 {
+  z-index: 1;
+}
+
+.overflow-md-hidden {
+  @include desktop {
+    overflow: hidden;
+  }
+}
+
+.vertical-align-middle{
+  vertical-align: middle;
+}
+
+.icon-md{
+  font-size: 36px;
+}
+
+/* page title */
+.page-title-section {
+  padding: 200px 0 80px;
+}
+
+.custom-breadcrumb {
+  li {
+    &.nasted {
+      position: relative;
+      padding-left: 25px;
+
+      &::before {
+        position: absolute;
+        font-family: $icon-font;
+        content: "\e649";
+        font-size: 20px;
+        top: 50%;
+        left: -5px;
+        color: $white;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+/* /page title */
+
+.list-styled{
+  padding-left: 25px;
+  li{
+    position: relative;
+    margin-bottom: 15px;
+    &::before{
+      position: absolute;
+      content: "";
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: $primary-color;
+      left: -25px;
+      top: 5px;
+    }
+  }
+}
+
+textarea.form-control{
+  height: 200px;
+  padding: 20px;
+}
+
+#map_canvas{
+  height: 500px;
+}
+
+details {
+  margin-left: 2em;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 100%;
+
+  >summary {
+    background-image: $gradientv;
+  }
+
+  >dl {
+
+    >dt {
+      padding-left: 5px;
+    }
+
+    >dt::before {
+      content: "---";
+    }
+
+    >dd {
+      width: 90%;
+      padding-left: 5px;
+      width: min(80ch, 90%);
+      margin: 0 auto;
+    }
+  }
+}
+
+.intro {
+  line-height: 1.6;
+  color: $text-color;
+  text-align: justify;
+  
+  a {
+    color: red;
+  }
+}
+
+.disclaimer {
+  color: $accent-color;
+  text-align: justify;
+  line-height: 1.6;
+  padding-top: 10px;
+}
+
+.DropCap::first-letter {
+  float: left;
+  font-size: 3em;
+  margin: 0.1em 0.1em 0.2em 0;
+  line-height: 0.65;
+  // font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-left: 2rem;
+  font-weight: 500;
+}
+
+h2,
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+a {
+  color: lighten(crimson, 20);
+  font-size: 1em;
+
+  :hover {
+    color: crimson;
+    background-color: $highlight-color;
+  }
+}
+
+p {
+  text-align: justify;
+  padding-bottom: .5em;
+}
+
+.list {
+  color: $highlight-color;
+  padding-left: 6rel;
+}
+
+.accent {
+  width: 100%;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: $accent-color;
+}
+
+.indent {
+  font-size: 60%;
+  padding-left: 6ch;
+  line-height: 1.0;
+}
+
+.list::before {
+  content: "";
+  display: inline-block;
+  height: .75rem;
+  width: .75rem;
+  margin-right: 3px;
+
+}
+
+.highlight {
+  font-size: larger;
+  font-style: italic;
+  color: $highlight-color;
+  margin-right: .25rem;
+}
+
+details.table-details {
+  width: 100%;
+  cursor: pointer;
+  margin: 0 auto;
+
+  >summary.table-summary {
+    padding-top: 5px;
+    border-top: 5px solid black;
+    color: $primary-color;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background-image: none;
+    background-color: lighten($secondary-color, 15%);
+  }
+
+  .big-table {
+    display: grid;
+    grid-template-columns: 40% 30% 15% 15%;
+
+    .table-heading {
+      padding-left: 5px;
+      font-size: 1.75rem;
+      font-weight: 700;
+      border: 1px solid $secondary-color;
+      background-image: $gradientv;
+    }
+
+    >.table-content {
+      font-size: 1.25rem;
+      padding-left: 5px;
+      border: 1px solid $secondary-color;
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+.ColumnContainer {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+
+  h1 {
+    margin: 0 auto;
+    // padding-bottom: 10px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    font-variant: small-caps;
+    font-weight: 700;
+    border-top: 1px solid #000;
+    color: $accent-color;
+  }
+
+  h2 {
+    margin: 0 auto;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    font-variant: small-caps;
+    font-weight: 700;
+    color: $accent-color;
+  }
+
+}
+
+.singleColumn {
+  width: min(60ch, 90%);
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+article {
+  font-size: 1rem;
+  line-height: 1.6;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.904);
+
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    padding: 5px;
+    color: $accent-color;
+  }
+
+  p {
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  :hover {
+    background-image: $gradientv;
+  }
+}
+
+article.card {
+  // height: auto;
+  font-size: 1rem;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.904);
+
+}
+
+.WideContainer {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}

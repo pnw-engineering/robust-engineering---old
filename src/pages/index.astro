@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Home Page">
+	<main class="content">
+		<div class="singleColumn">
+			<p class="DropCap disclaimer">Note: This site is a work in process and incomplete. If you are interested and would like to know more about it, please contact me at <a href="mailto:rbishop4561@outlook.com">rbishop4561@outlook.com</a>.</p>
+			<div class="intro DropCap">Welcome to <span class="highlight">Robust Engineering</span> an online learning site intending to provide training for those working in product development and would like to improve product and/or process robustness. Product robustness here means the product will provide <span class="highlight">the intended functions, in stated conditions, for the specified time, in the presence of noise</span>.</div>
+			<br>
+			<div class="intro DropCap">Some assumptions are made about the experience level of the organization and individuals doing the various engineering activities. Links to background information to help close gaps are provided below.</div>
+			<div class="accent">Prerequisites:</div>
+			<p class="intro DropCap">A basic understanding of <span class="highlight">statistics</span> is essential - a good summary can be found <a rel="noopener" target="_blank" href="https://www.w3schools.com/statistics/index.php">here</a></p>
+			<br>
+			<p class="intro DropCap">Since there is likely significant variation in educational background and experience, some facility with a few engineering skills will be helpful. Links to prerequisite information are provided below for those needing to catch up.</p>
+			<div class="accent">Assumptions and background:</div>
+			<p class="list">S-M-A-R-T Requirements</p>
+			<div class="indent">
+				<p><span class="highlight">S</span>pecific - and clearly stated</p>
+				<p><span class="highlight">M</span>easurable - including units of measure</p>
+				<p><span class="highlight">A</span>chievable - otherwise it's a waste of effort</p>
+				<p><span class="highlight">R</span>elevany - must reflect what customers want</p>
+				<p><span class="highlight">T</span>ime Bound - achievable within project timeframe</p>
+			</div>
+			<h2>Laws of the <span class="highlight">famous dead guys</span></h2>
+			<p>Newtons 3 laws are important - don't try to break them</p>
+			<p>Other scientific laws and principles are also to be remembered</p>
+			<h2 class="list">The Scientific Method</h2>
+			<p>Hypothosize - Test - Validate (or not) - Repeat</p>
+		</div>
+	</main>
+</Layout>
+
+<!-- <style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 2;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style> -->
