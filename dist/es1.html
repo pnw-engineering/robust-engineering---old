@@ -1,74 +1,129 @@
-<main id="myContent" class="content">
-    <div class="columnContainer">
-        <div class="ColumnContainer__heading">--- Test For Success ---</div>
-        <div class="mainbody">
-            <div class="grid-container">
-                <div class="grid-item">
-                    <div class="grid-item__title">Test Types</div>
-                    <article class="card">
-                        <h2>Development Testing</h2>
-                        <div class="DropCap">
-                            Testing done to understand the limits of the design space. Tests should be
-                            designed so that limits are reached about half the time to maximize information
-                            obtained. This way, design constraints are best defined. Sample sizes and test counts
-                            need to provide a good statistical basis for drawing conclusions.
-                        </div>
-                        <h2>Verification Testing</h2>
-                        <div class="DropCap">
-                            Testing done to verify that functional requiremenst are met. Test failures
-                            at this point should be rare and carefully evaluated if they occur.
-                        </div>
-                        <h2>Reliability Testing</h2>
-                        <div class="DropCap">
-                            Testing done to determine and/or verify expected product life. Testing must
-                            be done to failue to be sure that product strengths are well understood.
-                        </div>
-                    </article>
-                </div>
-                <div class="grid-item">
-                    <div class="grid-item__title">Verification Methods</div>
-                    <article class="card">
-                        <div class="DropCap">Once requirements are understood, the methods for
-                            verification shoud be
-                            defined.
-                            These methods must include <span class="highlight">specific test procedures</span> to be
-                            used, the <span class="highlight">units of measure</span>, and the <span
-                                class="highlight">acceptance criteria</span>.
-                        </div>
-                    </article>
-                </div>
-                <div class="grid-item">
-                    <div class="grid-item__title"> Statistical significance</div>
-                    <article class="card">
-                        <div class="DropCap">
-                            Statistical significance should always be considered when designing test plans and
-                            evaluating the results. Consideration should be given to the following:
-                        </div>
-                        <h2>Sampe Size (<span class="highlight">n</span>)</h2>
-                        <div class="DropCap">
-                            Small sample size can contribute to design flaw escapes due to incorrect
-                            conclusions due to high Beta error. Beta error is inversly proportional to
-                            sample size
-                        </div>
-                        <h2>Minimum <span class="highlight">p-value</span> for rejecting the
-                            Null Hypothesis
-                        </h2>
-                        <div class="DropCap">
-                            This should be a business driven value where test cost is traded off for
-                            lower Alpha error</div>
-                        <h2>Match <span class="highlight">tools</span> to <span class="highlight">data</span>
-                        </h2>
-                        <div class="article">
-                            <p>Continuous vs discrete.</p>
-                            <p>Normally distributed vs non-normal.</p>
-                            <p>Correct number of <span class="highlight">factors</span> and <span
-                                    class="highlight">levels</span>
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
 
-</main>
+<head>
+  <meta charset="utf-8">
+  <meta Content-Type="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <title>{title}</title>
+</head>
+
+<body class="site bg-primary-700" id="mysite">
+  <header class="header bg-primary-700 txt-normal">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <div class="header__title">Robust Engineering</div>
+    <div class="header__subtitle txt-light">Using Science, Statistics, and Critical Thinking to improve product design robustness</div>
+  </header>
+
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/start.html">Start</a>
+      </li>
+      <li>
+        <a href="/tools.html">Tools</a>
+      </li>
+      <li>
+        <a href="/Glossary.html">Glossary</a>
+      </li>
+      <li>
+        <a href="/hypothesis.html">Hypothesis Roadmap</a>
+      </li>
+      <li>
+        <a href="/hypo2.html">Hypothesis Tests</a>
+      </li>
+    </ul>
+  </nav>
+
+
+<main id="myContent" class="content">
+    <h1>Test For Success</h1>
+    <div class="newspaper">
+      <div class="nobreak">
+        <div class="news-card plain">
+          <div class="heading accent">Test Types</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Development Testing</div>
+          <div class="text">Testing done to understand the limits of the design space. Tests should be designed so
+            that limits are reached about half the time to maximize information obtained. This way, design constraints
+            are best defined. Sample sizes and test counts need to provide a good statistical basis for drawing
+            conclusions.</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Verification Testing</div>
+          <div class="text">Testing done to verify that functional requiremenst are met. Test failures at this point
+            should be rare and carefully evaluated if they occur.</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Reliability Testing</div>
+          <div class="text">Testing done to determine and/or verify expected product life. Testing must be done to
+            failue to be sure that product strengths are well understood.</div>
+        </div>
+      </div>
+      <div class="nobreak">
+        <div class="news-card plain">
+          <div class="heading accent">Statistical Terms</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Statistical Significance</div>
+          <div class="text">Statistical signifiance should always be considered when designing test plans and evaluating
+            results. Consideration should be given to the following:</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Sample Size (<span class="highlight">n</span>)</div>
+          <div class="text">Small sample size can contribute to design flaw escapes due to incorrect conclusions due to
+            high Beta error. Beta error is inversly proportional to sample size.</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Minimum (<span class="highlight">p-value</span>) for rejecting the null hypothesis
+          </div>
+          <div class="text">This should be a business derive value where test cost is traded off for lower Alpha error.
+          </div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">- Match tools to data</div>
+          <div class="text">- continuous v.s. discrete</div>
+          <div class="text">- Normally distributed v.s. Non-normal</div>
+          <div class="text">- Correct number of <span class="highlight">factors</span> and <span
+              class="highlight">levels</span>.</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Verification Medhods</div>
+          <div class="text">Once requirements are understood, the methods for verification should be defined. These
+            methods must include <span class="highlight">specific test procedures</span> to be used, the <span
+              class="highlight">units of measure</span>, and the <epan class="highlight">accoptance criteria</epan>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <!-- <button class="footButton pushable" onclick="window.location.href='start.html'"> -->
+    <button class="footButton pushable" onclick="history.back(-1)">
+      <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front">Back</span>
+    </button>
+    <div class="footCR">&copy; Copyright 2022</div>
+  </footer>
+
+</body>
+<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+<script src="/js/user.js"></script>
+
+</html>

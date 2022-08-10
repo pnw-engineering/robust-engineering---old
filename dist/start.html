@@ -2,108 +2,109 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <title>Robust Design</title>
+  <meta charset="utf-8">
+  <meta Content-Type="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <title>{title}</title>
 </head>
 
-<body class="site" id="mysite">
-
-    <header class="header">
-        <div class="header__bgr" onclick="toggleNav()">&#9776</div>
-        <div class="header__title">
-            Robust Engineering
-        </div>
-        <div class="header__subtitle">
-            Using Science, Statistics, and Critical Thinking to improve product design
-            robustness
-        </div>
-    </header>
-
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="tools.html">Tools</a>
-        <a href="Glossary.html">Glossary</a>
-        <a href="hypothesis.html">hypothesis tests</a>
-
+<body class="site bg-primary-700" id="mysite">
+  <header class="header bg-primary-700 txt-normal">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
     </div>
+    <div class="header__title">Robust Engineering</div>
+    <div class="header__subtitle txt-light">Using Science, Statistics, and Critical Thinking to improve product design robustness</div>
+  </header>
 
-    <main id="myContent" class="content">
-        <div class="ColumnContainer">
-            <div class="grid-container" id="gb1">
-                <div class="grid-item">
-                    <div class="grid-item__title">
-                        For Individual Contributors:</div>
-                    <article class="topic" onclick="loadHTML('es1.html')">
-                        <!-- <article class="topic" onclick="window.location.href='es1.html'"> -->
-                        <div class="topic__heading">
-                            Test For Success
-                        </div>
-                        <div class="topic__soundbite">
-                            Ensure requirements met
-                        </div>
-                        <img class="topic__img" src="img/gene-7031244_1280.png" alt="">
-                    </article>
-                    <article class="topic" onclick="loadHTML('es2.html')">
-                        <div class="topic__heading">
-                            Manage Variation
-                        </div>
-                        <div class="topic__soundbite">
-                            Statistical methods to account for variation.
-                        </div>
-                        <img class=" topic__img" src="img/presentation-1454403__340.webp" alt="">
-                    </article>
-                    <article class="topic" onclick="loadHTML('es3.html')">
-                        <div class="topic__heading">
-                            Eliminate Failure Modes
-                        </div>
-                        <div class="topic__soundbite">Know product history in field.</div>
-                        <img class=" topic__img" src="img/geometry-5973004_1280.png" alt="">
-                    </article>
-                </div>
-                <div class="grid-item">
-                    <div class="grid-item__title">
-                        For Organizations:</div>
-                    <article class="topic" onclick="loadHTML('es4.html')">
-                        <div class="topic__heading">
-                            Design Reviews
-                        </div>
-                        <div class="topic__soundbite">Use Subject Mater Experts to leverage Tribal Knowledge.</div>
-                        <img class=" topic__img" src="img/Bathtub.png" alt="">
-                    </article>
-                    <article class="topic" onclick="loadHTML('es5.html')">
-                        <div class="topic__heading">FMEA/DFME
-                        </div>
-                        <div class="topic__soundbite">Systematic approach to improve design robustness.</div>
-                        <img class=" topic__img" src="img/Bathtub.png" alt="">
-                    </article>
-                    <article class="topic" onclick="loadHTML('es6.html')">
-                        <div class="topic__heading">FRACAS</div>
-                        <div class="topic__soundbite">Failure Reporting And Corrective Action System.</div>
-                        <img class=" topic__img" src="img/Bathtub.png" alt="">
-                    </article>
-                </div>
-            </div>
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/start.html">Start</a>
+      </li>
+      <li>
+        <a href="/tools.html">Tools</a>
+      </li>
+      <li>
+        <a href="/Glossary.html">Glossary</a>
+      </li>
+      <li>
+        <a href="/hypothesis.html">Hypothesis Roadmap</a>
+      </li>
+      <li>
+        <a href="/hypo2.html">Hypothesis Tests</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="myContent" class="content">
+    <div class="newspaper" id="gb1">
+      <div class="nobreak">
+        <div class="news-card plain">
+          <div class="heading accent">For Individual Contributors:</div>
         </div>
-    </main>
+        <div class="card glow-box" onclick="location ='/es1.html'">
+          <div class="title">Test For Success</div>
+          <div class="text">Ensure requirements are met</div>
+          <img src="/img/gene-7031244_1280.png" alt="">
+        </div>
+        <div class="card glow-box" onclick="location ='/es2.html'">
+          <div class="title">Manage Variation</div>
+          <div class="text">Statistical methods</div>
+          <img src="/img/bar-chart.svg" alt="">
+        </div>
+        <div class="card glow-box" onclick="location='/es3.html'">
+          <div class="title">Eliminate Failure Modes</div>
+          <div class="text">Know product history in field.</div>
+          <img src="/img/derailing-toy-train-engine.svg" alt="">
+        </div>
+      </div>
+      <div class="nobreak">
+        <div class="news-card plain">
+          <div class="heading accent">For Organizations:</div>
+        </div>
+        <div class="card glow-box" onclick="location='/es4.html'">
+          <div class="title">Design Reviews</div>
+          <div class="text">Leverage Tribal Knowledge.</div>
+          <img src="/img/Fourth561-572.svg" alt="">
+        </div>
+        <div class="card glow-box" onclick="location='/es5.html'">
+          <div class="title">FMEA/DFME</div>
+          <div class="text">Improve design robustness.</div>
+          <img src="/img/Bathtub.png" alt="">
+        </div>
+        <div class="card glow-box" onclick="location='/es6.html'">
+          <div class="title">FRACAS</div>
+          <div class="text">Failure Reporting And Corrective Action</div>
+          <img src="/img/filing_cabinets.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <footer class="foot">
-        <button class="footButton pushable" onclick="history.back()">
-            <span class="shadow"></span>
-            <span class="edge"></span>
-            <span class="front">Back</span>
-        </button>
-        <div class="footCR">&copy; Copyright 2022</div>
-    </footer>
+  <footer class="foot">
+    <!-- <button class="footButton pushable" onclick="window.location.href='start.html'"> -->
+    <button class="footButton pushable" onclick="history.back(-1)">
+      <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front">Back</span>
+    </button>
+    <div class="footCR">&copy; Copyright 2022</div>
+    <script src="/js/user.js"></script>
+  </footer>
+
 </body>
-
 <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
-<script src="js/main.js"></script>
+
+</html>

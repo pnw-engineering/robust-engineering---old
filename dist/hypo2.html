@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta Content-Type="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <title>{title}</title>
+</head>
+
+<body class="site bg-primary-700" id="mysite">
+  <header class="header bg-primary-700 txt-normal">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <div class="header__title">Robust Engineering</div>
+    <div class="header__subtitle txt-light">Using Science, Statistics, and Critical Thinking to improve product design robustness</div>
+  </header>
+
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/start.html">Start</a>
+      </li>
+      <li>
+        <a href="/tools.html">Tools</a>
+      </li>
+      <li>
+        <a href="/Glossary.html">Glossary</a>
+      </li>
+      <li>
+        <a href="/hypothesis.html">Hypothesis Roadmap</a>
+      </li>
+      <li>
+        <a href="/hypo2.html">Hypothesis Tests</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="myContent" class="content">
+    <h1>Hypothesis Testing Tool assumptions and definitions for Null and Alternate Hypotheses</h1>
+    <div class="newspaper" id="H-Container">
+      <div class="H-Tools">
+        <details class="table-details">
+          <summary class="table-summary">Testing data shape, continuous data</summary>
+          <div class="big-table">
+            <div class="table-heading">Issue being addressed</div>
+            <div class="table-heading">Tool</div>
+            <div class="table-heading">Ho</div>
+            <div class="table-heading">Ha</div>
+            <div class="table-content">Are the data normally distributed?</div>
+            <div class="table-content">Normality Test</div>
+            <div class="table-content">normal</div>
+            <div class="table-content">not normal</div>
+          </div>
+        </details>
+        <details class="table-details">
+          <summary class="table-summary">Comparing data spread, continuous data</summary>
+          <div class="big-table">
+            <div class="table-heading">Issue being addressed</div>
+            <div class="table-heading">Tool</div>
+            <div class="table-heading">Ho</div>
+            <div class="table-heading">Ha</div>
+            <div class="table-content">Comparison of standard deviations- normally distributed data</div>
+            <div class="table-content">Test For Equal Variance, Bartlett's (or F) Test</div>
+            <div class="table-content">&sigma;s are the same</div>
+            <div class="table-content">at least one &sigma; is different</div>
+            <div class="table-content">Comparison of Standard deviations - non-normally distributed data</div>
+            <div class="table-content">Test For Equal Variance, Levene's Test</div>
+            <div class="table-content">Standard deviations are the same</div>
+            <div class="table-content">at least one standard deviation is different</div>
+          </div>
+        </details>
+        <details class="table-details">
+          <summary class="table-summary">Comparing data central tendency, continuous data</summary>
+          <div class="big-table">
+            <div class="table-heading">Issue being addressed</div>
+            <div class="table-heading">Tool</div>
+            <div class="table-heading">Ho</div>
+            <div class="table-heading">Ha</div>
+            <div class="table-content">Does data conform to a standard - normally distributed data</div>
+            <div class="table-content">1-Sample t test</div>
+            <div class="table-content">mean = standard</div>
+            <div class="table-content">mean not = standard</div>
+            <div class="table-content">Are the averages for two groups of normally distributed data the same?</div>
+            <div class="table-content">2-Sample t test</div>
+            <div class="table-content">mean group 1 = mean group 2</div>
+            <div class="table-content">mean group 1 not = mean group 2</div>
+            <div class="table-content">Are the averages for three or more groups of normally distributed data the same?</div>
+            <div class="table-content">One Way ANOVA test</div>
+            <div class="table-content">mean of all groups are the same</div>
+            <div class="table-content">at least one group's mean is different than the others</div>
+            <div class="table-content">Does the median of a group of non-normal data comply to a standard</div>
+            <div class="table-content">1-Sample Wilcoxon test</div>
+            <div class="table-content">median not different than the standard</div>
+            <div class="table-content">median is different than the standard</div>
+            <div class="table-content">Comparing median of two groups of data, used for non-normal data</div>
+            <div class="table-content">Mann-Whitney test</div>
+            <div class="table-content">median group 1 = median group 2</div>
+            <div class="table-content">median group 1 not = median group 2</div>
+            <div class="table-content">Comparing median of three or more groups of data, used for non-normal data</div>
+            <div class="table-content">Mood's Median test, for when distribution of each group's data has similar shapes</div>
+            <div class="table-content">group 1 = median group 2 = median group 3</div>
+            <div class="table-content">at least one group's median is different from the others</div>
+            <div class="table-content">Comparing median of three or more groups of data, used for non-normal data</div>
+            <div class="table-content">Kruskal-Wallis Median test, for when distribution of each group's data has different shapes</div>
+            <div class="table-content">median group 1 = median group 2 = median group 3</div>
+            <div class="table-content">at least one group's median is different from the others</div>
+          </div>
+        </details>
+        <details class="table-details">
+          <summary class="table-summary">Comparing data proportions, from counts, attribute data</summary>
+          <div class="big-table">
+            <div class="table-heading">Issue being addressed</div>
+            <div class="table-heading">Tool</div>
+            <div class="table-heading">Ho</div>
+            <div class="table-heading">Ha</div>
+            <div class="table-content">Proportion of one group of data compared to a standard</div>
+            <div class="table-content">1 Proportion Test</div>
+            <div class="table-content">proportion = standard group proportion not = standard</div>
+            <div class="table-content">Proportion of one group of data compared to a second group's proportion</div>
+            <div class="table-content">2 Proportion Test</div>
+            <div class="table-content">group 1 proportion = group 2 proportion</div>
+            <div class="table-content">group 2 proportion not = group 2 proportion</div>
+            <div class="table-content">Comparing dependencies in groups/levels [proportion test of two or more groups of two or more levels]</div>
+            <div class="table-content">Chi-Square Test</div>
+            <div class="table-content">data are independent (not related); proportions are the same</div>
+            <div class="table-content">data are dependent (related); at least one proportion is different from another</div>
+          </div>
+        </details>
+        <details class="table-details">
+          <summary class="table-summary">Correlation & Regression</summary>
+          <div class="big-table">
+            <div class="table-heading">Issue being addressed</div>
+            <div class="table-heading">Tool</div>
+            <div class="table-heading">Ho</div>
+            <div class="table-heading">Ha</div>
+            <div class="table-content">Is the data correlated?</div>
+            <div class="table-content">Correlation Test</div>
+            <div class="table-content">data is not correlated</div>
+            <div class="table-content">data is correlated</div>
+            <div class="table-content">Testing regression model for significance in session window output after running Regression</div>
+            <div class="table-content"></div>
+            <div class="table-content">model does not explain significant variation</div>
+            <div class="table-content">model does explain significant variation</div>
+            <div class="table-content">Testing constant for significance in session window output after running Regression</div>
+            <div class="table-content"></div>
+            <div class="table-content">constant [y-intercept] is zero, it has no significance (or not zero and not significant)</div>
+            <div class="table-content">constant is not zero, it has significance</div>
+            <div class="table-content">Testing terms for significance in session window output after running Regression</div>
+            <div class="table-content"></div>
+            <div class="table-content">term does not have significance, does not help explain the variation present</div>
+            <div class="table-content">term has significance and does explain the variation present</div>
+            <div class="table-content">Test of model fit Lack of Fit test under Regression Options</div>
+            <div class="table-content"></div>
+            <div class="table-content"> model has 'No Lack Of Fit', model passes this adequacy test</div>
+            <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
+          </div>
+        </details>
+        <details class="table-details">
+          <summary class="table-summary">DOE</summary>
+          <div class="big-table">
+            <div class="table-heading">Issue being addressed</div>
+            <div class="table-heading">Tool</div>
+            <div class="table-heading">Ho</div>
+            <div class="table-heading">Ha</div>
+            <div class="table-content">Testing the constant for significance in Session window output after running DOE analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">constant is zero, not significant (or not zero and not significant)</div>
+            <div class="table-content">constant is not zero, it has significance</div>
+            <div class="table-content">Testing Main Effects for significance in Session window output after running DOE analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">no Main Effects are significant</div>
+            <div class="table-content">at least one Main Effect is significant</div>
+            <div class="table-content">Testing 2-Way Interactions for significance (or n-Way) in Session window output after running DOE analysis and model includes higher order terms</div>
+            <div class="table-content"></div>
+            <div class="table-content">no n-Way interactions are significant</div>
+            <div class="table-content">at least one n-Way interaction is significant</div>
+            <div class="table-content">Testing specific terms for significance in Session window output after running DOE analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">term is not significant</div>
+            <div class="table-content">term is significant</div>
+            <div class="table-content">Testing for curvature in Session window output after running DOE analysis, center points exist and are included in the model</div>
+            <div class="table-content"></div>
+            <div class="table-content">curvature is not significant</div>
+            <div class="table-content">curvature is significant</div>
+            <div class="table-content">Testing Blocks for significance in Session window output after running DOE analysis, blocks exist and are included in the model</div>
+            <div class="table-content"></div>
+            <div class="table-content">no significant difference associated to blocks</div>
+            <div class="table-content">a significant difference can be attributed to blocks</div>
+            <div class="table-content">Testing for Lack of Fit Minitab will run this test when insignificant terms are removed from the model and sufficient degrees of freedom are available</div>
+            <div class="table-content"></div>
+            <div class="table-content">model has 'No Lack Of Fit', model passes this adequacy test</div>
+            <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
+          </div>
+        </details>
+        <details class="table-details">
+          <summary class="table-summary">Response Surfaces</summary>
+          <div class="big-table">
+            <div class="table-heading">Issue being addressed</div>
+            <div class="table-heading">Tool</div>
+            <div class="table-heading">Ho</div>
+            <div class="table-heading">Ha</div>
+            <div class="table-content">Testing the constant for significance in Session window output after running analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">constant is zero, not significant (or not zero and not significant)</div>
+            <div class="table-content">constant is not zero, it has significance</div>
+            <div class="table-content">Testing Linear terms for significance in Session window output after running analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">no Linear terms are significant</div>
+            <div class="table-content">at least one Linear term is significant</div>
+            <div class="table-content">Testing Square terms for significance in Session window output after running analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">no Square terms are significant</div>
+            <div class="table-content">at least one Square term is significant</div>
+            <div class="table-content">Testing Interactions for significance in Session window output after running analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">no Interactions are significant</div>
+            <div class="table-content">at least one interaction is significant</div>
+            <div class="table-content">Testing specific terms for significance in Session window output after running analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">term is not significant</div>
+            <div class="table-content">term is significant</div>
+            <div class="table-content">Testing for Lack of Fit in Session window after running analysis</div>
+            <div class="table-content"></div>
+            <div class="table-content">model has 'No Lack Of Fit', model passes this adequacy test</div>
+            <div class="table-content">model has 'Lack Of Fit', model is inadequate</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <!-- <button class="footButton pushable" onclick="window.location.href='start.html'"> -->
+    <button class="footButton pushable" onclick="history.back(-1)">
+      <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front">Back</span>
+    </button>
+    <div class="footCR">&copy; Copyright 2022</div>
+  </footer>
+
+</body>
+<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+<script src="/js/user.js"></script>
+
+</html>
