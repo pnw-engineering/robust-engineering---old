@@ -1,0 +1,202 @@
+@use '../abstracts' as *;
+
+.roadmap {
+  width: 90%;
+  text-align: center;
+}
+
+.ButtonSet {
+  display: block;
+}
+
+.MapButton {
+  // display: inline;
+  color: $text-color;
+  margin: .5rem;
+  // margin-bottom: 20px;
+  // padding-top: .5rem;
+  // padding-bottom: .5rem;
+  padding-left: 5px;
+  min-width: 6ch;
+  height: auto;
+  border: 1px solid $text-color;
+  border-radius: 1ch;
+  cursor: pointer;
+  background-color: darken($secondary-color, 20%);
+}
+
+.MapButton:hover {
+  background-image: $gradient1;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  // border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--clr-primary-600);
+  color: var(--clr-text);
+  text-align: center;
+  border-radius: 10px;
+  border: 1px dashed var(--clr-text-normal);
+  padding: 5px;
+  position: absolute;
+  z-index: 2;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+// .MapButton:active {
+//   background-image: none;
+//   background-color: white;
+// }
+
+.MapLine {
+  display: none;
+  width: min(50ch, 100%);
+  margin: 0 auto;
+  padding-top: 5px;
+  font-size: 1.2rem;
+}
+
+.mapQuestion {
+  font-size: 1.5rem;
+  background-color: lighten($primary-color, 2.5%);
+}
+
+.HypoTable {
+  display: grid;
+  grid-template:
+    "Name H0   HA   Link"
+    "Case Case Case Case"
+    /1fr 1fr 1fr 3em;
+
+}
+
+.HTableName {
+  // font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: small-caps;
+  letter-spacing: 2px;
+  grid-area: Name;
+  padding-left: 10px;
+  display: block;
+  border: 1px solid white;
+}
+
+.HTableH0 {
+  // font-size: 1.5rem;
+  grid-area: H0;
+  text-align: center;
+  display: block;
+  border: 1px solid white;
+
+}
+
+.HTableHA {
+  // font-size: 1.5rem;
+  grid-area: HA;
+  text-align: center;
+  display: block;
+  border: 1px solid white;
+}
+
+.HTabLink {
+  grid-area: Link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid white;
+
+  // .HTabLink:hover {
+  //   background-color: red;
+  // }
+
+  img {
+    // margin: auto;
+    padding: 3px;
+    max-width: 90%;
+    // height: auto;
+    // background-color: transparent;
+  }
+
+}
+
+.HTabUseCase {
+  grid-area: Case;
+  text-align: left;
+  // font-size: 1.5rem;
+  border: 1px solid white;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.HTabUseCase::before {
+  // font-size: 1.5rem;
+  text-transform: small-caps;
+  color: $highlight-color;
+  content: "Typical use case: ";
+}
+
+.hToolTable {
+  display: \grid;
+  grid-template:
+    "name use H0 HA"
+    /30% 30% 20% 20%;
+}
+
+.hToolHead {
+  grid-area: n;
+  content: "Tool Name"
+}
+
+.hToolName {
+  grid-area: name;
+  font-size: 1.5em;
+  border: 1px solid white;
+}
+
+.hToolUse {
+  grid-area: use;
+  font-size: 1.5em;
+  border: 1px solid white;
+}
+
+.hToolH0 {
+  grid-area: H0;
+  font-size: 1.5em;
+  border: 1px solid white;
+
+}
+
+.hToolHA {
+  grid-area: HA;
+  font-size: 1.5em;
+  border: 1px solid white;
+
+}

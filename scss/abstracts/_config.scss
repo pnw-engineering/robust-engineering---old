@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: clamp(1em, 1.5vw, 2em);
+  font-family: Roboto;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+// @mixin transition-ease {
+//   transition: all .3s ease-in-out;
+// }
+
+@mixin media-ml {
+
+  //mobil-landscape
+  @media screen and (min-width: 6400px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+
+  //tablet-portrait
+  @media screen and (min-width: 7680px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+
+  //tablet-landscape
+  @media screen and (min-width: 10240px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+
+  //laptop
+  @media screen and (min-width: 12800px) {
+    @content;
+  }
+}
+
+@mixin media-2xl {
+
+  //large screen
+  @media screen and (min-width: 15360px) {
+    @content;
+  }
+}

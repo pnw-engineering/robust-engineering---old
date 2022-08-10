@@ -1,0 +1,40 @@
+// @use '../abstracts' as *;
+
+/*  typography */
+// @import url('https://fonts.googleapis.com/css?family=roboto:300,400,500,600,700');
+
+// @font-face {
+//   font-family: 'Roboto';
+//   src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&&family=Roboto:wght@300&display=swap') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// $fs-small: 
+
+body {
+  line-height: 1.6;
+  // font-family: $primary-font;
+  -webkit-font-smoothing: antialiased;
+  // font-size: 15px;
+  color: $text-color;
+}
+
+p, .paragraph {
+  font-weight: 400;
+  color: $text-color;
+  // font-size: 15px;
+  // line-height: 1.9;
+  // font-family: $primary-font;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $text-color-dark;
+  font-family: $secondary-font;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-highlight{
+  color: $text-color-dark;
+}

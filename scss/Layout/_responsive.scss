@@ -1,0 +1,142 @@
+@include media-ml {
+
+  //mobile-landscape - 640px
+  // * {
+  //   font-size: .5rem;
+  // }
+
+  .site {
+    grid-template-columns: 130px 1fr;
+
+    // .sidenav {
+      // width: auto;
+      // border: 1px solid  rgb(200, 19, 19) 
+    // }
+  }
+
+  // .grid-container {
+  //   width: 95%;
+  //   // width: 100%;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   grid-gap: 30px;
+  //   // background-color: blue;
+  // }
+
+  // .grid-item {
+  //   // font-size: .5vw;
+  //   // font-size: .75rem;
+  //   width: 100%;
+  //   // background-color: burlywood;
+  // }
+}
+
+
+@include media-md {
+
+  //tablet-portrait - 768px
+  * {
+    font-size: .9rem;
+  }
+
+  .header {
+
+    // background-color: blue;
+    &__title {
+      font-size: 1rem;
+    }
+  }
+
+}
+
+@include media-lg {
+
+  //tablet-landscape
+  * {
+    font-size: 1rem;
+  }
+
+  .ColumnContainer {
+    width: inherit;
+    // background-color: cornflowerblue;
+  }
+}
+
+@include media-xl {
+
+  //laptop
+  * {
+    font-size: 1rem;
+  }
+
+  .site {
+    grid-template-columns: 8rem 1fr;
+
+    .content {
+      // width: min(80ch, 70%);
+      overflow-x: hidden;
+      // width: 50%;
+    }
+  }
+
+  .header {
+    // background-color: blue;
+
+    &__title {
+      letter-spacing: 5px;
+      font-size: 2rem;
+      // background-color: aqua;
+    }
+
+    &__subtitle {
+      // width: 100vw;
+      letter-spacing: 2px;
+      font-size: 1.75rem;
+      // background-color: aqua;
+    }
+  }
+
+  .columnContainer {
+    // width: 90%;
+    margin: 0 auto;
+    // background-color: cornflowerblue;
+  }
+
+  .singleColumn {
+    width: 60%;
+  }
+
+  .grid-container {
+    width: 95%;
+    // width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 90px;
+    // background-color: blue;
+  }
+
+  .grid-item {
+    // font-size: .5vw;
+    // font-size: .75rem;
+    width: 100%;
+    // background-color: burlywood;
+  }
+}
+
+@include media-2xl {
+
+  //extra large screen
+  * {
+    font-size: 1rem;
+  }
+
+  .columnContainer{
+    width:80%;
+  }
+
+  .grid-container{
+    width: 60%;
+  }
+
+  .grid-item{
+    width: 80%
+  }
+}

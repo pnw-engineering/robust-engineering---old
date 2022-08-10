@@ -1,0 +1,107 @@
+@use '../abstracts' as *;
+
+.tool-details {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-direction: column;
+
+  .title {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: $highlight-color;
+  }
+
+}
+
+.tool-table {
+  // max-width: 20em;
+  // flex: 0 0 20em;
+  flex-wrap: wrap;
+  // font-size: 1.5rem;
+  display: grid;
+  margin: 0 auto;
+  grid-template: 
+    "Name   Name Name  Name" 2.5rem
+    "h-Cond h-H0 h-HA  Link"
+    "Cond   H0   HA    Link"
+    /4fr min(20%, 5em) min(20%, 5em) 10%;
+
+  >.tool-name {
+    grid-area: Name;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: $highlight-color;
+    // background-image: $gradient1;
+    background-color: $primary-color;
+    // border: 1px solid $text-color;
+  }
+
+  .tool-head1 {
+    grid-area: h-Cond;
+    padding-left: 5px;
+    border: 1px solid $text-color;
+  }
+
+  .tool-head2 {
+    grid-area: h-H0;
+    text-align: center;
+    border: 1px solid $text-color;
+  }
+
+  .tool-head3 {
+    grid-area: h-HA;
+    text-align: center;
+    border: 1px solid $text-color;
+  }
+
+  .tool-cond {
+    grid-area: Cond;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid $text-color;
+  }
+
+  .tool-H0 {
+    grid-area: H0;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid $text-color;
+  }
+
+  .tool-HA {
+    grid-area: HA;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid $text-color;
+  }
+
+  .tool-link {
+    grid-area: Link;
+    display: grid;
+    align-items: center;
+    padding-left: 5px;
+    border: 1px solid $text-color;
+
+    img {
+      margin: 0 auto;
+      max-width: 70%;
+      background-color: transparent;
+    }
+  }
+}
+
+.tool-link:hover {
+  background-color: $secondary-color;
+
+}
+
+a.W-Ref {
+  color: green;
+  align-self: right;
+  font-weight: 700;
+  font-family: 'Brush Script MT', cursive;
+  font-style: oblique;
+}
