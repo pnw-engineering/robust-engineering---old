@@ -5,80 +5,58 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Testing">
   <main id="myContent" class="content">
     <h1>--- Test For Success ---</h1>
-    <div class="ColumnContainer">
-      <div class="deck-container">
+    <div class="newspaper">
+      <div class="nobreak">
         <h1>Test Types</h1>
-        <div class="deck">
-          <article class="card-simple">
-            <div class="title">Development Testing</div>
-            <div class="text DropCap">Testing done to understand the limits of the design space. Tests should be
-              designed so
-              that limits are reached about half the time to maximize information obtained. This way, design constraints
-              are best defined. Sample sizes and test counts need to provide a good statistical basis for drawing
-              conclusions.</div>
-          </article>
-          <article class="card-simple">
-            <div class="title">Verification Testing</div>
-            <div class="text DropCap">Testing done to verify that functional requiremenst are met. Test failures at this
-              point
-              should be rare and carefully evaluated if they occur.</div>
-          </article>
-          <article class="card-simple">
-            <div class="title">Reliability Testing</div>
-            <div class="text DropCap">Testing done to determine and/or verify expected product life. Testing must be
-              done to
-              failue to be sure that product strengths are well understood.</div>
-          </article>
+        <div class="news-card glow-box">
+          <div class="heading">Development Testing</div>
+          <div class="text">Testing done to understand the limits of the design space. Tests should be designed so
+            that limits are reached about half the time to maximize information obtained. This way, design constraints
+            are best defined. Sample sizes and test counts need to provide a good statistical basis for drawing
+            conclusions.</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Verification Testing</div>
+          <div class="text">Testing done to verify that functional requiremenst are met. Test failures at this point
+            should be rare and carefully evaluated if they occur.</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Reliability Testing</div>
+          <div class="text">Testing done to determine and/or verify expected product life. Testing must be done to
+            failue to be sure that product strengths are well understood.</div>
         </div>
       </div>
-      <div class="deck-container">
-        <h1>Verification Methods</h1>
-        <div class="deck">
-          <article class="card-simple">
-            <div class="text DropCap">Once requirements are understood, the methods for verification shoud be defined.
-              These methods must include <span class="highlight">specific test procedures</span> to be used, the <span
-                class="highlight">units of measure</span>, and the <span class="highlight">acceptance criteria</span>. A
-              verification plan should also include reliability testing which could extend beyond longer than the other
-              verification testing.</div>
-          </article>
+      <div class="nobreak">
+        <h1>Statistical Terms</h1>
+        <div class="news-card glow-box">
+          <div class="heading">Statistical Significance</div>
+          <div class="text">Statistical signifiance should always be considered when designing test plans and evaluating
+            results. Consideration should be given to the following:</div>
         </div>
-      </div>
-      <div class="deck-container">
-        <div class="deck">
-          <h1> Statistical significance</h1>
-          <article class="card-simple">
-            <div class="text DropCap">Statistical significance should always be considered when designing test plans and
-              evaluating the results.Consideration should be given to the following:</div>
-          </article>
+        <div class="news-card glow-box">
+          <div class="heading">Sample Size (<span class="highlight">n</span>)</div>
+          <div class="text">Small sample size can contribute to design flaw escapes due to incorrect conclusions due to
+            high Beta error. Beta error is inversly proportional to sample size.</div>
         </div>
-      </div>
-      <div class="deck-container">
-        <h1>Sampe Size (n)</h1>
-        <div class="deck">
-          <article class="card-simple">
-            <div class="tet DropCap">Small sample size can contribute to design flaw escapes due to incorrect conclusions due to high Beta error. Beta error is inversly proportional to sample size</div>
-          </article>
+        <div class="news-card glow-box">
+          <div class="heading">Minimum (<span class="highlight">p-value</span>) for rejecting the null hypothesis
+          </div>
+          <div class="text">This should be a business derive value where test cost is traded off for lower Alpha error.
+          </div>
         </div>
-      </div>
-      <div class="deck-container">
-        <h1>Minimum <span class="highlight">p-value</span> for rejecting the Null Hypothesis</h1>
-        <div class="deck">
-          <article class="card-simple">
-            <div class="text DropCap">This should be a business driven value where test cost is traded off for lower Alpha
-              error</div>
-          </article>
+        <div class="news-card glow-box">
+          <div class="heading">- Match tools to data</div>
+          <div class="text">- continuous v.s. discrete</div>
+          <div class="text">- Normally distributed v.s. Non-normal</div>
+          <div class="text">- Correct number of <span class="highlight">factors</span> and <span
+              class="highlight">levels</span>.</div>
         </div>
-      </div>
-      <div class="deck-container">
-        <h1>Match <span class="highlight">tools</span> to <span class="highlight">data</span></h1>
-        <div class="deck">
-          <article class="card-simple">
-            <div class="text">
-              <p>Continuous vs discrete.</p>
-              <p>Normally distributed vs non-normal.</p>
-              <p>Correct number of <span class="highlight">factors</span> and <span class="highlight">levels</span></p>
-            </div>
-          </article>
+        <div class="news-card glow-box">
+          <div class="heading">Verification Medhods</div>
+          <div class="text">Once requirements are understood, the methods for verification should be defined. These
+            methods must include <span class="highlight">specific test procedures</span> to be used, the <span
+              class="highlight">units of measure</span>, and the <epan class="highlight">accoptance criteria</epan>.
+          </div>
         </div>
       </div>
     </div>

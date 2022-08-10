@@ -5,10 +5,9 @@
 
 let { title } = Astro.props;
 
-// const { title } = Astro.props as Props;
-
-// import "../css/main.css";
-// import "../js/user.js"
+import "/src/css/main.css";
+// import { navSlide } from './js/user.js';
+// import "/src/js/user.js";
 // import "https://kit.fontawesome.com/a076d05399.js"
 ---
 
@@ -16,51 +15,75 @@ let { title } = Astro.props;
 <html lang="en">
 
 <head>
-	<!-- <meta charset="utf-8"> -->
-	<meta Content-Type="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com/css"> -->
-	<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300"
-		rel="stylesheet">
-	<link rel="stylesheet" href="src/css/main.css">
-	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
-	</script>
-	<title>{title}</title>
+  <!-- <meta charset="utf-8"> -->
+  <meta Content-Type="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com/css"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300" rel="stylesheet">
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+  <title>{title}</title>
 </head>
 
-<body class="site" id="mysite">
-	<header class="header">
-		<div class="header__bgr" onclick="toggleNav()">&#9776</div>
-		<div class="header__title">Robust Engineering</div>
-		<div class="header__subtitle">Using Science, Statistics, and Critical Thinking to improve product design
-			robustness</div>
-	</header>
+<body class="site bg-primary-700" id="mysite">
+  <header class="header bg-primary-700 txt-normal">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <div class="header__title">Robust Engineering</div>
+    <div class="header__subtitle txt-light">Using Science, Statistics, and Critical Thinking to improve product design robustness</div>
+  </header>
 
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="/">Home</a>
-		<a href="/tools">Tools</a>
-		<a href="/Glossary">Glossary</a>
-		<a href="/hypothesis">Hypothesis Roadmap</a>
-		<a href="/hypo2">Hypothesis Tests</a>
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/start">Start</a>
+      </li>
+      <li>
+        <a href="/tools">Tools</a>
+      </li>
+      <li>
+        <a href="/Glossary">Glossary</a>
+      </li>
+      <li>
+        <a href="/hypothesis">Hypothesis Roadmap</a>
+      </li>
+      <li>
+        <a href="/hypo2">Hypothesis Tests</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/">Home</a>
+        <a href="/tools">Tools</a>
+        <a href="/Glossary">Glossary</a>
+        <a href="/hypothesis">Hypothesis Roadmap</a>
+        <a href="/hypo2">Hypothesis Tests</a>
+    </div> -->
 
-	</div>
+  <slot></slot>
 
-	<slot></slot>
-
-	<footer class="foot">
-		<button class="footButton pushable" onclick="window.location.href='start.html'">
-			<span class="shadow"></span>
-			<span class="edge"></span>
-			<span class="front">Go</span>
-		</button>
-		<div class="footCR">&copy; Copyright 2022</div>
-	</footer>
+  <footer class="foot">
+    <!-- <button class="footButton pushable" onclick="window.location.href='start.html'"> -->
+    <button class="footButton pushable" onclick="history.back(-1)">
+      <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front">Back</span>
+    </button>
+    <div class="footCR">&copy; Copyright 2022</div>
+  </footer>
 
 </body>
-<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
-<script is:inline src='../src/js/user.js'></script>
+<!-- <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script> -->
+<!-- <script is:inline src={Astro.resolve('/src/js/user.js')}></script> -->
+<script type="module" src={(await import("/src/js/user.js?url")).default}></script>
+<script type="module" src={(await import("/src/js/btnToggle.js?url")).default}></script>
 
 </html>

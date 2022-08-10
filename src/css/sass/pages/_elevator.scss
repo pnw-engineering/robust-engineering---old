@@ -1,169 +1,96 @@
 @use '../abstracts' as *;
 // @use '../abstracts/mixins' as *;
 
-.deck-container {
-  width: min(30rem, 90%);
-  margin: 0 auto;
-  // max-width: 30rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  // gap: 1em;
 
-  h1 {
-    margin: 0 auto;
-    font: 2rem;
-    letter-spacing: 5px;
-    color: $highlight-color;
+
+
+.card {
+  margin-top: 2em;
+  max-width: 30em;
+  display: grid;
+  grid-template:
+    "title  image"
+    "text   image"
+    /1fr 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.195);
+
+  .title {
+    grid-area: title;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    // line-height: 1;
+    font-variant: small-caps;
+    padding-bottom: 2px;
+    padding-top: 10px;
+    // margin: 0 auto;
+    color: $accent-color;
   }
 
-  .deck {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 1em;
-    margin: 0 auto;
-
-    h1 {
-      color: red;
-      margin: 0 auto;
-      padding-top: 5px;
-    }
-
-    .card {
-      margin-top: 2em;
-      max-width: 30em;
-      // height: 100%;
-      display: grid;
-      grid-template:
-        "title  image"
-        "text   image"
-        /1fr 100px;
-      padding-left: 5px;
-      padding-right: 5px;
-      box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.195);
-
-      .title {
-        grid-area: title;
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-        font-weight: 700;
-        // line-height: 1;
-        font-variant: small-caps;
-        padding-bottom: 2px;
-        padding-top: 10px;
-        // margin: 0 auto;
-        color: $accent-color;
-      }
-
-      .text {
-        grid-area: text;
-        font-size: 1rem;
-        letter-spacing: 1px;
-        padding-left: 5px;
-        color: $text-color;
-      }
-
-      img {
-        grid-area: image;
-        object-fit: cover;
-        // max-height: 100%;
-        max-width: 100%;
-        // border: 1px solid white;
-      }
-
-    }
-
-    .card {
-      margin-top: 2em;
-      max-width: 30em;
-      display: grid;
-      grid-template:
-        "title  image"
-        "text   image"
-        /1fr 100px;
-      padding-left: 5px;
-      padding-right: 5px;
-      box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.195);
-
-      .title {
-        grid-area: title;
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-        font-weight: 700;
-        // line-height: 1;
-        font-variant: small-caps;
-        padding-bottom: 2px;
-        padding-top: 10px;
-        // margin: 0 auto;
-        color: $accent-color;
-      }
-
-      .text {
-        grid-area: text;
-        font-size: 1rem;
-        letter-spacing: 1px;
-        padding-left: 5px;
-        color: $text-color;
-      }
-
-      img {
-        grid-area: image;
-        object-fit: cover;
-        // max-height: 100%;
-        max-width: 100%;
-        // border: 1px solid white;
-      }
-
-    }
-
-    .card:hover {
-      background-image: $gradient1;
-    }
-
-    .card-simple {
-      margin-top: 2em;
-      // max-width: 30em;
-      display: grid;
-      grid-template:
-        "title"
-        "text"
-        /30em;
-      padding-left: 5px;
-      padding-right: 5px;
-      box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.195);
-
-      .title {
-        grid-area: title;
-        font-size: 1.5rem;
-        letter-spacing: 2px;
-        font-weight: 700;
-        font-variant: small-caps;
-        padding-bottom: 2px;
-        padding-top: 10px;
-        color: $accent-color;
-      }
-
-      .text {
-        grid-area: text;
-        width: 100%;
-        font-size: 1rem;
-        line-height: 1.8;
-        letter-spacing: 1px;
-        text-align: justify;
-        padding-left: 15px;
-        padding-right: 15px;
-        color: $text-color;
-      }
-    }
-
-    .card-simple:hover {
-      background-image: $gradient1;
-    }
-
+  .text {
+    grid-area: text;
+    // font-size: 1rem;
+    letter-spacing: 1px;
+    padding-left: 5px;
+    color: $text-color;
   }
+
+  img {
+    grid-area: image;
+    // object-fit: contain;
+    max-height: 100px;
+    max-width: 100px;
+    // border: 1px solid white;
+  }
+
 }
 
+.card:hover {
+  background-image: $gradient1;
+}
+
+
+.card-simple:hover {
+  background-image: $gradient1;
+}
+
+.card-simple {
+  // margin-top: 2em;
+  width: 30em;
+  display: block;
+  // flex-direction: column;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 2em;
+  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.195);
+  break-inside: avoid;
+  page-break-inside: avoid;
+
+  .title {
+    // grid-area: title;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-variant: small-caps;
+    padding-bottom: 2px;
+    // padding-top: 10px;
+    color: $accent-color;
+  }
+
+  .text {
+    // grid-area: text;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $text-color;
+  }
+}
 
 .return {
   display: block;

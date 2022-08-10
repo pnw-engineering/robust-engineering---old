@@ -3,80 +3,49 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Variation">
-    <main id="myContent" class="content">
-
-        <div class="ColumnContainer">
-            <div class="ColumnContainer__heading">--- Manage Variation ---</div>
-            <div class="mainbody">
-                <div class="grid-container">
-                    <div class="grid-item">
-                        <div class="grid-item__title">Nature of Variation</div>
-                        <article class="card">
-                            <div class="DropCap">Variation occurs in all natural processes and if not managed, can cause
-                                undesireable
-                                effects.
-                                Statistical methods are available to understand the types and amount of variation that
-                                occurs. <span class="highlight">Common Cause</span> variation is the variation naturally
-                                seen from the
-                                processes being
-                                used. <span class="highlight">Special Cause</span> variation is variation caused by some
-                                unusual
-                                factor that
-                                can generally be controlled and eliminated. <span class="highlight">Control
-                                    Charts</span> are a
-                                common tool
-                                for keeping processes within their design limits.
-                            </div>
-                            <p>A good summary of control charts can be found <a target="_blank"
-                                    href="https://en.wikipedia.org/wiki/Control_chart"> here </a></p>
-                        </article>
-                    </div>
-                    <div class="grid-item">
-                        <div class="grid-item__title">Key Concepts</div>
-                        <article class="card">
-                            <h1>Inferential Statistics</h1>
-                            <div class="DropCap">
-                                When we “infer” characteristics of the entire population based on characteristics of a
-                                sampling
-                                of the population. Since it is impractical to test entire populations, we will be
-                                infering
-                                characteristics measured in a limited sampling to the entire population. In plain
-                                english, we
-                                test a sampling of parts to determine how all parts will behave.
-                            </div>
-                            <h1>Central Tendancy</h1>
-                            <dl>
-                                <div class="DropCap"><span class="highlight">Mean</span> </div>
-                                <dd>average value for a normally distributed set of data.</dd>
-                                <div class="DropCap"><span class="highlight">Median</span> </div>
-                                <dd>middle value for non-normally distributed set of data.</dd>
-                                <div class="DropCap"><span class="highlight">Mode</span></div>
-                                <dd>most often occuring value for attribute data.</dd>
-                            </dl>
-                            <h1>Variability</h1>
-                            <dl>
-                                <div><span class="highlight">Range</span></div>
-                                <dd>distance between exreme values (Maximum - Minimum)</dd>
-                                <div><span class="highlight">Variance (&sigma;<sup>2</sup>)</span></div>
-                                <dd>the Average Squared Deviation of each data point from the Mean</dd>
-                                <div><span class="highlight">Standard Deviation (&sigma;)</span></div>
-                                <dd>the Square Root of the Variance</dd>
-                            </dl>
-                            <p>
-                                Range is most sensitive to outliers. &sigma; has same units as the data so is more
-                                intuitive.
-                                &sigma;<sup>2</sup> can be averaged so is a good metric for dealing with multiple
-                                datasets.
-                            </p>
-                        </article>
-                    </div>
-                    <div class="grid-item">
-                        <article class="card">
-                            <p class="DropCap"></p>
-                        </article>
-                    </div>
-                </div>
-            </div>
+  <main id="myContent" class="content">
+    <h1>--- Manage Variation ---</h1>
+    <div class="newspaper">
+      <div class="nobreak">
+        <h1>Nature of Variation</h1>
+        <div class="news-card glow-box">
+          <div class="DropCap">Variation occurs in all natural processes and if not managed, can cause undesireable
+            effects. Statistical methods are available to understand the types and amount of variation that occurs.
+            <span class="highlight">Common Cause</span> variation is the variation naturally seen from the processes
+            being used. <span class="highlight">Special Cause</span> variation is variation caused by some unusual
+            factor that can generally be controlled and eliminated. <span class="highlight">Control Charts</span> are a
+            common tool for keeping processes within their design limits.
+          </div>
+          <div class="text">A good summary of control charts can be found <a target="_blank"
+              href="https://en.wikipedia.org/wiki/ontrol_chart"> here </a></div>
         </div>
-    </main>
+      </div>
+      <div class="nobreak">
+        <h1>Key Concepts</h1>
+        <div class="news-card glow-box">
+          <div class="heading">Inferential Statistics</div>
+          <div class="text">When we “infer” characteristics of the entire population based on characteristics of a sampling of the population. Since it is impractical to test entire populations, we will be infering characteristics measured in a limited sampling to the entire population. In plain english, we test a sampling of parts to determine how all parts will behave.</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Central Tendancy</div>
+          <div class="text"><span class="highlight">Mean</span> </div>
+          <div class="text">Average value for a normally distributed set of data.</div>
+          <div class="text"><span class="highlight">Median</span> </div>
+          <div class="text">Middle value for non-normally distributed set of data.</div>
+          <div class="text"><span class="highlight">Mode</span></div>
+          <div class="text">Most often occuring value for attribute data.</div>
+        </div>
+        <div class="news-card glow-box">
+          <div class="heading">Variability</div>
+          <div class="text"><span class="highlight">Range</span></div>
+          <div class="text">distance between exreme values (Maximum - Minimum)</div>
+          <div class="text"><span class="highlight">Variance (&sigma;<sup>2</sup>)</span></div>
+          <div class="text">the Average Squared Deviation of each data point from the Mean</div>
+          <div class="text"><span class="highlight">Standard Deviation (&sigma;)</span></div>
+          <div class="text">the Square Root of the Variance</div>
+          <div class="text highlight">Range is most sensitive to outliers. &sigma; has same units as the data so is more intuitive. &sigma;<sup>2</sup> can be averaged so is a good metric for dealing with multiple datasets.</div>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>

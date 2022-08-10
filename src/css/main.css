@@ -2,7 +2,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-size: clamp(10px, 3vw, 18px);
   font-family: Roboto;
 }
 
@@ -52,31 +51,85 @@ h6 {
 }
 
 :root {
-  --clr-primary: hsl(212, 45%, 13%);
-  --clr-primary-400: hsl(212, 45%, 13%);
-  --clr-secondary: #4282a7;
+  --clr-primary-100: hsla(212, 50%, 90%);
+  --clr-primary-200: hsla(212, 50%, 70%);
+  --clr-primary-400: hsla(212, 50%, 50%);
+  --clr-primary-600: hsla(212, 50%, 25%);
+  --clr-primary-700: hsla(212, 50%, 15%);
+  --clr-primary-900: hsla(212, 5%, 5%);
+  --clr-secondary: hsl(212, 15%, 50%);
+  --clr-text-light: hsl(60, 30%, 95%);
   --clr-text-normal: hsl(60, 30%, 90%);
-  --clr-text-light: #8585a4;
-  --clr-text-dark: #1e1e4b;
+  --clr-text-medium: hsl(60, 30%, 80%);
+  --clr-text-dark: hsl(60, 30%, 30%);
   --clr-neutral-900: hsl(232, 12%, 13%);
   --clr-neutral-100: hsl(0 0% 100%);
-  --clr-highlight: hsl(202deg 43% 66%);
+  --clr-highlight-100: hsl(202deg 43% 90%);
+  --clr-highlight-200: hsl(202deg 43% 75%);
+  --clr-highlight-400: hsl(202deg 43% 50%);
+  --clr-highlight-600: hsl(202deg 43% 25%);
+  --clr-highlight-800: hsl(202deg 43% 10%);
   --clr-accent: hsl(18, 88%, 38%);
   --clr-accent-100: hsl(18, 100%, 96%);
   --clr-accent-300: hsl(18, 88%, 75%);
-  --clr-accent-400: hsl(18, 88%, 38%);
-  --clr-accent-500: hsl(18, 60%, 45%);
+  --clr-accent-400: hsl(18, 88%, 40%);
+  --clr-accent-500: hsl(18, 88%, 30%);
+}
+
+.bg-primary-100 {
+  background-color: var(--clr-primary-100);
+}
+
+.bg-primary-200 {
+  background-color: var(--clr-primary-2-00);
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.bg-primary-600 {
+  background-color: var(--clr-primary-600);
+}
+
+.bg-primary-700 {
+  background-color: var(--clr-primary-700);
+}
+
+.bg-primary-900 {
+  background-color: var(--clr-primary-900);
+}
+
+.txt-light {
+  color: var(--clr-text-light);
+}
+
+.txt-normal {
+  color: var(--clr-text-normal);
+}
+
+.txt-medium {
+  color: var(--clr-text-medium);
+}
+
+.txt-dark {
+  color: var(--clr-text-dark);
+}
+
+.txt-accent {
+  color: var(--clr-accent);
 }
 
 .site {
+  min-height: 100%;
   display: grid;
-  grid-template: "hdr   hdr" 3.5em "nav   content" calc(100% - 6.5em) "foot  foot" 3em/0 1fr;
-  background-color: #122030;
+  grid-template: "hdr     hdr" 3.5em "content content" calc(100% - 6.5em) "foot  foot" 3em/1fr;
 }
 .site .header {
   top: 0;
   grid-area: hdr;
   height: 100%;
+  position: fixed;
   position: -webkit-sticky;
   position: sticky;
   overflow-y: hidden;
@@ -84,13 +137,10 @@ h6 {
   grid-template: "bgr title" "bgr subtitle"/3rem 1fr;
   width: 100%;
   line-height: 1;
-  color: hsl(60deg, 30%, 90%);
-  background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
-  border-bottom: 3px solid rgb(180, 62, 12);
+  border-bottom: 3px solid var(--clr-accent);
   overflow-y: hidden;
 }
 .site .header__bgr {
-  position: webkit-sticky;
   position: -webkit-sticky;
   position: sticky;
   grid-area: bgr;
@@ -112,28 +162,25 @@ h6 {
   padding-left: 10px;
   margin: 0 auto;
   text-align: center;
-  letter-spacing: 3px;
+  font-size: 0.7rem;
   border-bottom: 3px rgb(180, 62, 12);
 }
 .site .content {
   position: -webkit-sticky;
   position: sticky;
-  overflow-y: scroll;
   overflow-x: hidden;
   grid-area: content;
   color: hsl(60deg, 30%, 90%);
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
 }
 .site .content h1 {
   margin: 0 auto;
-  padding-bottom: 10px;
   text-align: center;
   letter-spacing: 5px;
   font-size: 2rem;
   font-variant: small-caps;
   font-weight: 700;
-  border-top: 1px solid #000;
   color: rgb(180, 62, 12);
 }
 .site .foot {
@@ -147,8 +194,8 @@ h6 {
   height: 100%;
   bottom: 0rem;
   text-align: center;
-  color: hsl(60deg, 30%, 90%);
-  background-color: #122030;
+  color: var(--clr-text-light);
+  border-top: 1px solid rgb(180, 62, 12);
   overflow-y: hidden;
 }
 .site .footButton {
@@ -158,16 +205,97 @@ h6 {
   grid-area: copyr;
 }
 
-@media (min-width: 450px) {
-  .site {
-    grid-template-columns: 130px 1fr;
+.nav-links {
+  grid-area: content;
+  z-index: 9999;
+  height: calc(100% - 6.5em);
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  position: absolute;
+  width: 10ch;
+  left: 0px;
+  top: 3.5em;
+  background-color: #4282a7;
+  cursor: pointer;
+  transform: translatex(-100%);
+  transition: transform 0.25s ease-in;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links li a {
+  color: hsl(60deg, 30%, 90%);
+  transition: color 0.25s ease-in;
+}
+.nav-links li a:hover {
+  color: var(--clr-text);
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.burger {
+  cursor: pointer;
+  padding-right: 10px;
+  color: rbg(256, 256, 256);
+}
+.burger > div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.nav-active {
+  transform: translatex(0%);
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translatex(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0px);
   }
 }
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translatex(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: var(--clr-accent);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: var(--clr-accent);
+}
+
 .sidenav {
   grid-area: nav;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(0deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
   overflow-x: hidden;
   transition: 0.25s;
   text-align: center;
@@ -196,17 +324,16 @@ h6 {
 }
 
 body {
-  background-color: #fff;
   overflow-x: hidden;
 }
 
 ::-moz-selection {
-  background: #203955;
+  background: var(--clr-primary-400);
   color: #fff;
 }
 
 ::selection {
-  background: #203955;
+  background: var(--clr-primary-400);
   color: #fff;
 }
 
@@ -496,25 +623,22 @@ details > dl > dd {
 
 .intro {
   line-height: 1.6;
-  color: hsl(60deg, 30%, 90%);
   text-align: justify;
 }
 .intro a {
-  color: red;
+  color: var(--clr-accent-400);
 }
 
 .disclaimer {
-  color: rgb(180, 62, 12);
-  text-align: justify;
   line-height: 1.6;
-  padding-top: 10px;
+  text-align: justify;
 }
 
 .DropCap::first-letter {
   float: left;
-  font-size: 3em;
-  margin: 0.1em 0.1em 0.2em 0;
-  line-height: 0.65;
+  font-size: 3.2em;
+  margin: 0.2em 0.1em 0.2em 0;
+  line-height: 0.55;
 }
 
 ul {
@@ -560,9 +684,7 @@ p {
 }
 
 .indent {
-  font-size: 60%;
-  padding-left: 6ch;
-  line-height: 1;
+  padding-left: 3ch;
 }
 
 .list::before {
@@ -574,25 +696,27 @@ p {
 }
 
 .highlight {
-  font-size: larger;
+  font-size: inherit;
   font-style: italic;
-  color: hsl(202deg, 43%, 66%);
-  margin-right: 0.25rem;
+  color: var(--clr-highlight-200);
+  margin-right: 0.2rem;
 }
 
 details.table-details {
   width: 100%;
   cursor: pointer;
   margin: 0 auto;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
 }
 details.table-details > summary.table-summary {
   padding-top: 5px;
   border-top: 5px solid black;
-  color: #122030;
   font-size: 1.8rem;
   font-weight: 700;
   background-image: none;
-  background-color: #6fa6c6;
+  background-color: var(--clr-primary-400);
 }
 details.table-details .big-table {
   display: grid;
@@ -611,32 +735,7 @@ details.table-details .big-table > .table-content {
   border: 1px solid #4282a7;
 }
 
-.deck-container {
-  width: min(30rem, 90%);
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.deck-container h1 {
-  margin: 0 auto;
-  font: 2rem;
-  letter-spacing: 5px;
-  color: hsl(202deg, 43%, 66%);
-}
-.deck-container .deck {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 1em;
-  margin: 0 auto;
-}
-.deck-container .deck h1 {
-  color: red;
-  margin: 0 auto;
-  padding-top: 5px;
-}
-.deck-container .deck .card {
+.card {
   margin-top: 2em;
   max-width: 30em;
   display: grid;
@@ -645,7 +744,7 @@ details.table-details .big-table > .table-content {
   padding-right: 5px;
   box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.195);
 }
-.deck-container .deck .card .title {
+.card .title {
   grid-area: title;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -655,74 +754,46 @@ details.table-details .big-table > .table-content {
   padding-top: 10px;
   color: rgb(180, 62, 12);
 }
-.deck-container .deck .card .text {
+.card .text {
   grid-area: text;
-  font-size: 1rem;
   letter-spacing: 1px;
   padding-left: 5px;
   color: hsl(60deg, 30%, 90%);
 }
-.deck-container .deck .card img {
+.card img {
   grid-area: image;
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 100%;
+  max-height: 100px;
+  max-width: 100px;
 }
-.deck-container .deck .card {
-  margin-top: 2em;
-  max-width: 30em;
-  display: grid;
-  grid-template: "title  image" "text   image"/1fr 100px;
-  padding-left: 5px;
-  padding-right: 5px;
-  box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.195);
-}
-.deck-container .deck .card .title {
-  grid-area: title;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  font-variant: small-caps;
-  padding-bottom: 2px;
-  padding-top: 10px;
-  color: rgb(180, 62, 12);
-}
-.deck-container .deck .card .text {
-  grid-area: text;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  padding-left: 5px;
-  color: hsl(60deg, 30%, 90%);
-}
-.deck-container .deck .card img {
-  grid-area: image;
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 100%;
-}
-.deck-container .deck .card:hover {
+
+.card:hover {
   background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
 }
-.deck-container .deck .card-simple {
-  margin-top: 2em;
-  display: grid;
-  grid-template: "title" "text"/30em;
+
+.card-simple:hover {
+  background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
+}
+
+.card-simple {
+  width: 30em;
+  display: block;
   padding-left: 5px;
   padding-right: 5px;
+  margin-bottom: 2em;
   box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.195);
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
 }
-.deck-container .deck .card-simple .title {
-  grid-area: title;
+.card-simple .title {
   font-size: 1.5rem;
   letter-spacing: 2px;
   font-weight: 700;
   font-variant: small-caps;
   padding-bottom: 2px;
-  padding-top: 10px;
   color: rgb(180, 62, 12);
 }
-.deck-container .deck .card-simple .text {
-  grid-area: text;
+.card-simple .text {
   width: 100%;
   font-size: 1rem;
   line-height: 1.8;
@@ -731,9 +802,6 @@ details.table-details .big-table > .table-content {
   padding-left: 15px;
   padding-right: 15px;
   color: hsl(60deg, 30%, 90%);
-}
-.deck-container .deck .card-simple:hover {
-  background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
 }
 
 .return {
@@ -800,12 +868,10 @@ details.table-details .big-table > .table-content {
 }
 
 .tool-table {
-  max-width: 20em;
   flex-wrap: wrap;
-  font-size: 1.5rem;
   display: grid;
   margin: 0 auto;
-  grid-template: "Name   Name Name  Name" 2.5rem "h-Cond h-H0 h-HA  Link" "Cond   H0   HA    Link"/50% 20% 20% 1fr;
+  grid-template: "Name   Name Name  Name" 2.5rem "h-Cond h-H0 h-HA  Link" "Cond   H0   HA    Link"/4fr 1fr 1fr 70px;
 }
 .tool-table > .tool-name {
   grid-area: Name;
@@ -852,10 +918,11 @@ details.table-details .big-table > .table-content {
   grid-area: Link;
   display: grid;
   align-items: center;
-  justify-content: center;
+  padding-left: 5px;
   border: 1px solid hsl(60deg, 30%, 90%);
 }
 .tool-table .tool-link img {
+  margin: 0 auto;
   max-width: 70%;
   background-color: transparent;
 }
@@ -873,12 +940,12 @@ a.W-Ref {
 }
 
 .ColumnContainer {
+  padding-top: 1em;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 2em;
 }
 .ColumnContainer h1 {
   margin: 0 auto;
@@ -898,11 +965,86 @@ a.W-Ref {
   font-weight: 700;
   color: rgb(180, 62, 12);
 }
+.ColumnContainer > div {
+  max-width: 60ch;
+  flex-basis: 60ch;
+}
 
-.singleColumn {
-  width: min(60ch, 90%);
-  margin: 0 auto;
-  overflow-x: hidden;
+.newspaper {
+  max-width: 90%;
+  margin-bottom: 2em;
+  -moz-columns: auto 45ch;
+       columns: auto 45ch;
+  margin: 10px auto;
+  -moz-column-gap: 5em;
+       column-gap: 5em;
+}
+.newspaper .news-card {
+  display: block;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 2em;
+}
+.newspaper .news-card .heading {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-variant: small-caps;
+  letter-spacing: 5px;
+  color: var(--clr-accent);
+  padding-left: 5px;
+}
+.newspaper .news-card .text {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.newspaper .glow-box {
+  box-shadow: 0px 0px 10px 1px var(--clr-primary-400);
+}
+.newspaper .plain {
+  color: var(--clr-highlight-400);
+  box-shadow: none;
+}
+.newspaper .card {
+  display: grid;
+  grid-template: "title  image" "text   image"/1fr 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.newspaper .card .title {
+  grid-area: title;
+  height: 60px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-variant: small-caps;
+  padding-bottom: 2px;
+  padding-top: 10px;
+  color: rgb(180, 62, 12);
+}
+.newspaper .card .text {
+  grid-area: text;
+  height: 40px;
+  letter-spacing: 1px;
+  padding-left: 5px;
+  color: hsl(60deg, 30%, 90%);
+}
+.newspaper .card img {
+  grid-area: image;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100px;
+  max-width: 100px;
+}
+.newspaper .nobreak {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+}
+.newspaper .nobreak h1 {
+  width: 30rem;
+  text-align: center;
+  color: var(--clr-text-light);
 }
 
 article {
@@ -1129,7 +1271,7 @@ article.card {
 
 .roadmap {
   width: 90%;
-  margin: o auto;
+  text-align: center;
 }
 
 .ButtonSet {
@@ -1137,7 +1279,6 @@ article.card {
 }
 
 .MapButton {
-  display: inline;
   color: hsl(60deg, 30%, 90%);
   margin: 0.5rem;
   padding-left: 5px;
@@ -1146,15 +1287,50 @@ article.card {
   border: 1px solid hsl(60deg, 30%, 90%);
   border-radius: 1ch;
   cursor: pointer;
+  background-color: #25495e;
 }
 
 .MapButton:hover {
   background-image: linear-gradient(90deg, hsl(212deg, 45%, 13%) 0%, hsl(207deg, 44%, 29%) 50%, hsl(202deg, 43%, 46%) 100%);
 }
 
-.MapButton:active {
-  background-image: none;
-  background-color: white;
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--clr-primary-600);
+  color: var(--clr-text);
+  text-align: center;
+  border-radius: 10px;
+  border: 1px dashed var(--clr-text-normal);
+  padding: 5px;
+  position: absolute;
+  z-index: 2;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .MapLine {
@@ -1165,16 +1341,15 @@ article.card {
 
 .mapQuestion {
   font-size: 1.5rem;
-  background-color: #192c43;
+  background-color: #152639;
 }
 
 .HypoTable {
   display: grid;
-  grid-template: "Name H0   HA   Link" "Case Case Case Case"/30% 30% 30% 10%;
+  grid-template: "Name H0   HA   Link" "Case Case Case Case"/1fr 1fr 1fr 3em;
 }
 
 .HTableName {
-  font-size: 1.5rem;
   font-weight: 700;
   text-transform: small-caps;
   letter-spacing: 2px;
@@ -1185,7 +1360,6 @@ article.card {
 }
 
 .HTableH0 {
-  font-size: 1.5rem;
   grid-area: H0;
   text-align: center;
   display: block;
@@ -1193,7 +1367,6 @@ article.card {
 }
 
 .HTableHA {
-  font-size: 1.5rem;
   grid-area: HA;
   text-align: center;
   display: block;
@@ -1205,23 +1378,23 @@ article.card {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   border: 1px solid white;
 }
 .HTabLink img {
   padding: 3px;
-  width: 90%;
-  height: auto;
-  background-color: transparent;
+  max-width: 90%;
 }
 
 .HTabUseCase {
   grid-area: Case;
-  font-size: 1.5rem;
+  text-align: left;
   border: 1px solid white;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .HTabUseCase::before {
-  font-size: 1.5rem;
   text-transform: small-caps;
   color: hsl(202deg, 43%, 66%);
   content: "Typical use case: ";

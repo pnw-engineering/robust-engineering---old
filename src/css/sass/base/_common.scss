@@ -1,12 +1,11 @@
-@use '../abstracts' as *;
+@use '../abstracts/' as *;
 
 body {
-  background-color: $body-color;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: lighten($color: $primary-color, $amount: 10);
+  background: var(--clr-primary-400);
   color: $white;
 }
 
@@ -314,26 +313,26 @@ details {
 
 .intro {
   line-height: 1.6;
-  color: $text-color;
+  // color: $text-color;
   text-align: justify;
   
   a {
-    color: red;
+    color: var(--clr-accent-400);
   }
 }
 
 .disclaimer {
-  color: $accent-color;
-  text-align: justify;
   line-height: 1.6;
-  padding-top: 10px;
+  // color: $accent-color;
+  text-align: justify;
+  // padding-top: 10px;
 }
 
 .DropCap::first-letter {
   float: left;
-  font-size: 3em;
-  margin: 0.1em 0.1em 0.2em 0;
-  line-height: 0.65;
+  font-size: 3.2em;
+  margin: 0.2em 0.1em 0.2em 0;
+  line-height: 0.55;
   // font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
 }
 
@@ -382,9 +381,9 @@ p {
 }
 
 .indent {
-  font-size: 60%;
-  padding-left: 6ch;
-  line-height: 1.0;
+  // font-size: 60%;
+  padding-left: 3ch;
+  // line-height: 1.0;
 }
 
 .list::before {
@@ -397,26 +396,28 @@ p {
 }
 
 .highlight {
-  font-size: larger;
+  font-size: inherit;
   font-style: italic;
-  color: $highlight-color;
-  margin-right: .25rem;
+  color: var(--clr-highlight-200);
+  margin-right: .2rem;
 }
 
 details.table-details {
   width: 100%;
   cursor: pointer;
   margin: 0 auto;
+  break-inside: avoid;
+  page-break-inside: avoid;
 
   >summary.table-summary {
     padding-top: 5px;
     border-top: 5px solid black;
-    color: $primary-color;
+    // color: $primary-color;
     font-size: 1.8rem;
     font-weight: 700;
     background-image: none;
-    background-color: lighten($secondary-color, 15%);
-  }
+    background-color: var(--clr-primary-400);
+    }
 
   .big-table {
     display: grid;

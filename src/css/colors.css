@@ -1,16 +1,25 @@
 :root {
-  --clr-primary: hsl(212, 45%, 13%);
-  --clr-primary-400: hsl(212, 45%, 13%);
-  --clr-secondary: #4282a7;
+  --clr-primary-100: hsla(212, 50%, 90%);
+  --clr-primary-200: hsla(212, 50%, 70%);
+  --clr-primary-400: hsla(212, 50%, 50%);
+  --clr-primary-600: hsla(212, 50%,25%);
+  --clr-primary-700: hsla(212, 50%, 15%);
+  --clr-primary-900: hsla(212, 5%, 5%);
+  --clr-secondary: hsl(212, 15%, 50%);
+  --clr-text-light: hsl(60, 30%, 95%);
   --clr-text-normal: hsl(60, 30%, 90%);
-  --clr-text-light: #8585a4;
-  --clr-text-dark: #1e1e4b;
+  --clr-text-medium: hsl(60, 30%, 80%);
+  --clr-text-dark: hsl(60, 30%, 30%);
   --clr-neutral-900: hsl(232, 12%, 13%);
   --clr-neutral-100: hsl(0 0% 100%);
-  --clr-highlight: hsl(202deg 43% 66%);
+  --clr-highlight-100: hsl(202deg 43% 66%);
+  --clr-highlight-200: hsl(202deg 43% 66%);
+  --clr-highlight-400: hsl(202deg 43% 66%);
+  --clr-highlight-600: hsl(202deg 43% 66%);
+  --clr-highlight-800: hsl(202deg 43% 66%);
   --clr-accent: hsl(18, 88%, 38%);
   --clr-accent-100: hsl(18, 100%, 96%);
   --clr-accent-300: hsl(18, 88%, 75%);
-  --clr-accent-400: hsl(18, 88%, 38%);
-  --clr-accent-500: hsl(18, 60%, 45%);
-}/*# sourceMappingURL=colors.css.map */
+  --clr-accent-400: hsl(18, 88%, 40%);
+  --clr-accent-500: hsl(18, 88%, 30%);
+}

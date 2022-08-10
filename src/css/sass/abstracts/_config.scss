@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-size: clamp(10px, 3vw, 18px);
+  // font-size: clamp(.5em, 1vw, 1em);
   font-family: Roboto;
 }
 
@@ -51,9 +51,9 @@ h6 {
   isolation: isolate;
 }
 
-@mixin transition-ease {
-  transition: all .3s ease-in-out;
-}
+// @mixin transition-ease {
+//   transition: all .3s ease-in-out;
+// }
 
 @mixin media-ml {
 
