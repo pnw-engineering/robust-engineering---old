@@ -1,0 +1,86 @@
+.ColumnContainer {
+    margin: 0 auto;
+    width: 90%;
+
+    // background-color: cornflowerblue;
+    &__heading {
+        margin: 0 auto;
+        padding-bottom: 10px;
+        // margin-top: 10px;
+        text-align: center;
+        font-size: 3rem;
+        font-variant: small-caps;
+        font-weight: 700;
+        border-top: 1px solid #000;
+        color: $accent-color;
+        // background-image: $gradientv;
+        // background-color: cornflowerblue;
+    }
+
+    .Dr    article {
+        width: 100%;
+        height: max-content;
+        padding-bottom: 5px;
+        text-align: justify;
+        // background-color: cornflowerblue;
+
+        p {
+            // background-color: cornflowerblue;
+            text-justify: center;
+
+            dfn {
+                background-image: $gradientv;
+                // background-color: $secondary-color ;
+            }
+        }
+
+
+        ul {
+            list-style: none;
+            // background-color: cornflowerblue;
+
+            >li {
+                font-size: 100%;
+
+                // background-color: cornflowerblue;
+                >details {
+                    display: block;
+                    width: 100%;
+                    padding-bottom: 5px;
+                    margin-left: 0;
+                    text-align: justify;
+                    // background-color: cornflowerblue;
+
+                    >summary {
+                        padding-bottom: 5px;
+                        background-image: gradient1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.singleColumn{
+    width: 95%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+article.card {
+    // background-color: aqua;;
+    // height: auto;
+    font-size: 1rem;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.904);
+
+}
+article.card:hover {
+    background-image: $gradientv;
+}
+
+.WideContainer {
+    width: 90%;
+    height:100%;
+    margin: 0 auto;
+}

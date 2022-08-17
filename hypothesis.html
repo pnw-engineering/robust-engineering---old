@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta Content-Type="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <title>{title}</title>
+</head>
+
+<body class="site bg-primary-700" id="mysite">
+  <header class="header bg-primary-700 txt-normal">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <div class="header__title">Robust Engineering</div>
+    <div class="header__subtitle txt-light">Using Science, Statistics, and Critical Thinking to improve product design
+      robustness</div>
+  </header>
+
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/start.html">Start</a>
+      </li>
+      <li>
+        <a href="/tools.html">Tools</a>
+      </li>
+      <li>
+        <a href="/Glossary.html">Glossary</a>
+      </li>
+      <li>
+        <a href="/hypothesis.html">Hypothesis Roadmap</a>
+      </li>
+      <li>
+        <a href="/hypo2.html">Hypothesis Tests</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="myContent" class="content">
+    <div class="newspaper" id="H-Container">
+      <div class="DropCap intro nobreak">Hypothesis testing is a fundamental part of the scientific process where it is  used to evaluate whether something being hypothesized is statistically valid or not.</div>
+      <div class="DropCap intro nobreak" id="H-Def">Hypothesis testing is so named because the user has <span class="highlight">hypothesized</span> about something and wants statistical evedence of the validity (or lack thereof) of The hypothesis. A Null Hypothesis (H<sub>0</sub>) and an Alternate Hypothesis (H<sub>A</sub>) are key element of every test. The nature of H<sub>0</sub> is always based on the variation observed in the data being purely random (or "Nothing interesting going on") and H<sub>A</sub> is based on something else is going on. H<sub>0</sub> and H<sub>A</sub> are always defined (at least in general) by the specific test being run and are not selectable by the user. The tests all provide a "p" statistic that represents The probability that H<sub>0</sub> is <span class="highlight">TRUE</span>. Decisions are ususally made based on P statistics and the value of p to use as the cutoff shoud be a carefully considered business decision. Typically, a value of .05 (5%) is used where if p is less that .05, H<sub>0</sub> is rejected and it is assumed that H<sub>A</sub> is correct. Test selection is a function of the specifics of the data collected.</div>
+    </div>
+    <h1>Roadmap for selecting Hypothesis testing tools</h1>
+    <div class="roadmap" id="h-roadmap">
+      <div class="mapQuestion">Type of data?</div>
+      <button class="MapButton tooltip" id="b1" onclick="toggleElement()">Attribute<span class="tooltiptext">Discrete:
+          Items are generally counted</span></button>
+      <button class="MapButton tooltip" id="b2" onclick="toggleElement()">Variable<span class="tooltiptext">Continuous:
+          Items are generally measured</span></button>
+      <div class="MapLine" id='1'>
+        <div class="mapQuestion">Attribute: Number of Factors?</div>
+        <button class="MapButton tooltip" id="b11" onclick="toggleElement()">1<span class="tooltiptext">Looking at only
+            one attribute</span></button>
+        <button class="MapButton tooltip" id="b12" onclick="toggleElement()">2<span class="tooltiptext">Looking at 2 or
+            more attributes</span></button>
+        <div class=" MapLine" id="11">
+          <div class="mapQuestion">Number of samples?</div>
+          <button class="MapButton tooltip" id="b111" onclick="toggleElement()">1<span class="tooltiptext">Only one type
+              of item - compare against a standard</span></button>
+          <button class="MapButton tooltip" id="b112" onclick="toggleElement()">2<span class="tooltiptext">2 types of
+              items - compare against each other</span></button>
+          <div class="MapLine" id="111">
+            <div class="HypoTable">
+              <div class="HTableName">1-Proportion Test</div>
+              <div class="HTableH0">H<sub>0</sub>: P<sub>1</sub> = P<sub>t</sub></div>
+              <div class="HTableHA">H<sub>A</sub>: P<sub>1</sub> &#8800 P<sub>t</sub></div>
+              <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+              <div class="HTabUseCase">Test if the proportion (percent) of the population for a specific type of article (e.g. brand, color, material, etc.) meets a specification (e.g. 90% 0f parts must pass a test).</div>
+            </div>
+          </div>
+          <div class="MapLine" id="112">
+            <div class="HypoTable">
+              <div class="HTableName">2-Proportion Test</div>
+              <div class="HTableH0">H<sub>0</sub>: P<sub>1</sub> = P<sub>2</sub></div>
+              <div class="HTableHA">H<sub>A</sub>: P<sub>1</sub> &#8800 P<sub>2</sub></div>
+              <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+              <div class="HTabUseCase">Test if the proportion (percent) of the population for two specific types of articles (e.g. brand, color, material, etc.) are equal (e.g. the odds of A and B are the same).</div>
+            </div>
+          </div>
+        </div>
+        <div class="MapLine" id="12">
+          <div class="HypoTable">
+            <div class="HTableName">Contingency Table</div>
+            <div class="HTableH0">H<sub>0</sub>: F<sub>A</sub> and F<sub>B</sub> are independant</div>
+            <div class="HTableHA">H<sub>A</sub>: F<sub>A</sub> and F<sub>B</sub> are dependant</div>
+            <div class="HTabLink"><a class="W-Ref" target="_blank" rel="noopener"
+                href="https://en.wikipedia.org/wiki/Contingency_table"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></a></div>
+            <div class="HTabUseCase">Test ...</div>
+          </div>
+        </div>
+      </div>
+      <div class="MapLine" id="2">
+        <div class="mapQuestion">Number of factors?</div>
+        <button class="MapButton tooltip" id="b21" onclick="toggleElement()">1<span class="tooltiptext">Looking at a single attribute</span></button>
+        <button class="MapButton tooltip" id="b22" onclick="toggleElement()">More than 1<span
+            class="tooltiptext">Looking at 2 or more attributes</span></button>
+        <div class="MapLine" accesskey="" id="21">
+          <div class="mapQuestion">Is data Normal or Non-Normal?</div>
+          <button class="MapButton tooltip" id="b211" onclick="toggleElement()">Normal<span class="tooltiptext">The data is normally distributed</span></button>
+          <button class="MapButton tooltip" id="b212" onclick="toggleElement()">Not Normal<span class="tooltiptext">The data is not normally distributed (e.g. skewed)</span></button>
+          <div class="MapLine" id="211">
+            <div class="mapQuestion">Number of Levels?</div>
+            <button class="MapButton tooltip" id="b2111" onclick="toggleElement()">1<span class="tooltiptext">A single type of item (e.g. brand, material, color, etc)</span></button>
+            <button class="MapButton tooltip" id="b2112" onclick="toggleElement()">2<span class="tooltiptext">Two types of items (e.g. brand, material, color, etc)</span></button>
+            <button class="MapButton tooltip" id="b2113" onclick="toggleElement()">More than 2<span class="tooltiptext">Three or more types of items (e.g. brand, material, color, etc)</span></button>
+            <div class="MapLine" id="2111">
+              <div class="mapQuestion">Type of Test for 1 Level?</div>
+              <button class="MapButton tooltip" id="b21111" onclick="toggleElement()">Mean<span class="tooltiptext">Checking average value against a specification</span></button>
+              <button class="MapButton tooltip" id="b21112" onclick="toggleElement()">Standard Deviation<span class="tooltiptext">Checking variation against a standard</span></button>
+              <div class="MapLine" id="21112">
+                <div class="HypoTable">
+                  <div class="HTableName">Chi<sup>2</sup>Test</div>
+                  <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub></div>
+                  <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub> &#8800 &sigma;<sub>t</sub></div>
+                  <div class="HTabLink"><a class="W-Ref" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Chi-squared_test"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></a></div>
+                  <div class="HTabUseCase">Determine if the variation for a specific type meets a specifaction - generally a maximum.</div>
+                </div>
+              </div>
+              <div class="MapLine" id="21111">
+                <div class="HypoTable">
+                  <div class="HTableName">1 Sample t Test</div>
+                  <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>t</sub></div>
+                  <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &#8800 &mu;<sub>t</sub></div>
+                  <div class="HTabLink"><a class="W-Ref" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Student%27s_t-test"><img src="/img/W-Logo.png" alt="Wiki link"></a>
+                  </div>
+                  <div class="HTabUseCase">Determine if the avarage value for a specific type is within specifications
+                    (e.g. thickness within +/- spec limits)</div>
+                </div>
+              </div>
+            </div>
+            <div class="MapLine" id="2112">
+              <div class="mapQuestion">Type of Test for 2 Levels?</div>
+              <button class="MapButton tooltip" id="b21121" onclick="toggleElement()">Mean<span
+                  class="tooltiptext">Checking average values</span></button>
+              <button class="MapButton tooltip" id="b21122" onclick="toggleElement()">Standard Deviation<span
+                  class="tooltiptext">Checking variation</span></button>
+              <div class="MapLine" id="21122">
+                <div class="HypoTable">
+                  <div class="HTableName">F Test</div>
+                  <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub></div>
+                  <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub> &#8800 &sigma;<sub>2</sub></div>
+                  <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                  <div class="HTabUseCase">Determine if variation for two different types is equal</div>
+                </div>
+              </div>
+              <div class="MapLine" id="21121">
+                <div class="mapQuestion">Is data independant?</div>
+                <button class="MapButton tooltip" id="b211211" onclick="toggleElement()">Independant<span
+                    class="tooltiptext">Type B is unrelated to type A</span></button>
+                <button class="MapButton tooltip" id="b211212" onclick="toggleElement()">Dependant<span
+                    class="tooltiptext">Types A and B are related (e.g. for a pair of shoes, a=left,
+                    B=right)</span></button>
+                <div class="MapLine" id="211211">
+                  <div class="HypoTable">
+                    <div class="HTableName">2 Sample t Test</div>
+                    <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>2</sub></div>
+                    <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &ne; &mu;<sub>2</sub></div>
+                    <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                    <div class="HTabUseCase">Test if the avarage value for an attribute is the same for two specific
+                      types of items</div>
+                  </div>
+                </div>
+                <div class="MapLine" id="211212">
+                  <div class="HypoTable">
+                    <div class="HTableName">Paired t Test</div>
+                    <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>2</sub></div>
+                    <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &#8800 &mu;<sub>2</sub></div>
+                    <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                    <div class="HTabUseCase">Test if the average values for two specific types of items is the same when
+                      subjected to the same conditions (e.g. is shoe sole wear the same for the left and right shoes?)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="MapLine" id="2113">
+              <div class="HypoTable">
+                <div class="HTableName">Bartlets Test</div>
+                <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> = &sigma;<sub>3</sub>
+                </div>
+                <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800; j
+                  (or at least one is different)</div>
+                <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                <div class="HTabUseCase">Test if three or more specific types of items the same average values</div>
+              </div>
+            </div>
+          </div>
+          <!-- Not Normal -->
+          <div class="MapLine" id="212">
+            <div class="mapQuestion">Number of levels?</div>
+            <button class="MapButton tooltip" id="b2121" onclick="toggleElement()">1<span class="tooltiptext">Single
+                type of item</span></button>
+            <button class="MapButton tooltip" id="b2122" onclick="toggleElement()">2 or more<span
+                class="tooltiptext">More than one type of item</span></button>
+            <!-- 1 level -->
+            <div class="MapLine" id="2121">
+              <div class="mapQuestion">Test Type?</div>
+              <button class="MapButton tooltip" id="b21211" onclick="toggleElement()">Median<span
+                  class="tooltiptext">Test for central tendancy</span></button>
+              <button class="MapButton tooltip" id="b21212" onclick="toggleElement()">Standard Deviation<span
+                  class="tooltiptext">Test for variation</span></button>
+              <!-- Test for Median -->
+              <div class="MapLine" id="21211">
+                <div class="HypoTable">
+                  <div class="HTableName">1-sample Wilcoxon or 1-Sample Significance</div>
+                  <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>t</sub></div>
+                  <div class="HTableHA">H<sub>A</sub>: M<sub>1</sub> &#8800; M<sub>t</sub> (t = target)</div>
+                  <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                  <div class="HTabUseCase">Test if the median value for a set of non-normally distributed data meets a
+                    specification</div>
+                </div>
+              </div>
+              <div class="MapLine" id="21212">
+                <div class="HypoTable">
+                  <div class="HTableName">Chi<sup>2</sup> Test</div>
+                  <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>t</sub></div>
+                  <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>1</sub> &#8800; &sigma;<sub>t</sub> (t = target)
+                  </div>
+                  <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                  <div class="HTabUseCase">Test if the variation for a set of non-normally distributed data meets a
+                    specification</div>
+                </div>
+              </div>
+            </div>
+            <!-- 2 or more levels -->
+            <div class="MapLine" id="2122">
+              <div class="HypoTable">
+                <div class="HTableName">Levene's Test</div>
+                <div class="HTableH0">H<sub>0</sub>: &sigma;<sub>1</sub> = &sigma;<sub>2</sub> = &sigma;<sub>3</sub> ...
+                </div>
+                <div class="HTableHA">H<sub>A</sub>: &sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800; j (or
+                  at least 1 is different)</div>
+                <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                <div class="HTabUseCase">Test if central tendancies for 2 or more specific types of items are the same
+                </div>
+              </div>
+              <div class="mapQuestion">Test Results?</div>
+              <button class="MapButton tooltip" id="b21221" onclick="toggleElement()">Reject H<sub>0</sub><span
+                  class="tooltiptext">Central tendancies are not the same</span></button>
+              <button class="MapButton tooltip" id="b21222" onclick="toggleElement()">Fail to Reject H<sub>0</sub><span
+                  class="tooltiptext">Central tendancies are the same</span></button>
+              <div class="MapLine" id="21221">
+                <div class="HypoTable">
+                  <div class="HTableName">2 Sample t Test</div>
+                  <div class="HTableH0">H<sub>0</sub>: &mu;<sub>1</sub> = &mu;<sub>t</sub></div>
+                  <div class="HTableHA">H<sub>A</sub>: &mu;<sub>1</sub> &ne; &mu;<sub>t</sub></div>
+                  <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                  <div class="HTabUseCase">Test ...</div>
+                </div>
+              </div>
+              <div class="MapLine" id="21222">
+                <div class="mapQuestion">Number of Levels?</div>
+                <button class="MapButton tooltip" id="b212221" onclick="toggleElement()">2<span class="tooltiptext">Tool
+                    tip</span></button>
+                <button class="MapButton tooltip" id="b212222" onclick="toggleElement()">More than 2<span
+                    class="tooltiptext">Tool tip</span></button>
+              </div>
+              <div class="MapLine" id="212221">
+                <div class="HypoTable">
+                  <div class="HTableName">Mann-Whitney Test</div>
+                  <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>2</sub></div>
+                  <div class="HTableHA">H<sub>A</sub>: M<sub>1</sub> &ne; M<sub>2</sub></div>
+                  <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                  <div class="HTabUseCase">Test ...</div>
+                </div>
+              </div>
+              <div class="MapLine" id="212222">
+                <div class="HypoTable">
+                  <div class="HTableName">Moods Median Test (used with outlier)</div>
+                  <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>2</sub> = M<sub>3</sub>...</div>
+                  <div class="HTableHA">H<sub>A</sub>: M<sub>i</sub> &ne; M<sub>j</sub> for i&ne;j (or at least 1 is
+                    different)</div>
+                  <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                  <div class="HTabUseCase">Test ...</div>
+                </div>
+                <div class="HypoTable">
+                  <div class="HTableName">Kruskal-Wallis Test (used with no outlier)</div>
+                  <div class="HTableH0">H<sub>0</sub>: M<sub>1</sub> = M<sub>2</sub> = M<sub>3</sub>...</div>
+                  <div class="HTableHA">H<sub>A</sub>: M<sub>i</sub> &ne; M<sub>j</sub> for i&ne;j (or at least 1 is
+                    different)</div>
+                  <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+                  <div class="HTabUseCase">Test ...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="MapLine" id="22">
+          <div class="HypoTable">
+            <div class="HTableName">ANOVA or Multiple Regression</div>
+            <div class="HTableH0"></div>
+            <div class="HTableHA"></div>
+            <div class="HTabLink"><img src="/img/W-Logo.png" alt="Wikapedia Entry"></div>
+            <div class="HTabUseCase">Test ...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <!-- <button class="footButton pushable" onclick="window.location.href='start.html'"> -->
+    <button class="footButton pushable" onclick="history.back(-1)">
+      <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front">Back</span>
+    </button>
+    <div class="footCR">&copy; Copyright 2022</div>
+  </footer>
+
+</body>
+<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+<script src="/js/user.js"></script>
+
+</html>

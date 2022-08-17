@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta Content-Type="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <title>{title}</title>
+</head>
+
+<body class="site bg-primary-700" id="mysite">
+  <header class="header bg-primary-700 txt-normal">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <div class="header__title">Robust Engineering</div>
+    <div class="header__subtitle txt-light">Using Science, Statistics, and Critical Thinking to improve product design robustness</div>
+  </header>
+
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/start.html">Start</a>
+      </li>
+      <li>
+        <a href="/tools.html">Tools</a>
+      </li>
+      <li>
+        <a href="/Glossary.html">Glossary</a>
+      </li>
+      <li>
+        <a href="/hypothesis.html">Hypothesis Roadmap</a>
+      </li>
+      <li>
+        <a href="/hypo2.html">Hypothesis Tests</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <h1>Statistical Tests</h1>
+    <div class="newspaper">
+      <div class="tool-table nobreak">
+        <div class="tool-name">Student t-Test</div>
+        <div class="tool-link"><a class="W-Ref" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Student%27s_t-test"><img src="/img/W-Logo.png" alt="Wiki link"></a></div>
+        <div class="tool-head1">Conditions</div>
+        <div class="tool-head2">H<sub>0</sub></div>
+        <div class="tool-head3">H<sub>A</sub></div>
+        <div class="tool-cond">Normally distributed data</div>
+        <div class="tool-H0">&mu;<sub>1</sub> = &mu;<sub>t</sub></div>
+        <div class="tool-HA">&mu;<sub>1</sub> &#8800; &mu;<sub>t</sub></div>
+      </div>
+      <div class="tool-table nobreak">
+        <div class="tool-name">Bartlett's Test</div>
+        <div class="tool-link"><a class="W-Ref" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Bartlett%27s_test"><img src="/img/W-Logo.png" alt="Wiki link"></a></div>
+        <div class="tool-head1">Conditions</div>
+        <div class="tool-head2">H<sub>0</sub></div>
+        <div class="tool-head3">H<sub>A</sub></div>
+        <div class="tool-cond">Normally distributed data and more than 2 levels</div>
+        <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>2</sub> = &sigma;<sub>3</sub> ...</div>
+        <div class="tool-HA">&sigma;<sub>i</sub> &#8800; &sigma;<sub>j</sub> for i &#8800; j or at least 1 is different
+        </div>
+      </div>
+      <div class="tool-table nobreak">
+        <div class="tool-name">Chi<sup>2</sup> Test</div>
+        <div class="tool-link"><a class="W-Ref" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Chi-squared_test"><img src="/img/W-Logo.png" alt="Wiki link"></a></div>
+        <div class="tool-head1">Conditions</div>
+        <div class="tool-head2">H<sub>0</sub></div>
+        <div class="tool-head3">H<sub>A</sub></div>
+        <div class="tool-cond">Normally distributed data with 1 levels looking for StandardDeviation compared to
+          target (t)</div>
+        <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>t</sub></div>
+        <div class="tool-HA">&sigma;<sub>1</sub> &#8800; &sigma;<sub>t</sub></div>
+      </div>
+      <div class="tool-table nobreak">
+        <div class="tool-name">F Test</div>
+        <div class="tool-link"><a class="W-Ref" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/F-test"><img src="/img/W-Logo.png" alt="Wiki link"></a></div>
+        <div class="tool-head1">Conditions</div>
+        <div class="tool-head2">H<sub>0</sub></div>
+        <div class="tool-head3">H<sub>A</sub></div>
+        <div class="tool-cond">Normally distributed data with 2 levels looking for Standard Deviation</div>
+        <div class="tool-H0">&sigma;<sub>1</sub> = &sigma;<sub>2</sub></div>
+        <div class="tool-HA">&sigma;<sub>1</sub> &#8800; &sigma;<sub>2</sub></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <!-- <button class="footButton pushable" onclick="window.location.href='start.html'"> -->
+    <button class="footButton pushable" onclick="history.back(-1)">
+      <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front">Back</span>
+    </button>
+    <div class="footCR">&copy; Copyright 2022</div>
+  </footer>
+
+</body>
+<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+<script src="/js/user.js"></script>
+
+</html>

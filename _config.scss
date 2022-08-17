@@ -1,0 +1,130 @@
+$primary-color: #122030;
+$text-color: hsl(60, 30%, 90%);
+// $text-color: #f4f2e9;
+$secondary-color: #4282a7;
+$accent-color: #b43e0c;
+$highlight-color: hsl(202deg 43% 66%);
+// $gradient2: linear-gradient(90deg,
+//     hsl(240deg 36% 17%) 0%,
+//     hsl(275deg 50% 26%) 50%,
+//     hsl(306deg 100% 27%) 100%);
+$gradient1: linear-gradient(90deg,
+    hsl(212deg 45% 13%) 0%,
+    hsl(207, 44%, 29%) 50%,
+    hsl(202deg 43% 46%) 100%);
+
+$gradientv: linear-gradient(0deg,
+    hsl(212deg 45% 13%) 0%,
+    hsl(207, 44%, 29%) 50%,
+    hsl(202deg 43% 46%) 100%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: min(3vw, 3vh);
+  font-family: Roboto;
+}
+
+:root {
+  --accentColor: #B43E0C;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@mixin transition-ease {
+  transition: all .3s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return $text-color;
+  }
+
+  @else {
+    @return $text-color; //rgb(203, 198, 69);
+  }
+}
+
+@mixin media-ml {
+
+  //mobil-landscape
+  @media screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+
+  //tablet-portrait
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+
+  //tablet-landscape
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+
+  //laptop
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin media-2xl {
+
+  //large screen
+  @media screen and (min-width: 1536px) {
+    @content;
+  }
+}

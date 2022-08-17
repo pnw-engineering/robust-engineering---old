@@ -1,0 +1,78 @@
+.roadmap{
+    width:90%;
+    margin: o auto;
+}
+
+.ButtonSet{
+    display: block;
+}
+
+.MapButton{
+    display: inline;
+    color: $text-color;
+    margin: .5rem;
+    // padding-top: .5rem;
+    // padding-bottom: .5rem;
+    padding-left: 5px;
+    min-width: 6ch;
+    height: auto;
+    border: 1px solid $text-color;
+    border-radius: 1ch;
+    cursor: pointer;
+    background-color: darken($secondary-color, 20%);
+}
+.MapButton:hover{
+    background-image: $gradient1;
+}
+.MapButton:active{
+    background-image: none;
+    background-color:white;
+}
+
+.MapLine{
+    display: none;
+    padding-top: 5px;
+    font-size: 1.2rem;
+}
+
+.mapQuestion{
+    font-size: 1.5rem;
+    background-color: lighten($primary-color,5%);
+}
+
+.action{
+    display: none;
+    width: 100%;
+}
+
+.HypoTable{
+    display:grid;
+    grid-template:
+    "Name H0 HA"
+    /40% 30% 30%;
+    
+}
+
+.HTableName{
+    font-size: 1.5rem;
+    grid-area: Name;
+    padding-left: 10px;
+    display:block;
+    border: 1px solid white;
+}
+
+.HTableH0{
+    font-size: 1.5rem;
+    grid-area: H0;
+    text-align:center;
+    display:block;
+    border: 1px solid white;
+}
+
+.HTableHA{
+    font-size: 1.5rem;
+    grid-area: HA;
+    text-align:center;
+    display:block;
+    border: 1px solid white;
+}
